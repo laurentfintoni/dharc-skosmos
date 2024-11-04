@@ -1,10 +1,10 @@
 {# This is the template for the front page welcome box. You can enter any html here and show different language versions by using the lang value in a twig conditional as demonstrated below. #}
 <div class="welcome-box">
-  {% if request.lang == 'fi' %}
-  <h1>Tervetuloa Skosmos -selaimeen!</h1>
-  {% elseif request.lang == 'sv' %}
-  <h1>Välkommen till Skosmos läsaren!</h1>
+  {% if request.lang == 'it' %}
+  <h1>Benvenuto!</h1>
+  <p>Questo repository fornisce accesso a tutti i vocabolari controllati creati dal Digital Humanities Advanced Research Centre presso l'Università di Bologna. Tutti i vocabolari sono basati sul SKOS data model e possono essere consultati (preferibilmente da desktop) e scaricati in formato RDF.</p>
   {% elseif request.lang == 'en' %}
-  <h1>Welcome to the Skosmos browser!</h1>
+  <h1>Welcome to /DH.arc Vocabularies!</h1>
+  <p>This repository provides access to all controlled vocabularies created by the Digital Humanities Advanced Research Centre at the University of Bologna. Vocabularies are based on the SKOS data model and can be browsed (desktop preferred) and downloaded in RDF formats.</p>
   {% endif %}
 </div>

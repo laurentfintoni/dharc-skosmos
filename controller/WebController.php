@@ -112,7 +112,7 @@ class WebController extends Controller
      * @return string css class for the container eg. 'voclist-wide' or 'voclist-right'
      */
     private function listStyle() {
-        $left = file_exists('view/left.inc');
+        $left = file_exists('view/left.inc.dist');
         $right = file_exists('view/right.inc');
         $ret = 'voclist';
         if (!$left && !$right) {

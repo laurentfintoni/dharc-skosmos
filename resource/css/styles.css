@@ -8,7 +8,7 @@
   --tooltip-bg-color: #1E1E1E;
   --tooltip-text-color: #00ACD3;
   --tooltip-border-color: #75889F; /*also used as typeahead focus border */
-  --main-bg-color: #D5DBDE;
+  --main-bg-color: #F4E8DE;
   --alert-color-pale: #D95F8A;
   --alert-color-bright: #ED0D6C;
   --uri-id-text-color: #006621; /* only used in search results */
@@ -192,7 +192,7 @@ a:focus {
 
 a:hover {
   text-decoration: underline;
-  color: var(--link-hover-color);
+  color: var(--medium-color);
   /* All text links have underlining when hovered. */
 }
 
@@ -202,6 +202,7 @@ a:focus {
 
 #service-logo {
   display: inline-block;
+  text-decoration: none !important;
 }
 
 /* basics
@@ -269,6 +270,11 @@ ul {
   margin-bottom: 20px;
 }
 
+.footer-container {
+  background-color: none;
+  margin-top: 15px;
+}
+
 .spinner {
   background:url("../pics/spinner.gif") no-repeat transparent;
   display:inline-block;
@@ -305,9 +311,13 @@ ul {
 
 #topbar-service-helper {
   display: inline-flex;
-  flex-grow: 1;
+  flex-grow: 0.01;
   margin-bottom: -23px;
   height: max-content;
+}
+
+#topbar-service-helper > a {
+  text-decoration: none !important;
 }
 
 #topbar-language-navigation:before {
@@ -337,7 +347,7 @@ ul {
 }
 
 #service-name {
-  line-height: 50px;
+  line-height: 65px;
   margin: 0px 4px;
 }
 
@@ -618,7 +628,7 @@ ul.dropdown-menu > li:last-child > input {
   font-weight: bold;
 }
 
-.headerbar {
+.headerbar, .footer-container {
   margin: 0 auto;
   position: relative;
   width: 95%;
@@ -1144,7 +1154,7 @@ span.xl-pref-label > img {
 }
 
 .about-content {
-  padding: 0 15px;
+  padding: 15px;
   width: 100%;
 }
 
@@ -2716,7 +2726,7 @@ body, .versal, h1, h2, h3, p, .versal-bold {
 
 @media (min-width: 1520px) {
 
-  .main-container, .headerbar, .topbar {
+  .main-container, .headerbar, .topbar, .footer-container {
     width: 1240px;
   }
 

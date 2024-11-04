@@ -783,7 +783,7 @@ msgid "search_example_text"
 msgstr "Per la ricerca su parole incomplete, usare il simbolo *, come in *animale o *licenza*. Per la parte terminale di una parola, la ricerca completerà la parola inserita anche se il simbolo * non è stato inserito: ad esempio, gatto fornirà gli stessi risultati di gatto*"
 
 msgid "feedback_enter_name_email"
-msgstr ""
+msgstr "Inserisci il tuo nome e indirizzo email se desideri ricevere una risposta diretta. Hai anche la possibilità di inviare il tuo feedback in forma anonima. NB: il feedback riguardante un vocabolario specifico viene inoltrato direttamente al suo amministratore."
 
 msgid "concept_types"
 msgstr ""

@@ -28,7 +28,11 @@
     skosmos:sparqlTimeout 20 ;
     skosmos:httpTimeout 5 ;
     # customize the service name
-    skosmos:serviceName "/DH.arc Vocabularies" ;
+    skosmos:serviceName "/DH.arc Vocabularies"@en, "/DH.arc Vocabularies"@it ;
+    skosmos:serviceNameLong "/DH.arc Vocabularies"@en, "/DH.arc Vocabularies"@it ;
+    skosmos:serviceDescription "A repository of controlled vocabularies created by the Digital Humanities Advanced Research Centre at the University of Bologna. All vocabularies can be browsed online and downloaded."@en ;
+    skosmos:aboutDescription "A repository of controlled vocabularies created by the Digital Humanities Advanced Research Centre at the University of Bologna. All vocabularies can be browsed online and downloaded."@en ;
+    skosmos:feedbackDescription "Contact form for feedback about any of the controlled vocabularies available in the /DH.arc repository."@en ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
     # skosmos:baseHref "http://localhost/Skosmos/" ;
     # interface languages available, and the corresponding system locales
@@ -51,13 +55,13 @@
     # customize the css by adding your own stylesheet
     skosmos:customCss "resource/css/stylesheet.css" ;
     # default email address where to send the feedback
-    skosmos:feedbackAddress "" ;
+    skosmos:feedbackAddress "laurent.fintoni2@unibo.it" ;
     # email address to set as the sender for feedback messages
-    skosmos:feedbackSender "" ;
+    skosmos:feedbackSender "laurent.fintoni2@unibo.it" ;
     # email address to set as the envelope sender for feedback messages
-    skosmos:feedbackEnvelopeSender "" ;
+    skosmos:feedbackEnvelopeSender "laurent.fintoni2@unibo.it" ;
     # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages) 
-    skosmos:uiLanguageDropdown true ;
+    skosmos:uiLanguageDropdown false ;
     # whether to enable the spam honey pot or not, enabled by default
     skosmos:uiHoneypotEnabled true ;
     # default time a user must wait before submitting a form
@@ -67,53 +71,94 @@
 
 # Skosmos vocabularies
 
-:unesco a skosmos:Vocabulary, void:Dataset ;
-    dc:title "UNESCO Thesaurus"@en ;
-    skosmos:shortName "UNESCO";
-    dc:subject :cat_general ;
-    void:uriSpace "http://skos.um.es/unescothes/";
-    skosmos:language "en", "es", "fr", "ru";
-    skosmos:defaultLanguage "en";
-    skosmos:showTopConcepts true ;
-    skosmos:fullAlphabeticalIndex true ;
-    skosmos:groupClass isothes:ConceptGroup ;
-    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    skosmos:sparqlGraph <http://skos.um.es/unescothes/> .
-
-:stw a skosmos:Vocabulary, void:Dataset ;
-    dc:title "STW Thesaurus for Economics"@en ;
-    skosmos:shortName "STW";
-    dc:subject :cat_general ;
-    void:uriSpace "http://zbw.eu/stw/";
-    skosmos:language "en", "de";
-    skosmos:defaultLanguage "de";
-    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    skosmos:sparqlGraph <http://zbw.eu/stw/> .
-
 :ktx a skosmos:Vocabulary, void:Dataset ;
-    dc:title "KNOT test"@en, "KNOT test"@it ;
-    skosmos:shortName "KNOT";
-    dc:subject :cat_general ;
-    void:uriSpace "http://purl.org/knot/taxonomy";
+    dc:title "KNOT Taxonomy"@en, "KNOT Tassonomia"@it;
+    dc:description: "The KNOT Taxonomy is a knowledge organization system developed by the Digital Humanities Advanced Research Center at the University of Bologna as part of the KNOT pilot project. The purpose of this taxonomy is to provide a simple hierarchical classification and definitions for  different types of scholarly digital objects produced by humanities research, such as software, databases, digital platforms, and datasets. In the context of this taxonomy scholarly digital objects are understood as being either collections of structured information (such as datasets) or digital forms that enable interaction with information (software, visualization tools, etc.). The taxonomy is used in the KNOT catalogue and intended to help increase the visibility of the digital objects created by humanities research. Definitions are taken from trusted sources and intended to act as a starting point for classifying these objects within existing research structures."@en,
+    "La tassonomia KNOT è un sistema di organizzazione della conoscenza sviluppato dal Digital Humanities Advanced Research Center dell'Università di Bologna nell'ambito del progetto pilota KNOT. Lo scopo di questa tassonomia è quello di fornire una semplice classificazione gerarchica e definizioni per i diversi tipi di oggetti digitali accademici prodotti dalla ricerca umanistica, come software, database, piattaforme digitali e dataset. Nel contesto di questa tassonomia, per oggetti digitali accademici si intendono sia collezioni di informazioni strutturate (come i dataset) sia forme digitali che consentono l'interazione con le informazioni (software, strumenti di visualizzazione, ecc.). La tassonomia è utilizzata nel catalogo KNOT e mira ad aumentare la visibilità degli oggetti digitali creati dalla ricerca umanistica. Le definizioni sono tratte da fonti attendibili e mirano a fungere da punto di partenza per classificare questi oggetti all'interno delle strutture di ricerca esistenti."@it;
+    skosmos:shortName "KTX";
+    dc:subject :cat_knot ;
+    void:uriSpace "http://purl.org/knot/taxonomy/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/ktx.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/ktx.ttl> .
+
+:kth a skosmos:Vocabulary, void:Dataset ;
+    dc:title "KNOT Technology Thesaurus"@en, "KNOT Thesaurus Tecnologico"@it;
+    dc:description "The KNOT Technology Thesaurus is a knowledge organization system developed by the Digital Humanities Advanced Research Center at the University of Bologna as part of the KNOT pilot project. The purpose of this thesaurus is to provide a hierarchical classification and definitions for a variety of technological concepts related to the research projects and scholarly digital objects catalogued by the KNOT project, such as the formal languages and information architecture used. The thesaurus is used in the KNOT catalogue and intended to help increase the visibility of the digital objects created by humanities research. Definitions are taken from trusted sources and the thesaurus is intended as a starting point to improve and spread authority control records for the technologies used in humanities research."@en, "Il Thesaurus tecnologico KNOT è un sistema di organizzazione della conoscenza sviluppato dal Digital Humanities Advanced Research Center dell'Università di Bologna nell'ambito del progetto pilota KNOT. Lo scopo di questo thesaurus è quello di fornire una classificazione gerarchica e delle definizioni per una serie di concetti tecnologici relativi ai progetti di ricerca e agli scholarly digital objects catalogati dal progetto KNOT, come i linguaggi formali e l'architettura dell'informazione utilizzati. Il thesaurus è utilizzato nel catalogo KNOT e ha lo scopo di aumentare la visibilità degli oggetti digitali creati dalla ricerca umanistica. Le definizioni sono tratte da fonti attendibili e il thesaurus è inteso come punto di partenza per migliorare e diffondere i record di controllo di autorità per le tecnologie utilizzate nella ricerca umanistica."@it;
+  skos:prefLabel "KNOT Technology Thesaurus"@en, "KNOT Thesaurus Tecnologico"@it;
+    skosmos:shortName "KTH";
+    dc:subject :cat_knot ;
+    void:uriSpace "http://purl.org/knot/thesaurus/";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "en";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
     skosmos:conceptSchemesInHierarchy true ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/main/data_model/controlled_vocabularies/ktx_new.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/main/data_model/controlled_vocabularies/ktx_new.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/kth.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/kth.ttl> .
 
 :mtv a skosmos:Vocabulary, void:Dataset ;
-    dc:title "Moro Types test"@en ;
+    dc:title "Controlled vocabulary of Aldo Moro's works types"@en, "Vocabolario controllato delle tipologie delle opere di Aldo Moro"@it ;
+    dc:description "A SKOS controlled vocabulary of the possible document types of Aldo Moro's works."@en ;
     skosmos:shortName "MTV";
-    dc:subject :cat_general ;
+    dc:subject :cat_moro ;
     void:uriSpace "https://www.w3id.org/moro/voc/types/";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "it";
     skosmos:fullAlphabeticalIndex true ;
     skosmos:showTopConcepts false ;
-    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://zenodo.org/records/5653608/files/types.ttl> ;
-    skosmos:sparqlGraph <https://zenodo.org/records/5653608/files/types.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/types.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/types.ttl> .
+
+:mrv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Controlled vocabulary of Aldo Moro's roles"@en ,
+        "Vocabolario controllato dei ruoli di Aldo Moro"@it ;
+    dc:description "A SKOS controlled vocabulary of the possible roles assumed by Aldo Moro during his lifetime."@en ;
+    skosmos:shortName "MRV";
+    dc:subject :cat_moro ;
+    void:uriSpace "https://www.w3id.org/moro/voc/roles/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "it";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/roles.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/roles.ttl> .
+
+:msv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Controlled vocabulary of Aldo Moro's works subjects"@en,
+        "Vocabolario controllato delle tematiche delle opere di Aldo Moro"@it ;
+    dc:description "A SKOS controlled vocabulary of the possible subjects covered in Aldo Moro's works."@en ;
+    skosmos:shortName "MSV";
+    dc:subject :cat_moro ;
+    void:uriSpace "https://www.w3id.org/moro/voc/subjects/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "it";
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl> .
+
+:categories a skos:ConceptScheme;
+    skos:prefLabel "Browse Vocabularies by Project"@en .
+
+:cat_knot a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "KNOT"@en , "KNOT"@it .
+
+:cat_moro a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "National Edition of Aldo Moro's Works"@it , "National Edition of Aldo Moro's Works"@en .

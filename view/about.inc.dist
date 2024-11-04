@@ -1,19 +1,15 @@
 {# This is the template for the about page. You can enter any html here and show different language versions by using the lang value in a twig conditional as demonstrated below. #}
-{% if request.lang == 'fi' %}
+{% if request.lang == 'it' %}
 
-<h4>Tietoja sanastoselaimesta</h4>
-<p>Skosmos on web-pohjainen sanasto ja ontologiaselain.</p>
-<a href="http://github.com/NatLibFi/Skosmos">Skosmos GitHub-repositorio</a>
-{% elseif request.lang == 'sv' %}
-
-<h4>Information</h4>
-<p>Skosmos är en ontologibrowser.</p>
-<a href="http://github.com/NatLibFi/Skosmos">Skosmos på GitHub</a>
+<p>Questo repository fornisce l'accesso a tutti i vocabolari controllati creati dal <a href = "https://centri.unibo.it/dharc/en" target = "_blank"> Digital Humanities Advanced Research Center</a>, Università di Bologna. I vocabolari sono classificati per progetti e possono essere sfogliati (preferibilmente da desktop) utilizzando facilmente una visualizzazione delle gerarchie concettuali o indice alfabetico, nonché scaricato in formati RDF. L'interfaccia di ricerca consente agli utenti di cercare termini in vocabolari specifici o tutti disponibili. </p>
+<p>Il repository usa <a href="http://github.com/NatLibFi/Skosmos" target="_blank">Skosmos</a>, un open source ontology browser svilupatto dalla Biblioteca nazionale della Finlandia, che utilizza SKOS come data model. Puoi visualizzare l'ultima build del repository sul nostro <a href = "https://github.com/laurentfintoni/dharc-skosmos" target = "_blank">GitHub </a>. </p>
+<p>Richieste e suggerimenti possono essere inviati tramite la pagina di feedback. </p>
 
 {% elseif request.lang == 'en' %}
 
-<h4>About</h4>
-<p>Skosmos is a web based open source ontology browser.</p>
-<a href="http://github.com/NatLibFi/Skosmos">Skosmos GitHub repository</a>
+<p>The /DH.arc Vocabularies repository provides access to all controlled vocabularies created by the <a href="https://centri.unibo.it/dharc/en" target="_blank">Digital Humanities Advanced Research Centre</a> at the University of Bologna. Vocabularies are categorized by projects and can be browsed (desktop preferred) easily using a visualisation of the concept hierarchies or alphabetical index as well as downloaded in RDF formats. The search interface enables users to search terms in specific vocabularies or all available.</p>
+<p>The repository uses <a href="http://github.com/NatLibFi/Skosmos" target="_blank">Skosmos</a>, a web based open source ontology browser developed and released by the team at the National Library of Finland, which uses SKOS as the underlying data model. You can view the latest build of the repository on our <a href="https://github.com/laurentfintoni/dharc-skosmos" target="_blank">GitHub</a>.</p>
+<p>Inquiries and suggestions can be sent via the feedback page.</p>
+
 
 {% endif %}
