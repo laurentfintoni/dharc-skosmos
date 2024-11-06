@@ -7,7 +7,7 @@
 
 {% elseif request.lang == 'en' %}
 
-<p>The /DH.arc Vocabularies repository provides access to all controlled vocabularies created by the <a href="https://centri.unibo.it/dharc/en" target="_blank">Digital Humanities Advanced Research Centre</a> at the University of Bologna. Vocabularies are categorized by projects and can be browsed (desktop preferred) easily using a visualisation of the concept hierarchies or alphabetical index as well as downloaded in RDF formats. The search interface enables users to search terms in specific vocabularies or all available.</p>
+<p>The /DH.arc Vocabularies repository provides access to all controlled vocabularies created by the <a href="https://centri.unibo.it/dharc/en" target="_blank">Digital Humanities Advanced Research Centre</a> at the University of Bologna. Vocabularies are categorized by projects and can be easily browsed (desktop preferred) using a visualisation of the concept hierarchies or alphabetical index as well as downloaded in RDF formats. The search interface enables users to search terms in specific vocabularies or all available.</p>
 <p>The repository uses <a href="http://github.com/NatLibFi/Skosmos" target="_blank">Skosmos</a>, a web based open source ontology browser developed and released by the team at the National Library of Finland, which uses SKOS as the underlying data model. You can view the latest build of the repository on our <a href="https://github.com/laurentfintoni/dharc-skosmos" target="_blank">GitHub</a>.</p>
 <p>Inquiries and suggestions can be sent via the feedback page.</p>
 
