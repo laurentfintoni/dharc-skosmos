@@ -28,7 +28,8 @@
     owl:imports skos:, cito:, frbr:, prov:, vann: ;
     owl:versionInfo "2.0" ;
     skos:hasTopConcept hico:InterpretationCriterion, hico:InterpretationType, hico:InterpretationAct;
-    foaf:homepage <https://github.com/marilenadaquino/hico> .
+    foaf:homepage <https://github.com/marilenadaquino/hico> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/marilenadaquino/hico/refs/heads/master/current/hico.owl> .
 
 hico:InterpretationCriterion a owl:Class, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
@@ -196,3 +197,11 @@ rdfs:isDefinedBy a rdf:Property ;
     skos:definition "The defininition of the subject resource."@en ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdf:Resource .
+
+dcat:downloadURL a rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+	rdfs:label "Download URL"@en ;
+	rdfs:comment "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType."@en ;
+    skos:definition "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType."@en ;
+	rdfs:range rdfs:Resource ;
+	rdfs:domain  dcat:Distribution .

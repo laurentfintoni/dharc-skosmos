@@ -8,19 +8,20 @@
 @prefix dct: <http://purl.org/dc/terms/> .  
 
 <https://purl.org/ebr/odi#> a skos:ConceptScheme, owl:Ontology;
-    dct:title "Ontologia dei Destini incrociati di Italo Calvino"@it;
-    rdfs:label "Ontologia dei Destini incrociati di Italo Calvino"@it;
-    skos:prefLabel "Ontologia dei Destini incrociati di Italo Calvino"@it;
+    dct:title "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en;
+    rdfs:label "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en; 
+    skos:prefLabel "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en;
     dct:creator "Enrica Bruno", "Valentina Pasqual", "Francesca Tomasi" ; 
     dct:publisher "/DH.ARC - Digital Humanities Advanced Research Centre"@en, "Dipartimento di Filologia Classica e Italianistica - FICLIT"@it;
-    dct:description "ODI (Ontologia dei Destini incrociati di Italo Calvino) is a conceptualization of Italo Calvino's Il castello dei destini incrociati. ODI modules formalise the edition of the work, the description of the cards - both as artefacts and narrative instances - and the semantic links and narrative relations between cards in each story."@en ;
+    dct:description "ODI (Ontologia dei Destini incrociati di Italo Calvino) is a conceptualization of Italo Calvino's Il castello dei destini incrociati. ODI modules formalise the edition of the work, the description of the cards - both as artefacts and narrative instances - and the semantic links and narrative relations between cards in each story."@en, "ODI (Ontologia dei Destini incrociati di Italo Calvino) è una concettualizzazione di Il castello dei destini incrociati di Italo Calvino. I moduli ODI formalizzano l'edizione dell'opera, la descrizione delle carte - sia come artefatti che come istanze narrative - e i collegamenti semantici e le relazioni narrative tra le carte in ogni racconto."@it ;
     owl:imports skos: ;
     dct:language "English"@en, "Italian"@it ;
     dct:created "2019" ;
     dct:issued "2019-02-01"^^xsd:date ;
     owl:versionInfo "1.0" ;
     skos:hasTopConcept odi:Condition, odi:Dimension, odi:Meaning, odi:Suit, odi:Typology, odi:Person, odi:Place, odi:Storycard, odi:Edition, odi:TarotDeck, odi:DeckCard, odi:Representation ;
-    foaf:homepage <https://odi-documentation.github.io/materials/> .
+    foaf:homepage <https://odi-documentation.github.io/materials/> ;
+    dcat:downloadURL <https://odi-documentation.github.io/materials/static/data/odi.owl> .
 
 odi:Person a owl:Class, skos:Concept ;
     skos:inScheme <https://purl.org/ebr/odi#> ;
@@ -1013,7 +1014,6 @@ odi:isContainedIn a owl:ObjectProperty, skos:Concept ;
     rdfs:range odi:TarotDeck ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-
 owl:inverseOf a rdf:Property ;
      rdfs:label "inverseOf"@en ;
      rdfs:comment "The property that determines that two given properties are inverse."@en ;
@@ -1038,5 +1038,10 @@ rdfs:range a rdf:Property ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdf:Property .
 
-
-
+dcat:downloadURL a rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+	rdfs:label "Download URL"@en ;
+	rdfs:comment "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType."@en ;
+    skos:definition "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType."@en ;
+	rdfs:range rdfs:Resource ;
+	rdfs:domain  dcat:Distribution .
