@@ -1,3 +1,4 @@
+docker-compose.yml
 config.ttl
 build
 vendor

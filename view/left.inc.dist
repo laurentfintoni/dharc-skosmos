@@ -2,9 +2,9 @@
 <div class="welcome-box">
   {% if request.lang == 'it' %}
   <h1>Benvenuto!</h1>
-  <p>Questo repository fornisce accesso a tutti i vocabolari controllati creati dal Digital Humanities Advanced Research Centre presso l'Università di Bologna. Tutti i vocabolari sono basati sul SKOS data model e possono essere consultati (preferibilmente da desktop) e scaricati in formato RDF.</p>
+  <p>Questo sito web fornisce accesso a versioni interoperabili di vocabolari e ontologie controllate create dal Digital Humanities Advanced Research Centre, presso l'Università di Bologna, basate sul modello di dati SKOS. Tutti i file possono essere consultati (preferibilmente da desktop) e scaricati in formati RDF.</p>
   {% elseif request.lang == 'en' %}
   <h1>Welcome to /DH.arc Vocabularies!</h1>
-  <p>This repository provides access to all controlled vocabularies created by the Digital Humanities Advanced Research Centre at the University of Bologna. Vocabularies are based on the SKOS data model and can be browsed (desktop preferred) and downloaded in RDF formats.</p>
+  <p>This website provides access to interoperable versions of controlled vocabularies and ontologies created by the Digital Humanities Advanced Research Centre at the University of Bologna, based on the SKOS data model. All files can be browsed (desktop preferred) and downloaded in RDF formats.</p>
   {% endif %}
 </div>

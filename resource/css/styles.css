@@ -31,7 +31,7 @@
   --gray-900: #474B4F;
   /* Font definitions */
   /* N.B.: Bootstrap 5 sets it to 1rem (16px), while Skosmos had it set to 14px... */
-  --font-size: 14px;
+  --font-size: 16px;
   --font-family: 'Fira Sans', sans-serif;
 }
 
@@ -78,7 +78,7 @@ h6, .h6 { font-size: 12px; }
 }
 
 h2, h3 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 li, td > a {
@@ -104,7 +104,7 @@ h1, .prefLabel, .prefLabelLang, .notation {
 }
 
 .navigation-font {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .topbar a.navigation-font, .topbar span {
