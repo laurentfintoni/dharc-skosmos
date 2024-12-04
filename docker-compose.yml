@@ -40,7 +40,8 @@ services:
       context: .
       dockerfile: dockerfiles/Dockerfile.ubuntu
     ports:
-      - ${SKOSMOS_PORT:-9090}:80
+#     - ${SKOSMOS_PORT:-9090}:80
+      - 8083:80
     depends_on:
       - fuseki
       - fuseki-cache
