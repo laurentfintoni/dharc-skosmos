@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.essepuntato.it/2014/03/fentry#"
+     xml:base="http://www.essepuntato.it/2014/03/fentry"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:frbr="http://purl.org/vocab/frbr/core#"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:sw-vocab-status="http://www.w3.org/2003/06/sw-vocab-status/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:fentry="http://www.essepuntato.it/2014/03/fentry/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:c4o="http://purl.org/spar/c4o/">
+    <owl:Ontology rdf:about="http://www.essepuntato.it/2014/03/fentry">
+        <owl:versionIRI rdf:resource="http://www.essepuntato.it/2014/03/fentry/1.0"/>
+        <owl:imports rdf:resource="http://purl.org/spar/cito/"/>
+        <owl:imports rdf:resource="http://purl.org/spar/fabio"/>
+        <owl:imports rdf:resource="http://purl.org/spar/pro/"/>
+        <owl:imports rdf:resource="http://purl.org/spar/scoro/"/>
+        <owl:imports rdf:resource="http://purl.org/emmedi/hico"/>
+        <dc:creator xml:lang="en">Silvio Peroni</dc:creator>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <rdfs:label xml:lang="en">F Entry Ontology</rdfs:label>
+        <dc:date>2016-12-15</dc:date>
+        <rdfs:comment xml:lang="en">Description of a photograph: metadata and subjects.</rdfs:comment>
+        <dc:description rdf:resource="http://svn.code.sf.net/p/dwellonit/code/FEO/fentry.png"/>
+        <dc:description xml:lang="en">The Scheda F is a document containing metadata describing a photograph having as subject a concrete object (or part of it) or a group of different objects. 
+
+Any Scheda F (F), as well as the photograph (P) it describes and the subjects of such photograph (S), can be described in terms of some entities of the Functional Requirements for Bibliographic Records, i.e., Work (referring to the essence of the object; it applies to F, P and S), Expression (referring to the content of the object; it applies to F and, P), Manifestation (referring to the format of the object; it applies to P and S) and Item (referring to the physical location of the object; it applies to F, P and S). All these objects, i.e., the Scheda F, the photograph and the related object portrayed, are subject to authorial attribution as result of some production activity involving someone.
+
+Exemples of [usage](http://svn.code.sf.net/p/dwellonit/code/FEO/examples.html) of this ontology as well as exemplar [SPARQL queries](http://svn.code.sf.net/p/dwellonit/code/FEO/sparql.html) are available online.</dc:description>
+        <dc:creator>Marilena Daquino</dc:creator>
+        <dc:title xml:lang="en">F Entry (Scheda F) Ontology
+FEO</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonthYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gMonthYear"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasManifestation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/fabio/hasManifestation"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasPortrayal -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/fabio/hasPortrayal"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#exemplar -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#exemplar"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#partOf"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#subject -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#subject"/>
+    
+
+
+    <!-- http://www.essepuntato.it/2014/03/fentry/describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2014/03/fentry/describes">
+        <owl:inverseOf rdf:resource="http://www.essepuntato.it/2014/03/fentry/isDescribedBy"/>
+        <rdfs:domain rdf:resource="http://www.essepuntato.it/2014/03/fentry/FEntry"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2014/03/fentry/Shot"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Expression"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/spar/fabio/hasRepresentation"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Item"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#subjectOf"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Item"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/spar/fabio/isPortrayalOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Manifestation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#embodimentOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Shot"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Manifestation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#exemplar"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Item"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#subjectOf"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Work"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/spar/fabio/hasPortrayal"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/spar/fabio/Item"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#subjectOf"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/fabio/Item"/>
+                                    <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Object"/>
+                                    <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Place"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#subjectOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">It allows one to link a Scheda F to the photograph and the portrayed object the Scheda F describes.</rdfs:comment>
+        <rdfs:label>describes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2014/03/fentry/isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2014/03/fentry/isDescribedBy">
+        <rdfs:comment xml:lang="en">It allows one to link a photograph and portrayed object to the scheda F that describes them.</rdfs:comment>
+        <rdfs:label xml:lang="en">is described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generated -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#generated"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#endedAtTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#startedAtTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#startedAtTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/fabio/Item -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Item"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Manifestation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Manifestation"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Work -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Work"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#ResponsibleEntity -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
+    
+
+
+    <!-- http://www.essepuntato.it/2014/03/fentry/FEntry -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2014/03/fentry/FEntry">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/EntityMetadata"/>
+        <rdfs:comment xml:lang="en">It is a document containing metadata about a photograph and about the concrete object portrayed by the photograph.</rdfs:comment>
+        <rdfs:label xml:lang="it">scheda F</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2014/03/fentry/Photograph -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2014/03/fentry/Photograph">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/StillImage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#subject"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/AnalogItem"/>
+                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Object"/>
+                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Place"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/fabio/ItemCollection"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#part"/>
+                                        <owl:allValuesFrom rdf:resource="http://purl.org/spar/fabio/AnalogItem"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
+                <owl:allValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Shot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It is a static, visual representation of some concrete object (or part of it) or a group of different objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">photograph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2014/03/fentry/Shot -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2014/03/fentry/Shot">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#embodiment"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/fabio/AnalogManifestation"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/fabio/DigitalManifestation"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#exemplar"/>
+                                        <owl:allValuesFrom rdf:resource="http://purl.org/spar/fabio/ComputerFile"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realizationOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.essepuntato.it/2014/03/fentry/Photograph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The realisation of a photograph - it is strictly related with the act of taking the picture by someone.</rdfs:comment>
+        <rdfs:label xml:lang="en">shot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
