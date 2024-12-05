@@ -1,44 +1,79 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.essepuntato.it/2014/03/fentry#"
      xml:base="http://www.essepuntato.it/2014/03/fentry"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:fabio="http://purl.org/spar/fabio/"
-     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:frbr="http://purl.org/vocab/frbr/core#"
-     xmlns:skos1="http://www.w3.org/2008/05/skos#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:sw-vocab-status="http://www.w3.org/2003/06/sw-vocab-status/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:fentry="http://www.essepuntato.it/2014/03/fentry/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:c4o="http://purl.org/spar/c4o/">
+     xmlns:c4o="http://purl.org/spar/c4o/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:frbr="http://purl.org/vocab/frbr/core#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:fentry="http://www.essepuntato.it/2014/03/fentry/"
+     xmlns:sw-vocab-status="http://www.w3.org/2003/06/sw-vocab-status/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.essepuntato.it/2014/03/fentry">
         <owl:versionIRI rdf:resource="http://www.essepuntato.it/2014/03/fentry/1.0"/>
-        <owl:imports rdf:resource="http://purl.org/spar/cito/"/>
+        <owl:imports rdf:resource="http://purl.org/emmedi/hico"/>
         <owl:imports rdf:resource="http://purl.org/spar/fabio"/>
+        <owl:imports rdf:resource="http://purl.org/spar/cito/"/>
         <owl:imports rdf:resource="http://purl.org/spar/pro/"/>
         <owl:imports rdf:resource="http://purl.org/spar/scoro/"/>
-        <owl:imports rdf:resource="http://purl.org/emmedi/hico"/>
+        <dc:creator>Marilena Daquino</dc:creator>
         <dc:creator xml:lang="en">Silvio Peroni</dc:creator>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
-        <rdfs:label xml:lang="en">F Entry Ontology</rdfs:label>
         <dc:date>2016-12-15</dc:date>
-        <rdfs:comment xml:lang="en">Description of a photograph: metadata and subjects.</rdfs:comment>
         <dc:description rdf:resource="http://svn.code.sf.net/p/dwellonit/code/FEO/fentry.png"/>
         <dc:description xml:lang="en">The Scheda F is a document containing metadata describing a photograph having as subject a concrete object (or part of it) or a group of different objects. 
 
 Any Scheda F (F), as well as the photograph (P) it describes and the subjects of such photograph (S), can be described in terms of some entities of the Functional Requirements for Bibliographic Records, i.e., Work (referring to the essence of the object; it applies to F, P and S), Expression (referring to the content of the object; it applies to F and, P), Manifestation (referring to the format of the object; it applies to P and S) and Item (referring to the physical location of the object; it applies to F, P and S). All these objects, i.e., the Scheda F, the photograph and the related object portrayed, are subject to authorial attribution as result of some production activity involving someone.
 
 Exemples of [usage](http://svn.code.sf.net/p/dwellonit/code/FEO/examples.html) of this ontology as well as exemplar [SPARQL queries](http://svn.code.sf.net/p/dwellonit/code/FEO/sparql.html) are available online.</dc:description>
-        <dc:creator>Marilena Daquino</dc:creator>
         <dc:title xml:lang="en">F Entry (Scheda F) Ontology
 FEO</dc:title>
+        <rdfs:comment xml:lang="en">Description of a photograph: metadata and subjects.</rdfs:comment>
+        <rdfs:label xml:lang="en">F Entry Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -94,9 +129,39 @@ FEO</dc:title>
     
 
 
+    <!-- http://purl.org/spar/fabio/hasRepresentation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/fabio/hasRepresentation"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/isPortrayalOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/fabio/isPortrayalOf"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#embodiment -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#embodiment"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#embodimentOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#embodimentOf"/>
+    
+
+
     <!-- http://purl.org/vocab/frbr/core#exemplar -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#exemplar"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#part -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#part"/>
     
 
 
@@ -106,9 +171,27 @@ FEO</dc:title>
     
 
 
+    <!-- http://purl.org/vocab/frbr/core#realization -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#realization"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#realizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#realizationOf"/>
+    
+
+
     <!-- http://purl.org/vocab/frbr/core#subject -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#subject"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#subjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#subjectOf"/>
     
 
 
@@ -282,9 +365,51 @@ FEO</dc:title>
     
 
 
+    <!-- http://purl.org/spar/fabio/AnalogItem -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/AnalogItem"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/AnalogManifestation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/AnalogManifestation"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/ComputerFile -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/ComputerFile"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/DigitalManifestation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/DigitalManifestation"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/EntityMetadata -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/EntityMetadata"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Expression -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Expression"/>
+    
+
+
     <!-- http://purl.org/spar/fabio/Item -->
 
     <owl:Class rdf:about="http://purl.org/spar/fabio/Item"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/ItemCollection -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/ItemCollection"/>
     
 
 
@@ -294,9 +419,27 @@ FEO</dc:title>
     
 
 
+    <!-- http://purl.org/spar/fabio/StillImage -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/StillImage"/>
+    
+
+
     <!-- http://purl.org/spar/fabio/Work -->
 
     <owl:Class rdf:about="http://purl.org/spar/fabio/Work"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Object -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Object"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Place -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Place"/>
     
 
 
@@ -399,5 +542,5 @@ FEO</dc:title>
 
 
 
-<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
