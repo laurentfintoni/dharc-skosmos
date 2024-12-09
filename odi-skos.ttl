@@ -83,6 +83,7 @@ odi:Chapter a owl:Class, skos:Concept ;
     skos:definition "Is a chapter of the book that contains a story."@en,
         "È un capitolo del libro che contiene una storia."@it ;
     skos:broader odi:Edition ;
+    skos:narrower odi:Story ; 
     rdfs:subClassOf odi:Edition .
 
 odi:Story a owl:Class, skos:Concept ;
@@ -122,6 +123,7 @@ odi:Edition a owl:Class, skos:Concept ;
         "È l'edizione del libro presa come riferimento."@it ;
     skos:definition "It is the edition of the book taken as a reference."@en,
         "È l'edizione del libro presa come riferimento."@it ;
+    skos:narrower odi:Chapter, odi:PublishingHouse ;
     rdfs:subClassOf owl:Thing .
 
 odi:InanimateObject a owl:Class, skos:Concept ;
@@ -173,6 +175,7 @@ odi:Representation a owl:Class, skos:Concept ;
         "La rappresentazione di una carta."@it;
     skos:definition         "The representation of a card."@en,
         "La rappresentazione di una carta."@it;
+    skos:narrower odi:Event, odi:FictionalPlace, odi:Symbol, odi:Character, odi:InanimateObject ;
     rdfs:subClassOf owl:Thing .
 
 odi:Character a owl:Class, skos:Concept ;
