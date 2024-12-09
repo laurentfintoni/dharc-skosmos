@@ -65,6 +65,7 @@ fentry:describes a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://www.essepuntato.it/2014/03/fentry/> ;
     rdfs:label "describes"@en ;
     skos:prefLabel "describes"@en ;
+    rdfs:comment "It allows one to link a Scheda F to the photograph and the portrayed object the Scheda F describes."@en ;
     skos:definition "It allows one to link a Scheda F to the photograph and the portrayed object the Scheda F describes."@en ;
     rdfs:domain fentry:FEntry ;
     rdfs:range fentry:shot, fentry:photograph ;
