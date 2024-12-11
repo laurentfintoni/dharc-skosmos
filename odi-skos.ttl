@@ -1042,6 +1042,14 @@ rdfs:range a rdf:Property ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdf:Property .
 
+rdfs:subClassOf a rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	rdfs:label "subClassOf" ;
+	rdfs:comment "The subject is a subclass of a class." ;
+    skos:definition "The subject is a subclass of a class." ;
+	rdfs:range rdfs:Class ;
+	rdfs:domain rdfs:Class .
+
 dcat:downloadURL a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
 	rdfs:label "Download URL"@en ;

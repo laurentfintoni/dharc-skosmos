@@ -286,8 +286,8 @@ odi:arrivesAt a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://purl.org/ebr/odi#> ;
     rdfs:label "Arrives at"@en,
         "Arriva a"@it ;
-    skos:prefLabel "Condition"@en,
-        "Condizione"@it ;
+    skos:prefLabel "Arrives at"@en,
+        "Arriva a"@it ;
     rdfs:comment "It means that a main character arrives at a place in his story."@en,
         "Significa che un protagonista arriva in un luogo nella sua storia."@it ;
     skos:definition "It means that a main character arrives at a place in his story."@en,
