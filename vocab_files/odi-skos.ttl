@@ -902,3 +902,9 @@ rdfs:subClassOf a rdf:Property ;
     skos:definition "The subject is a subclass of a class." ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdfs:Class .
+
+owl:Class a rdfs:Class ;
+     rdfs:label "Class" ;
+     rdfs:comment "The class of OWL classes." ;
+     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
+     rdfs:subClassOf rdfs:Class . 
