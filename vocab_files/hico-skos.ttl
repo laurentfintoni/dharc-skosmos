@@ -65,19 +65,7 @@ hico:InterpretationAct a owl:Class, skos:Concept ;
     rdfs:comment "The hermeneutical activity performed by an agent in order to generate new information (e.g. an artwork attribution)."@en ;
     rdfs:comment "L'attività ermeneutica svolta da un agente per proporre un'asserzione (e.g. attribuzione di un'opera d'arte)."@it ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/emmedi/hico/hasInterpretationType> ;
-            owl:someValuesFrom <http://purl.org/emmedi/hico/InterpretationType> ],
-        [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/emmedi/hico/isExtractedFrom> ;
-            owl:someValuesFrom frbr:Expression ],
-        [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf <http://www.w3.org/TR/prov-o/#wasGeneratedBy> ] ;
-            owl:someValuesFrom owl:Thing ],
-        [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/emmedi/hico/hasInterpretationCriterion> ;
-            owl:someValuesFrom <http://purl.org/emmedi/hico/InterpretationCriterion> ],
-        prov:Activity .
+    rdfs:subClassOf prov:Activity .
 
 hico:hasInterpretationCriterion a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
