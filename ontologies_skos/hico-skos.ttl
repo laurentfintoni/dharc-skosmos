@@ -100,8 +100,7 @@ hico:isExtractedFrom a owl:ObjectProperty, skos:Concept ;
     rdfs:comment "LA relazione tra l'atto interpretativo e la fonte (primaria o secondaria) da cui l'asserzione è estratta."@it ;
     rdfs:domain hico:InterpretationAct ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
-    rdfs:subPropertyOf prov:wasInfluencedBy ;
-    skos:broader prov:wasInfluencedBy .
+    rdfs:subPropertyOf prov:wasInfluencedBy .
 
 cito:cites a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
@@ -235,6 +234,13 @@ rdfs:subClassOf a rdf:Property ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdfs:Class .
 
+rdfs:subPropertyOf a rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	rdfs:label "subPropertyOf" ;
+	rdfs:comment "The subject is a subproperty of a property." ;
+	rdfs:range rdf:Property ;
+	rdfs:domain rdf:Property .
+
 dcat:downloadURL a rdf:Property ;
     rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
     rdfs:label "download URL"@en, "URL di scarico"@it ;
@@ -252,5 +258,11 @@ owl:Class a rdfs:Class ;
 owl:ObjectProperty a rdfs:Class ;
      rdfs:label "ObjectProperty" ;
      rdfs:comment "The class of object properties." ;
+     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
+     rdfs:subClassOf rdf:Property . 
+
+owl:DatatypeProperty a rdfs:Class ;
+     rdfs:label "DatatypeProperty" ;
+     rdfs:comment "The class of data properties." ;
      rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
      rdfs:subClassOf rdf:Property . 
