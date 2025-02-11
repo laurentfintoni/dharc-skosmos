@@ -22,15 +22,15 @@
   dct:license <https://creativecommons.org/licenses/by-sa/4.0/>;
   dct:language "English"@en, "Italiano"@it ;
   dct:issued "2023-06-15"^^xsd:date ;
-  dct:modified "2024-10-24"^^xsd:date ;
+  dct:modified "2025-02-10"^^xsd:date ;
   skos:hasTopConcept ktx:corpus, ktx:database, ktx:dataset, 
     ktx:digital_archive, ktx:digital_catalogue, ktx:digital_edition,
     ktx:digital_library, ktx:digital_platform, ktx:digital_repository,
     ktx:knowledge_base, ktx:knowledge_graph, ktx:ontology, ktx:controlled_vocabulary,
     ktx:software, ktx:endpoint ;
   owl:imports <http://www.w3.org/2004/02/skos/core#> ;
-  owl:versionInfo "1.2" ;
-  skos:editorialNote "Updated purl URI to function with Skosmos. Updated description. Added dct:language and rdfs:label to conceptscheme."@en .
+  owl:versionInfo "1.3" ;
+  skos:editorialNote "Updated LOC urls to URIs to correctly display in related box. Adjusted objects of mapping properties to be more consistent in usage of closeMatch and relatedMatch based on SKOS documentation. Adjusted irregular use of capitalisation. Added alt labels for plurals."@en .
 
 ktx:corpus a skos:Concept;
   skos:definition "A corpus is a type of digital collection in the form of a structured set of text resources, and potential attached metadata, electronically stored and processed and intended for use in linguistic analysis."@en,
@@ -38,10 +38,11 @@ ktx:corpus a skos:Concept;
   dct:source "“ACDH-CH/DARIAH Vocabularies: Dhataxonomy: Corpus.” n.d. Oeaw.ac.at. Accessed June 20, 2023. https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept39.01."@en;
   skos:example "The corpus created as part of the ALCIDE (Analysis of Language and Content In a Digital Environment) project, https://github.com/StefanoMenini/De-Gasperi-s-Corpus."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept39.01>;
-  skos:relatedMatch <http://vocab.getty.edu/page/aat/300311737>, <https://id.loc.gov/authorities/subjects/sh2006006393.html>;
+  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept39.01>, <http://id.loc.gov/authorities/subjects/sh2006006393>, <http://www.wikidata.org/entity/Q461183>;
+  skos:relatedMatch <http://vocab.getty.edu/aat/300311737>;
   skos:related ktx:dataset;
-  skos:prefLabel "Corpus"@en, "Corpus"@it;
+  skos:prefLabel "corpus"@en, "corpus"@it;
+  skos:altLabel "corpora"@en, "corpora"@it; 
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:database a skos:Concept;
@@ -49,11 +50,11 @@ ktx:database a skos:Concept;
   dct:source "“Art & Architecture Thesaurus Full Record Display (Getty Research).” n.d. Getty.edu. Accessed June 20, 2023. http://vocab.getty.edu/page/aat/300028543."@en;
   skos:example "The Epigraphic Database Vernacular project from the University of Roma Sapienza, http://www.edvcorpus.com/wp/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <http://vocab.getty.edu/page/aat/300028543>, <https://id.loc.gov/authorities/subjects/sh86007767.html>;
-  skos:relatedMatch <https://w3id.org/cerif/vocab/OutputTypes#Researchdatasetsanddatabases> ;
+  skos:closeMatch <http://vocab.getty.edu/aat/300028543>, <http://id.loc.gov/authorities/subjects/sh86007767>, <http://www.wikidata.org/entity/Q8513>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#Researchdatasetsanddatabases> ;
   skos:related ktx:knowledge_base, ktx:knowledge_graph;
-  skos:altLabel "DB"@en;
-  skos:prefLabel "Database"@en, "Banca Dati"@it;
+  skos:altLabel "DB"@en, "databases"@en, "data bases"@en;
+  skos:prefLabel "database"@en, "banca dati"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/>;
   skos:narrower ktx:image_database .
 
@@ -62,10 +63,10 @@ ktx:image_database a skos:Concept;
     "Un tipo di database in cui i dati raccolti, indicizzati e resi disponibili agli utenti sono immagini."@it;
   skos:example "The Medieval Kingdom of Sicily Image Database project from Duke University, https://kos.aahvs.duke.edu/."@en;
   skos:broader ktx:database;
-  skos:closeMatch <http://vocab.getty.edu/page/aat/300237774>, <https://id.loc.gov/authorities/subjects/sh86007767.html>;
-  skos:relatedMatch <https://w3id.org/cerif/vocab/OutputTypes#Researchdatasetsanddatabases>;
-  skos:altLabel "Image DB"@en;
-  skos:prefLabel "Image Database"@en, "Banca Dati di Immagini"@it;
+  skos:closeMatch <http://vocab.getty.edu/aat/300237774>, <http://id.loc.gov/authorities/subjects/sh86007767>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#Researchdatasetsanddatabases>;
+  skos:altLabel "image DB"@en, "image databases"@en;
+  skos:prefLabel "image database"@en, "banca dati di immagini"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:dataset a skos:Concept;
@@ -74,11 +75,11 @@ ktx:dataset a skos:Concept;
   dct:source "“Definition of DATASET.” n.d. Merriam-webster.com. Accessed June 20, 2023. https://www.merriam-webster.com/dictionary/dataset. “Dataset.” n.d. Cambridge.org. Accessed June 20, 2023. https://dictionary.cambridge.org/dictionary/english/dataset. Albertoni, Riccardo. n.d. “Data Catalog Vocabulary (DCAT) - Version 2.” Www.w3.org. Accessed June 19, 2023. https://www.w3.org/TR/vocab-dcat-2/."@en;
   skos:example "The Zeri Photo Archive RDF dataset created as part of the Zeri & LODE project at the University of Bologna, http://data.fondazionezeri.unibo.it/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <https://w3id.org/cerif/vocab/OutputTypes#Researchdatasetsanddatabases>,
-    <https://id.loc.gov/authorities/subjects/sh2018002256.html>;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh2018002256>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/OutputTypes#Researchdatasetsanddatabases>;
   skos:related ktx:corpus;
-  skos:altLabel "Data set"@en;
-  skos:prefLabel "Dataset"@en, "Dataset"@it;
+  skos:altLabel "data set"@en, "datasets"@en;
+  skos:prefLabel "dataset"@en, "dataset"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:digital_archive a skos:Concept;
@@ -86,8 +87,10 @@ ktx:digital_archive a skos:Concept;
   dct:source "Valacchi, Federico. 2012. “Tra cartaceo e digitale: gestione e conservazione degli archivi degli enti pubblici”. “Soprintendenza archivistica e bibliografica della Lombardia.” n.d. Gov.it. Accessed June 20, 2023. https://sab-lom.cultura.gov.it/conoscere-archivi-e-biblioteche. “Linee Guida sulla formazione, Allegato 1. al documento, and Gestione e. Conservazione Dei informatici”. n.d. “Glossario Dei Termini e Degli Acronimi.” Gov.It. Accessed June 20, 2023. https://www.agid.gov.it/sites/default/files/repository_files/allegato_1_glossario_dei_termini_e_degli_acronimi.pdf."@it, "Morris, Sammie L. 2009. “An Introduction to Archives for Librarians.” https://docs.lib.purdue.edu/lib_research/103/."@en;
   skos:example "The Archivio della Latinità Italiana del Medioevo project hosted by the University of Siena, http://alim.unisi.it/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:relatedMatch <https://id.loc.gov/authorities/subjects/sh85006913.html>, <http://vocab.getty.edu/page/aat/300379430>;
-  skos:prefLabel "Digital Archive"@en, "Archivio Digitale"@it;
+  skos:closeMatch  <http://vocab.getty.edu/aat/300379430>;
+  skos:relatedMatch <http://id.loc.gov/authorities/subjects/sh85006913>;
+  skos:prefLabel "digital archive"@en, "archivio digitale"@it;
+  skos:altLabel "digital archives"@en, "archivi digitali"@it ; 
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:digital_catalogue a skos:Concept;
@@ -96,8 +99,9 @@ ktx:digital_catalogue a skos:Concept;
   dct:source "“Catalogue.” n.d. Wikidata.org. Accessed June 20, 2023. https://www.wikidata.org/wiki/Q2352616. “Digital Catalogues Study.” 2019. Github.Io. November 6, 2019. https://digpublishing.github.io/catalogues-study/."@en ;
   skos:example "The Catalogue of Digital Editions project led by Greta Franzini, https://dig-ed-cat.acdh.oeaw.ac.at/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:relatedMatch <http://vocab.getty.edu/page/aat/300026614>, <https://id.loc.gov/authorities/subjects/sh85020898.html>;
-  skos:prefLabel "Digital Catalogue"@en, "Catalogo Digitale"@it;
+  skos:relatedMatch <http://vocab.getty.edu/aat/300026614>, <http://id.loc.gov/authorities/subjects/sh85020898>;
+  skos:prefLabel "digital catalogue"@en, "catalogo digitale"@it;
+  skos:altLabel "digital catalogues"@en, "cataloghi digitali"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:digital_edition a skos:Concept;
@@ -107,19 +111,20 @@ ktx:digital_edition a skos:Concept;
   skos:example "The Vercelli Book Digitale project by the University of Turin, http://vbd.humnet.unipi.it/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
   skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept42>;
-  skos:relatedMatch <https://w3id.org/cerif/vocab/OutputTypes#ScholarlyEdition>;
-  skos:altLabel "Scholarly Digital Edition"@en;
-  skos:prefLabel "Digital Edition"@en, "Edizione Critica Digitale"@it;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/OutputTypes#ScholarlyEdition>;
+  skos:altLabel "scholarly digital edition"@en, "digital editions"@en, "edizioni critiche digitali"@it;
+  skos:prefLabel "digital edition"@en, "edizione critica digitale"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/>;
   skos:narrower ktx:semantic_digital_edition .
 
 ktx:semantic_digital_edition a skos:Concept;
   skos:definition "A type of scholarly digital edition that employs and centers semantic web technologies (such as RDF) in its methods, for example by enabling a user to navigate its contents based on relationships between entities or concepts."@en,
     "Un tipo di edizione critica digitale che impiega e centra le tecnologie del web semantico (come RDF) nei suoi metodi, ad esempio consentendo a un utente di navigare nei suoi contenuti in base a relazioni tra entità o concetti."@it;
-  skos:example "Tje Paolo Bufalini's Notebook project by the University of Bologna, http://projects.dharc.unibo.it/bufalini-notebook/."@en;
+  skos:example "The Paolo Bufalini's Notebook project by the University of Bologna, http://projects.dharc.unibo.it/bufalini-notebook/."@en;
   skos:broader ktx:digital_edition;
-  skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept59>;
-  skos:prefLabel "Semantic Digital Edition"@en, "Edizione Critica Digitale Semantica"@it;
+  skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept42>;
+  skos:altLabel "semantic digital editions"@en ;
+  skos:prefLabel "semantic digital edition"@en, "edizione critica digitale semantica"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:digital_library a skos:Concept;
@@ -128,8 +133,9 @@ ktx:digital_library a skos:Concept;
   dct:source "Mazzitelli, Gabriele. 2007. Che cos’è una biblioteca."@it, "Lynch, Clifford, and Hector Garcia-Molina. 1995. “Interoperability, Scaling, and the Digital Libraries Research Agenda.” Nitrd.gov. 1995. https://www.nitrd.gov/PUBS/iita-dlw/IITA_Digital_Libraries_Workshop.pdf. Graham, Wayne. 1998. “CLIR Issues Number 4.” CLIR. July 13, 1998. https://www.clir.org/1998/07/clir-issues-number-4/. Borgman, Christine L. 1999. “What are digital libraries? Competing visions.” Information Processing & Management, 35, 227-243. 1999. https://escholarship.org/uc/item/7c55m1xf. ALA Library. 2016. “LibGuides: Definition of a Library: General Definition.” https://libguides.ala.org/library-definition."@en, "“Soprintendenza archivistica e bibliografica della Lombardia.” n.d. Gov.it. Accessed June 20, 2023. https://sab-lom.cultura.gov.it/conoscere-archivi-e-biblioteche."@it;
   skos:example "The Biblioteca Italiana project hosted by the University of Roma Sapienza, http://www.bibliotecaitaliana.it/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <http://vocab.getty.edu/page/aat/300391336>, <https://id.loc.gov/authorities/subjects/sh95008857.html>;
-  skos:prefLabel "Digital Library"@en, "Biblioteca Digitale"@it;
+  skos:closeMatch <http://vocab.getty.edu/aat/300391336>, <http://id.loc.gov/authorities/subjects/sh95008857>;
+  skos:prefLabel "digital library"@en, "biblioteca digitale"@it;
+  skos:altLabel "digital libraries"@en, "biblioteche digitali"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/>;
   skos:narrower ktx:digital_collection .
 
@@ -139,8 +145,9 @@ ktx:digital_collection a skos:Concept;
   dct:source "“Reicat/Parte I/Capitolo 1/1.5/1.5.4.” n.d. Sbn.it. Accessed June 20, 2023. https://norme.iccu.sbn.it/index.php?title=Reicat/Parte_I/Capitolo_1/1.5/1.5.4#1.5.4.1."@it, "Glushko, Robert J. n.d. The Discipline of Organizing: 4th Professional Edition. University of California, Berkeley. Accessed June 20, 2023."@en;
   skos:example "The collections within the ALIM project, http://alim.unisi.it/collection/collezione-asiatica/."@en;
   skos:broader ktx:digital_library;
-  skos:relatedMatch <http://vocab.getty.edu/page/aat/300443858>;
-  skos:prefLabel "Digital Collection"@en, "Collezione Digitale"@it;
+  skos:relatedMatch <http://vocab.getty.edu/aat/300443858>;
+  skos:prefLabel "digital collection"@en, "collezione digitale"@it;
+  skos:altLabel "digital collections"@en, "collezioni digitali"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:digital_platform a skos:Concept;
@@ -150,9 +157,9 @@ ktx:digital_platform a skos:Concept;
   skos:example "The Carte d'Autore project from the University of Florence, https://www.cartedautore.it/, and the ALCIDE (Analysis of Language and Content In a Digital Environment) project from DH@FBK, https://alcidedigitale.fbk.eu/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
   skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#ResearchTool>,
-    <https://id.loc.gov/authorities/subjects/sh99005116.html>;
-  skos:altLabel "Web Portal"@en;
-  skos:prefLabel "Digital Platform"@en, "Piattaforma Digitale"@it;
+    <http://id.loc.gov/authorities/subjects/sh99005116>;
+  skos:altLabel "web portal"@en, "digital platforms"@en, "piattaforme digitale"@it;
+  skos:prefLabel "digital platform"@en, "piattaforma digitale"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/>;
   skos:narrower ktx:crowdsourcing_platform, ktx:multimedia_platform,
     ktx:research_platform, ktx:storytelling_platform .
@@ -163,7 +170,8 @@ ktx:crowdsourcing_platform a skos:Concept;
   skos:example "The project VinKo (Varietà in Contatto) from the Universities of Verona, Trento, and Bolzano, https://www.vinko.it/index.php."@en;
   skos:broader ktx:digital_platform;
   skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept54>;
-  skos:prefLabel "Crowdsourcing Platform"@en, "Piattaforma Crowdsourcing"@it;
+  skos:prefLabel "crowdsourcing platform"@en, "piattaforma di crowdsourcing"@it;
+  skos:altLabel "crowdsourcing platforms"@en, "piattaforme di crowdsourcing"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:multimedia_platform a skos:Concept;
@@ -171,7 +179,8 @@ ktx:multimedia_platform a skos:Concept;
     "Una tipologia di piattaforma digitale caratterizzata dall'uso e l'editing di vari tipi di media per creare nuovi oggetti digitali."@it;
   skos:example "The eTalks project from the Swiss Institute of Bioinformatics, https://etalk.vital-it.ch/."@en;
   skos:broader ktx:digital_platform;
-  skos:prefLabel "Multimedia Platform"@en, "Piattaforma Multimedia"@it;
+  skos:prefLabel "multimedia Platform"@en, "piattaforma di multimedia"@it;
+  skos:altLabel "multimedia Platform"@en, "piattaforma di multimedia"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:research_platform a skos:Concept;
@@ -181,7 +190,8 @@ ktx:research_platform a skos:Concept;
   skos:example "The Sandrart.net project from the University of Frankfurt, http://www.sandrart.net/en/."@en;
   skos:broader ktx:digital_platform;
   skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#ResearchTool>;
-  skos:prefLabel "Research Platform"@en, "Piattaforma di Ricerca"@it;
+  skos:prefLabel "research platform"@en, "piattaforma di ricerca"@it;
+  skos:altLabel "research platforms"@en, "piattaforme di ricerca"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:storytelling_platform a skos:Concept;
@@ -189,7 +199,8 @@ ktx:storytelling_platform a skos:Concept;
     "Una tipologia di piattaforma digitale caratterizzata dall'utilizzo dello storytelling come mezzo per esprimere e rendere disponibili i risultati della ricerca. Tecnologie e pratiche digitali e vari formati multimediali vengono utilizzati per creare un'interfaccia con cui guidare la narrazione e/o consentire agli utenti di creare la propria storia dai dati e dagli strumenti. Una piattaforma di storytelling deve utilizzare almeno un formato digitale e uno strumento o servizio."@it;
   skos:example "The Memorie di Guerra project from the Universities of Pisa and Siena, http://www.memoriediguerra.it/site, and the Atlante Calvino project from the University of Geneve and the Polytechnic University of Milan, https://atlantecalvino.unige.ch/."@en;
   skos:broader ktx:digital_platform;
-  skos:prefLabel "Storytelling Platform"@en, "Piattaforma Narrativa"@it;
+  skos:prefLabel "storytelling platform"@en, "piattaforma narrativa"@it;
+  skos:altLabel "storytelling platforms"@en, "piattaforme narrative"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:digital_repository a skos:Concept;
@@ -198,10 +209,9 @@ ktx:digital_repository a skos:Concept;
   dct:source "Gibbons, Susan. 2009. “Chapter 2: Defining an Institutional Repository.” Library Technology Reports 40 (4): 6–10. https://journals.ala.org/index.php/ltr/article/view/4378"@en;
   skos:example "The mappaopendata project from the University of Pisa, http://mappaproject.arch.unipi.it/mod/Index.php."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <http://vocab.getty.edu/page/aat/300419319>;
-  skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept43>;
-  skos:altLabel "Repo"@en;
-  skos:prefLabel "Digital Repository"@en, "Digital Repository"@it;
+  skos:closeMatch <http://vocab.getty.edu/aat/300419319>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept43>;
+  skos:altLabel "repo"@en, "digital repositories"@en;
+  skos:prefLabel "digital repository"@en, "digital repository"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:knowledge_base a skos:Concept;
@@ -212,8 +222,8 @@ ktx:knowledge_base a skos:Concept;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
   skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.04>;
   skos:related ktx:database, ktx:knowledge_graph;
-  skos:altLabel "KB"@en;
-  skos:prefLabel "Knowledge Base"@en, "Knowledge Base"@it;
+  skos:altLabel "KB"@en, "knowledge bases"@en;
+  skos:prefLabel "knowledge base"@en, "knowledge base"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:knowledge_graph a skos:Concept;
@@ -224,8 +234,8 @@ ktx:knowledge_graph a skos:Concept;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
   skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.04>;
   skos:related ktx:database, ktx:knowledge_base;
-  skos:altLabel "KG"@en;
-  skos:prefLabel "Knowledge Graph"@en, "Knowledge Graph"@it;
+  skos:altLabel "KG"@en, "knowledge graphs"@en;
+  skos:prefLabel "knowledge graph"@en, "knowledge graph"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:ontology a skos:Concept;
@@ -234,9 +244,10 @@ ktx:ontology a skos:Concept;
   dct:source "Guarino, Nicola, Daniel Oberle, and Steffen Staab. 2009. “What Is an Ontology?” In Handbook on Ontologies, 1–17. Berlin, Heidelberg: Springer Berlin Heidelberg."@en;
   skos:example "The ArCo ontology produced by the University of Bologna, http://wit.istc.cnr.it/arco/index.php?lang=en."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.02>, <http://vocab.getty.edu/page/aat/300266741>,
-    <https://id.loc.gov/authorities/subjects/sh2005006014.html>;
-  skos:prefLabel "Ontology"@en, "Ontologia"@it;
+  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.02>, <http://vocab.getty.edu/aat/300266741>,
+    <http://id.loc.gov/authorities/subjects/sh2005006014>;
+  skos:prefLabel "ontology"@en, "ontologia"@it;
+  skos:altLabel "ontologies"@en, "ontologie"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
 ktx:controlled_vocabulary a skos:Concept;
@@ -245,8 +256,9 @@ ktx:controlled_vocabulary a skos:Concept;
   dct:source "Harping, Patricia. 2010. Introduction to Controlled Vocabularies: Terminology for Art, Architecture and Other Cultural Works. Santa Monica, CA: Getty Research Institute."@en;
   skos:example "The controlled vocabularies created for the Aldo Moro Digital Edition, https://aldomorodigitale.unibo.it/about/docs/results#codes-section."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <http://vocab.getty.edu/page/aat/300265266>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.03>, <https://id.loc.gov/authorities/subjects/sh85129426.html> ;
-  skos:prefLabel "Controlled Vocabulary"@en, "Vocabolario Controllato"@it;
+  skos:closeMatch <http://vocab.getty.edu/aat/300265266>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.03>, <http://id.loc.gov/authorities/subjects/sh85129426> ;
+  skos:prefLabel "controlled vocabulary"@en, "vocabolario controllato"@it;
+  skos:altLabel "controlled vocabularies"@en, "vocabolari controllati"@it;
   skos:related ktx:ontology ;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
@@ -256,9 +268,8 @@ ktx:software a skos:Concept;
   dct:source "“Iso/Iec 2382:2015.” 2020. ISO. 2020. https://www.iso.org/standard/63598.html."@en;
   skos:example "The Bradypus software developed the University of Rome Sapienza, https://bdus.cloud/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <https://w3id.org/cerif/vocab/OutputTypes#Software>, <http://vocab.getty.edu/page/aat/300028566>;
-  skos:relatedMatch <https://id.loc.gov/authorities/subjects/sh85029534.html>;
-  skos:prefLabel "Software"@en, "Software"@it;
+  skos:closeMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#Software>, <http://vocab.getty.edu/aat/300028566>, <http://id.loc.gov/authorities/subjects/sh85029534>;
+  skos:prefLabel "software"@en, "software"@it;
   skos:inScheme <http://purl.org/knot/taxonomy/> .
 
   ktx:endpoint a skos:Concept;
@@ -267,6 +278,7 @@ ktx:software a skos:Concept;
   dct:source "Wikipedia contributors. 2023. “Web API.” Wikipedia, The Free Encyclopedia. December 8, 2023. https://en.wikipedia.org/w/index.php?title=Web_API&oldid=1188983708. Wikipedia contributors. 2024. “Communication Endpoint.” Wikipedia, The Free Encyclopedia. January 16, 2024. https://en.wikipedia.org/w/index.php?title=Communication_endpoint&oldid=1196087839."@en;
   skos:example "The API offered by the FRED project, http://wit.istc.cnr.it/stlab-tools/fred_api/."@en;
   skos:topConceptOf <http://purl.org/knot/taxonomy/>;
-  skos:closeMatch <https://id.loc.gov/authorities/subjects/sh98004527.html>, <http://vocab.getty.edu/page/aat/300419453>;
-  skos:prefLabel "Endpoint"@en, "Endpoint"@it;
+  skos:relatedMatch <http://id.loc.gov/authorities/subjects/sh98004527>, <http://vocab.getty.edu/aat/300419453>;
+  skos:prefLabel "endpoint"@en, "endpoint"@it;
+  skos:altLabel "endpoints"@en ;
   skos:inScheme <http://purl.org/knot/taxonomy/> .

@@ -80,12 +80,13 @@
     void:uriSpace "http://purl.org/knot/taxonomy/";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "en";
-    skosmos:fullAlphabeticalIndex true ;
+    skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
     skosmos:conceptSchemesInHierarchy true ;
+    skosmos:defaultSidebarView 'hierarchy' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/ktx.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/ktx.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/ktx.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/ktx.ttl> .
 
 :kth a skosmos:Vocabulary, void:Dataset ;
     dc:title "KNOT Technology Thesaurus"@en, "KNOT Thesaurus Tecnologico"@it;
@@ -99,9 +100,11 @@
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
     skosmos:conceptSchemesInHierarchy true ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:defaultSidebarView 'groups' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/kth.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/kth.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/kth.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/kth.ttl> .
 
 :mtv a skosmos:Vocabulary, void:Dataset ;
     dc:title "Controlled vocabulary of Aldo Moro's works types"@en, "Vocabolario controllato delle tipologie delle opere di Aldo Moro"@it ;
