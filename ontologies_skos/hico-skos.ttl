@@ -36,236 +36,158 @@
 hico:InterpretationCriterion a owl:Class, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
     skos:topConceptOf <http://purl.org/emmedi/hico/> ;
-    rdfs:label "Interpretation Criterion"@en ;
-    skos:prefLabel "Interpretation Criterion"@en ;
-    rdfs:label "Criterio Interpretativo"@it ;
-    skos:prefLabel "Criterio Interpretativo"@it ;
-    rdfs:comment "The criterion or type of source used by an agent to support an interpretation act, such as bibliography, verbal communication, etc. "@en ;
-    rdfs:comment "Il criterio o tipo di fonte utilizzato da un agente per supportare un atto interpretativo, come riferimenti bibliografici, comunicazione orale, etc. "@it ;
+    rdfs:label "Interpretation Criterion"@en, "Criterio Interpretativo"@it ;
+    skos:prefLabel "Interpretation Criterion"@en, "Criterio Interpretativo"@it ;
+    rdfs:comment "The criterion or type of source used by an agent to support an interpretation act, such as bibliography, verbal communication, etc. "@en, "Il criterio o tipo di fonte utilizzato da un agente per supportare un atto interpretativo, come riferimenti bibliografici, comunicazione orale, etc. "@it ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> .
 
 hico:InterpretationType a owl:Class, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
     skos:topConceptOf <http://purl.org/emmedi/hico/> ;
-    rdfs:label "Interpretation Type"@en ;
-    skos:prefLabel "Interpretation Type"@en ;
-    rdfs:label "Tipo di Atto Interpretativo"@it ;
-    skos:prefLabel "Tipo di Atto Interpretativo"@it ;
-    rdfs:comment "An arbitrary definition of the interpretation act, such as artowork attribution or date attribution."@en ;
-    rdfs:comment "Una definizione arbitraria dell'atto interpretativo, come l'attribuzione di un'opera o di una datazione."@it ;
+    rdfs:label "Interpretation Type"@en, "Tipo di Atto Interpretativo"@it ;
+    skos:prefLabel "Interpretation Type"@en, "Tipo di Atto Interpretativo"@it ;
+    rdfs:comment "An arbitrary definition of the interpretation act, such as artowork attribution or date attribution."@en, "Una definizione arbitraria dell'atto interpretativo, come l'attribuzione di un'opera o di una datazione."@it ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> .
 
 hico:InterpretationAct a owl:Class, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
     skos:topConceptOf <http://purl.org/emmedi/hico/> ;
-    rdfs:label "Interpretation Act"@en ;
-    skos:prefLabel "Interpretation Act"@en ;
-    rdfs:label "Atto Interpretativo"@it ;
-    skos:prefLabel "Atto Interpretativo"@it ;
-    rdfs:comment "The hermeneutical activity performed by an agent in order to generate new information (e.g. an artwork attribution)."@en ;
-    rdfs:comment "L'attività ermeneutica svolta da un agente per proporre un'asserzione (e.g. attribuzione di un'opera d'arte)."@it ;
+    rdfs:label "Interpretation Act"@en, "Atto Interpretativo"@it ;
+    skos:prefLabel "Interpretation Act"@en, "Atto Interpretativo"@it ;
+    rdfs:comment "The hermeneutical activity performed by an agent in order to generate new information (e.g. an artwork attribution)."@en, "L'attività ermeneutica svolta da un agente per proporre un'asserzione (e.g. attribuzione di un'opera d'arte)."@it ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
     skos:note "This class makes use of OWL hasValue restrictions which cannot be displayed correctly in SKOS. Please see the original OWL file to view these restrictions." ;
     rdfs:subClassOf prov:Activity .
 
 hico:hasInterpretationCriterion a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "has interpretation criterion"@en ;
-    skos:prefLabel "has interpretation criterion"@en ;
-    rdfs:label "utilizza il criterio interpretativo"@it ;
-    skos:prefLabel "utilizza il criterio interpretativo"@it ;
-    rdfs:comment "A property relating an interpretation act to a criterion or type of source used to support the claim."@en ;
-    rdfs:comment "La relazione tra un atto interpretativo e il criterio o tipo di fonte utilizzata per supportare l'affermazione."@it ;
+    rdfs:label "has interpretation criterion"@en, "utilizza il criterio interpretativo"@it ;
+    skos:prefLabel "has interpretation criterion"@en, "utilizza il criterio interpretativo"@it ;
+    rdfs:comment "A property relating an interpretation act to a criterion or type of source used to support the claim."@en, "La relazione tra un atto interpretativo e il criterio o tipo di fonte utilizzata per supportare l'affermazione."@it ;
     rdfs:domain hico:InterpretationAct ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
     rdfs:range hico:InterpretationCriterion .
 
 hico:hasInterpretationType a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "has interpretation type"@en ;
-    skos:prefLabel "has interpretation type"@en ;
-    rdfs:label "ha tipologia di atto interpretativo"@it ;
-    skos:prefLabel "ha tipologia di atto interpretativo"@it ;
-    rdfs:comment "A property relating an interpretation act to an individual defining an arbitrary classification of the interpretation."@en ;
-    rdfs:comment "La relazione tra l'atto interpretativo e una classificazione arbitraria della tipologia di interpretazione effettuata."@it ;
+    rdfs:label "has interpretation type"@en, "ha tipologia di atto interpretativo"@it ;
+    skos:prefLabel "has interpretation type"@en, "ha tipologia di atto interpretativo"@it ;
+    rdfs:comment "A property relating an interpretation act to an individual defining an arbitrary classification of the interpretation."@en, "La relazione tra l'atto interpretativo e una classificazione arbitraria della tipologia di interpretazione effettuata."@it ;
     rdfs:domain hico:InterpretationAct ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
     rdfs:range hico:InterpretationType .
 
 hico:isExtractedFrom a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "is extracted from"@en ;
-    skos:prefLabel "is extracted from"@en ;
-    rdfs:label "è estratto da"@it ;
-    skos:prefLabel "è estratto da"@it ;
-    rdfs:comment "LA relazione tra l'atto interpretativo e la fonte (primaria o secondaria) da cui l'asserzione è estratta."@it ;
+    rdfs:label "is extracted from"@en, "è estratto da"@it ;
+    skos:prefLabel "is extracted from"@en, "è estratto da"@it ;
+    rdfs:comment "A property relating an interpretation act to the source where from the claim has been extracted"@en, "La relazione tra l'atto interpretativo e la fonte (primaria o secondaria) da cui l'asserzione è estratta."@it ;
     rdfs:domain hico:InterpretationAct ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
     rdfs:subPropertyOf prov:wasInfluencedBy .
 
 cito:cites a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "cites"@en ;
-    skos:prefLabel "cites"@en ;
-    rdfs:label "cita"@it ;
-    skos:prefLabel "cita"@it ;
-    rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
-    rdfs:comment "La relazione tra l'entità citante e quella citata. La citazione può essere esplicita (e.g. nella sezione Bibliografia di un articolo scientifico), indiretta (e.g. citando un articolo degli stessi autori o sullo stesso argomento), or implicita (e.g. una parodia artistica o un plagio)."@it ;
+    rdfs:label "cites"@en, "cita"@it ;
+    skos:prefLabel "cites"@en, "cita"@it ;
+    rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en, "La relazione tra l'entità citante e quella citata. La citazione può essere esplicita (e.g. nella sezione Bibliografia di un articolo scientifico), indiretta (e.g. citando un articolo degli stessi autori o sullo stesso argomento), or implicita (e.g. una parodia artistica o un plagio)."@it ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> .
 
 cito:agreesWith a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "agrees with"@en ;
-    skos:prefLabel "agrees with"@en ;
-    rdfs:label "è in accordo con"@it ;
-    skos:prefLabel "è in accordo con"@it ;
+    rdfs:label "agrees with"@en, "è in accordo con"@it ;
+    skos:prefLabel "agrees with"@en, "è in accordo con"@it ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites .
 
 cito:citesAsEvidence a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "cites as evidence"@en ;
-    skos:prefLabel "cites as evidence"@en ;
-    rdfs:label "cita come prova"@it ;
-    skos:prefLabel "cita come prova"@it ;
+    rdfs:label "cites as evidence"@en, "cita come prova"@it ;
+    skos:prefLabel "cites as evidence"@en, "cita come prova"@it ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites .
 
 cito:disagreesWith a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "disagrees with"@en ;
-    skos:prefLabel "disagrees with"@en ;
-    rdfs:label "è in disaccordo con"@it ;
-    skos:prefLabel "è in disaccordo con"@it ;
+    rdfs:label "disagrees with"@en, "è in disaccordo con"@it ;
+    skos:prefLabel "disagrees with"@en, "è in disaccordo con"@it ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites .
 
 cito:refutes a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "refutes"@en ;
-    skos:prefLabel "refutes"@en ;
-    rdfs:label "confuta"@it ;
-    skos:prefLabel "confuta"@it ;
+    rdfs:label "refutes"@en, "confuta"@it  ;
+    skos:prefLabel "refutes"@en, "confuta"@it  ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites .
 
 prov:startedAtTime a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "started at time"@en ;
-    skos:prefLabel "started at time"@en ;
-    rdfs:label "inizia"@it ;
-    skos:prefLabel "inizia"@it ;
-    rdfs:comment "A property relating an interpretation act to the time that triggered the activity."@en ;
-    rdfs:comment "La relazione tra l'atto interpretativo e il momento in cui l'attività inizia."@it ;
+    rdfs:label "started at time"@en, "inizia"@it ;
+    skos:prefLabel "started at time"@en, "inizia"@it ;
+    rdfs:comment "A property relating an interpretation act to the time that triggered the activity."@en, "La relazione tra l'atto interpretativo e il momento in cui l'attività inizia."@it ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
     rdfs:range xsd:dateTime .
 
 frbr:Expression a owl:Class, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "Expression"@en ;
-    skos:prefLabel "Expression"@en ;
-    rdfs:label "Espressione"@it ;
-    skos:prefLabel "Espressione"@it ;
+    rdfs:label "Expression"@en, "Espressione"@it ;
+    skos:prefLabel "Expression"@en, "Espressione"@it ;
     rdfs:isDefinedBy <http://purl.org/vocab/frbr/core> .
 
 prov:Activity a owl:Class, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "Activity"@en ;
-    skos:prefLabel "Activity"@en ;
-    rdfs:label "Attività"@it ;
-    skos:prefLabel "Attività"@it ;
+    rdfs:label "Activity"@en, "Attività"@it ;
+    skos:prefLabel "Activity"@en, "Attività"@it ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 prov:wasInfluencedBy a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "was influenced by"@en ;
-    skos:prefLabel "was influenced by"@en ;
-    rdfs:label "è influenzato da"@it ;
-    skos:prefLabel "è influenzato da"@it ;
+    rdfs:label "was influenced by"@en, "è influenzato da"@it ;
+    skos:prefLabel "was influenced by"@en, "è influenzato da"@it ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 prov:wasGeneratedBy a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://purl.org/emmedi/hico/> ;
-    rdfs:label "was generated by"@en ;
-    skos:prefLabel "was generated by"@en ;
-    rdfs:label "è generato da"@it ;
-    skos:prefLabel "è generato da"@it ;
-    rdfs:comment "A property relating statements to an interpretation act."@en ;
-    rdfs:comment "La relazione tra un'affermazione e l'atto interpretativo."@it ;
+    rdfs:label "was generated by"@en, "è generato da"@it ;
+    skos:prefLabel "was generated by"@en, "è generato da"@it ;
+    rdfs:comment "A property relating statements to an interpretation act."@en, "La relazione tra un'affermazione e l'atto interpretativo."@it ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
+#SKOSMOS specific classes and properties for display purposes 
+
 rdfs:domain a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "domain"@en ;
-  rdfs:label "dominio"@it ;
-	rdfs:comment "A domain of the subject property."@en ;
-  skos:definition  "A domain of the subject property."@en ;
-	rdfs:comment "Il dominio della proprietà."@it ;
-  skos:definition "Il dominio della proprietà."@it ;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdf:Property .
+	rdfs:label "domain"@en, "dominio"@it ;
+    skos:definition  "A domain of the subject property."@en, "Il dominio della proprietà."@it .
 
 rdfs:range a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "range"@en ;
-	rdfs:comment "A range of the subject property."@en ;
-  skos:definition "A range of the subject property."@en ;
-  rdfs:label "codominio"@it ;
-  rdfs:comment "Il codominio della proprietà."@it ;
-  skos:definition "Il codominio della proprietà."@it;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdf:Property .
+	rdfs:label "range"@en, "codominio"@it ;
+    skos:definition "A range of the subject property."@en, "Il codominio della proprietà."@it.
 
 rdfs:isDefinedBy a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "isDefinedBy"@en ;
-	rdfs:comment "The defininition of the subject resource."@en ;
-  skos:definition "The defininition of the subject resource."@en ;
-  rdfs:label "è definito da"@it ;
-	rdfs:comment "La fonte della definizione dell'entità."@it ;
-  skos:definition "La fonte della definizione dell'entità."@it ;
-	rdfs:range rdfs:Resource ;
-	rdfs:domain rdf:Resource .
+	rdfs:label "isDefinedBy"@en, "eDefinitoDa"@it ;
+	skos:definition "The defininition of the subject resource."@en, "La fonte della definizione dell'entità."@it .
 
 rdfs:subClassOf a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subClassOf" ;
-	rdfs:comment "The subject is a subclass of a class." ;
-    skos:definition "The subject is a subclass of a class." ;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdfs:Class .
+	rdfs:label "subClassOf"@en, "sottoclasseDi"@it ;
+    skos:definition "The subject is a subclass of a class."@en, "Il soggetto è una sottoclasse di una classe."@it .
 
 rdfs:subPropertyOf a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subPropertyOf" ;
-	rdfs:comment "The subject is a subproperty of a property." ;
-	rdfs:range rdf:Property ;
-	rdfs:domain rdf:Property .
+	rdfs:label "subPropertyOf"@en, "sottoproprietaDi"@it ;
+	rdfs:comment "The subject is a subproperty of a property."@en, "Il soggetto è una sottoproprietà di una proprietà"@it .
 
 rdfs:comment a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "comment" ;
-	rdfs:comment "A description of the subject resource." ;
-	rdfs:domain rdfs:Resource ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "comment"@en, "commento"@it ;
+	rdfs:comment "A description of the subject resource."@en, "Una descrizione della risorsa oggetto."@it .
 
 dcat:downloadURL a rdf:Property ;
     rdfs:label "download URL"@en, "URL di scarico"@it .
 
 owl:Class a rdfs:Class ;
-     rdfs:label "Class" ;
-     rdfs:comment "The class of OWL classes." ;
-     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
-     rdfs:subClassOf rdfs:Class . 
+     rdfs:label "Class" . 
 
 owl:ObjectProperty a rdfs:Class ;
-     rdfs:label "ObjectProperty" ;
-     rdfs:comment "The class of object properties." ;
-     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
-     rdfs:subClassOf rdf:Property . 
+     rdfs:label "ObjectProperty" . 
 
 owl:DatatypeProperty a rdfs:Class ;
-     rdfs:label "DatatypeProperty" ;
-     rdfs:comment "The class of data properties." ;
-     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
-     rdfs:subClassOf rdf:Property . 
+     rdfs:label "DatatypeProperty" . 
