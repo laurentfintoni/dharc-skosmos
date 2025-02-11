@@ -183,8 +183,8 @@
     skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/odi-skos.ttl> .
 
 :hico a skosmos:Vocabulary, void:Dataset ;
-    dc:title "The Historical Context Ontology (HiCO)"@en;
-    dc:description "The Historical Context Ontology (HiCO) is an OWL 2 DL ontology developed for representing the context of a claim."@en;
+    dc:title "The Historical Context Ontology (HiCO)"@en, "Ontologia per il Contesto Storico (HiCO)"@it ;
+    dc:description "The Historical Context Ontology (HiCO) is an OWL 2 DL ontology developed for representing the context of a claim."@en, "L'Ontologia per il Contesto Storico (HiCO) è una ontologia OWL 2 DL sviluppata per descrivere il contesto di una affermazione."@it;
     skosmos:shortName "HiCO";
     dc:subject :cat_ontos ;
     void:uriSpace "http://purl.org/emmedi/hico/";
