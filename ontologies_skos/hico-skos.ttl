@@ -248,3 +248,9 @@ owl:Class a rdfs:Class ;
      rdfs:comment "The class of OWL classes." ;
      rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
      rdfs:subClassOf rdfs:Class . 
+
+owl:ObjectProperty a rdfs:Class ;
+     rdfs:label "ObjectProperty" ;
+     rdfs:comment "The class of object properties." ;
+     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
+     rdfs:subClassOf rdf:Property . 

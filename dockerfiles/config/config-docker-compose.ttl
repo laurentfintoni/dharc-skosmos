@@ -190,7 +190,7 @@
     void:uriSpace "http://purl.org/emmedi/hico/";
     skosmos:language "en", "it";
     skosmos:fullAlphabeticalIndex true ;
-    skosmos:showTopConcepts true ;
+    skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
     void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl> ;
