@@ -12,6 +12,7 @@
 @prefix isothes: <http://purl.org/iso25964/skos-thes#> .
 @prefix mdrtype: <http://publications.europa.eu/resource/authority/dataset-type/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix : <#> .
 
 # Skosmos main configuration
@@ -226,3 +227,11 @@
     skos:topConceptOf :categories ;
     skos:inScheme :categories ;
     skos:prefLabel "Ontologie"@it , "Ontologies"@en .
+
+dcat:downloadURL a rdf:Property ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
+    rdfs:label "download URL"@en, "URL di scarico"@it ;
+    rdfs:comment "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType." ;
+    skos:definition "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType."@en, "Questo è un link diretto al file scaricabile in un dato formato. E.g. un file CSV o un file RDF. Il formato è descritto dal dcterms:format e/o dal dcat:mediaType della distribuzione."@it ;
+    rdfs:range rdfs:Resource ;
+	rdfs:domain dcat:Distribution .
