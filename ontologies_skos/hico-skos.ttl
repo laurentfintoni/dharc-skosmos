@@ -250,8 +250,7 @@ rdfs:comment a rdf:Property ;
 	rdfs:range rdfs:Literal .
 
 dcat:downloadURL a rdf:Property ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
-    skos:prefLabel "download URL"@en, "URL di scarico"@it .
+    rdfs:label "download URL"@en, "URL di scarico"@it .
 
 owl:Class a rdfs:Class ;
      rdfs:label "Class" ;
