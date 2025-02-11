@@ -1,10 +1,10 @@
 # load KNOT vocabs 
 
-curl -L -o ktx.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/ktx.ttl
-curl -I -X POST -H Content-Type:text/turtle -T ktx.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/ktx.ttl
+curl -L -o ktx.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/ktx.ttl
+curl -I -X POST -H Content-Type:text/turtle -T ktx.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/ktx.ttl
 
-curl -L -o kth.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/kth.ttl
-curl -I -X POST -H Content-Type:text/turtle -T kth.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.2/kth.ttl
+curl -L -o kth.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/kth.ttl
+curl -I -X POST -H Content-Type:text/turtle -T kth.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/kth.ttl
 
 # load Aldo Moro vocabs 
 
@@ -25,8 +25,8 @@ curl -I -X POST -H Content-Type:text/turtle -T fentry_skos.ttl -G http://localho
 curl -L -o odi-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/odi-skos.ttl
 curl -I -X POST -H Content-Type:text/turtle -T odi-skos.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/odi-skos.ttl
 
-curl -L -o hico-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/hico-skos.ttl
-curl -I -X POST -H Content-Type:text/turtle -T hico-skos.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/hico-skos.ttl
+curl -L -o hico-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
+curl -I -X POST -H Content-Type:text/turtle -T hico-skos.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
 
 curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/write-skos.ttl
 curl -I -X POST -H Content-Type:text/turtle -T write-skos.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/write-skos.ttl
