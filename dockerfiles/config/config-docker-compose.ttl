@@ -176,11 +176,11 @@
     void:uriSpace "https://purl.org/ebr/odi#";
     skosmos:language "en", "it";
     skosmos:fullAlphabeticalIndex false ;
-    skosmos:showTopConcepts true ;
-    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/odi-skos.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/odi-skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl> .
 
 :hico a skosmos:Vocabulary, void:Dataset ;
     dc:title "The Historical Context Ontology (HiCO)"@en, "Ontologia per il Contesto Storico (HiCO)"@it ;
