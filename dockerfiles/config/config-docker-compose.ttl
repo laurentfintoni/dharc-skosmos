@@ -67,8 +67,8 @@
     # default time a user must wait before submitting a form
     skosmos:uiHoneypotTime 5 ;
     # plugins to activate for the whole installation (including all vocabularies)
-    skosmos:globalPlugins () .
-    #skosmos:baseHref "https://lab.dharc.unibo.it/skosmos/" .
+    skosmos:globalPlugins () ;
+    skosmos:baseHref "https://lab.dharc.unibo.it/skosmos/" .
 
 # Skosmos vocabularies
 
@@ -211,7 +211,7 @@
     skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> .
 
 :categories a skos:ConceptScheme;
-    skos:prefLabel "Browse Vocabularies by Project or Type"@en .
+    skos:prefLabel "Browse vocabularies by project or type"@en .
 
 :cat_knot a skos:Concept ;
     skos:topConceptOf :categories ;
