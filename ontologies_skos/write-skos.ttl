@@ -5,21 +5,23 @@
 @prefix dct: <http://purl.org/dc/terms/> . 
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 <https://w3id.org/write/ontology/> a owl:Ontology, skos:ConceptScheme ;
-    dct:title "WRITE Ontology"@en;
-    rdfs:label "WRITE Ontology"@en;
-    skos:prefLabel "WRITE Ontology"@en;
-    dct:creator "Katarina Lucic", "Valentina Pasqual" ; 
+    dct:title "WRITE Ontology"@en, "Ontologia WRITE"@it;
+    skos:prefLabel "WRITE Ontology"@en, "Ontologia WRITE"@it;
+    dct:creator "Katarina Lucic", "Valentina Pasqual", "Francesca Tomasi" ; 
     dct:publisher "/DH.ARC - Digital Humanities Advanced Research Centre"@en, "Dipartimento di Filologia Classica e Italianistica - FICLIT"@it;
-    dct:description "TBC."@en ;
-    owl:imports skos: ;
-    dct:language "English"@en, "Italian"@it ;
+    dct:description "The WRITE ontology is aimed at representing the emerging phenomenon of Chinese Contemporary Calligraphy. In particular, the WRITE data model comprises artistic, linguistic, and socio-political-economic aspects. Metadata describing the artworks is structured by reusing and extending the Wikidata model. Complex relations are established between artworks and contextual elements, (e.g. people, exhibition history, organizations, and literary works). The artistic and linguistic information recorded over the ‘calli-writing units’ provide insights into shared and diverging characteristics with traditional calligraphy."@en, """L'ontologia WRITE mira a rappresentare il fenomeno emergente della calligrafia cinese contemporanea. In particolare, il modello di dati WRITE comprende aspetti artistici, linguistici e socio-politico-economici. I metadati che descrivono le opere d'arte sono strutturati riutilizzando ed estendendo il modello Wikidata. Sono stabilite relazioni complesse tra opere d'arte ed elementi contestuali (ad esempio persone, cronologia delle mostre, organizzazioni e opere letterarie). Le informazioni artistiche e linguistiche registrate sulle "unità di scrittura calligrafica" forniscono approfondimenti sulle caratteristiche condivise e divergenti con la calligrafia tradizionale."""@it ;
+    owl:imports skos:, wd:, wdt: ;
+    dct:language "English"@en, "Italiano"@it ;
     dct:created "2020" ;
     dct:issued "2019-04-09"^^xsd:date ;
     owl:versionInfo "1.0" ;
     skos:hasTopConcept pr:CalliWritingUnit, pr:DecorativeAndAppliedArt, pr:LifeEvent, pr:TraditionalArtwork ;
-    foaf:homepage <https://github.com/write-dataset/documentation/tree/main> .
+    dcat:downloadURL <https://write-dataset.github.io/documentation/static/data/write-ontology.ttl> ;
+    foaf:homepage <https://write-dataset.github.io/documentation/> .
 
 pr:CalliWritingUnit a owl:Class, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;

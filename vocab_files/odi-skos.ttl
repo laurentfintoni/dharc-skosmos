@@ -21,7 +21,7 @@
     dct:issued "2019-02-01"^^xsd:date ;
     owl:versionInfo "1.0" ;
     skos:hasTopConcept odi:Condition, odi:Dimension, odi:Meaning, odi:Suit, odi:Typology, odi:Person, odi:Place, odi:Storycard, odi:Edition, odi:TarotDeck, odi:DeckCard, odi:Representation ;
-    foaf:homepage <https://odi-documentation.github.io/materials/> ;
+    foaf:homepage <https://odi-documentation.github.io/materials/>, <https://projects.dharc.unibo.it/odi/> ;
     dcat:downloadURL <https://odi-documentation.github.io/materials/static/data/odi.owl> .
 
 odi:Person a owl:Class, skos:Concept ;
@@ -41,7 +41,6 @@ odi:Event a owl:Class, skos:Concept ;
     skos:prefLabel "Evento"@it, "Event"@en ;
     rdfs:comment "An event that is carried out by somebody and/or implies something in a story."@en,
         "Un avvenimento che viene eseguito da qualcuno e/o implica degli oggetti in una storia."@it ;
-    skos:broader odi:Representation ;
     rdfs:subClassOf odi:Representation .
 
 odi:FictionalPlace a owl:Class, skos:Concept ;
@@ -52,7 +51,6 @@ odi:FictionalPlace a owl:Class, skos:Concept ;
         "Luogo ideale"@it ;
     rdfs:comment "A place where a character is moving through or arrives at in a story."@en,
         "Un luogo in cui un personaggio si muove o arriva in una storia."@it ;
-    skos:broader odi:Representation ;
     rdfs:subClassOf odi:Representation .
 
 odi:Place a owl:Class, skos:Concept ;
@@ -74,8 +72,6 @@ odi:Chapter a owl:Class, skos:Concept ;
         "Capitolo"@it ;
     rdfs:comment "Is a chapter of the book that contains a story."@en,
         "È un capitolo del libro che contiene una storia."@it ; 
-    skos:broader odi:Edition ;
-    skos:narrower odi:Story ; 
     rdfs:subClassOf odi:Edition .
 
 odi:Story a owl:Class, skos:Concept ;
@@ -86,7 +82,6 @@ odi:Story a owl:Class, skos:Concept ;
         "Storia"@it ;
     rdfs:comment "A story that makes up the book."@en,
         "Una storia che compone il libro."@it ; 
-    skos:broader odi:Chapter ;
     rdfs:subClassOf odi:Chapter .
 
 odi:Storycard a owl:Class, skos:Concept ;
@@ -109,7 +104,6 @@ odi:Edition a owl:Class, skos:Concept ;
         "Edizione"@it ;
     rdfs:comment "It is the edition of the book taken as a reference."@en,
         "È l'edizione del libro presa come riferimento."@it ; 
-    skos:narrower odi:Chapter, odi:PublishingHouse ;
     rdfs:subClassOf owl:Thing .
 
 odi:InanimateObject a owl:Class, skos:Concept ;
@@ -120,7 +114,6 @@ odi:InanimateObject a owl:Class, skos:Concept ;
         "Oggetto inanimato"@it ;
     rdfs:comment "Every kind of an object in a story."@en,
         "Ogni tipo di oggetto in una storia."@it ; 
-    skos:broader odi:Representation ;
     rdfs:subClassOf odi:Representation .
 
 odi:TarotDeck a owl:Class, skos:Concept ;
@@ -152,7 +145,6 @@ odi:Representation a owl:Class, skos:Concept ;
     skos:prefLabel "Representation"@en, "Rappresentazione"@it  ;
     rdfs:comment "The representation of a card."@en,
         "La rappresentazione di una carta."@it; 
-    skos:narrower odi:Event, odi:FictionalPlace, odi:Symbol, odi:Character, odi:InanimateObject ;
     rdfs:subClassOf owl:Thing .
 
 odi:Character a owl:Class, skos:Concept ;
@@ -163,7 +155,6 @@ odi:Character a owl:Class, skos:Concept ;
         "Personaggio"@it ;
     rdfs:comment "A character of a story."@en,
         "Un personaggio di una storia."@it ; 
-    skos:broader odi:Representation ;
     rdfs:subClassOf odi:Representation .
 
 odi:Condition a owl:Class, skos:Concept ;
@@ -207,7 +198,6 @@ odi:PublishingHouse a owl:Class, skos:Concept ;
         "Casa editrice"@it ;
     rdfs:comment "Is the publishing house of the edition of reference."@en,
         "È la casa editrice dell'edizione di riferimento"@it ; 
-    skos:broader odi:Edition ;
     rdfs:subClassOf odi:Edition .
 
 odi:Suit a owl:Class, skos:Concept ;
@@ -229,7 +219,6 @@ odi:Symbol a owl:Class, skos:Concept ;
         "Simbolo"@it ;
     rdfs:comment "A symbol or an allegory of something expressed by a card."@en,
         "Un simbolo o un'allegoria di qualcosa espressi da una carta."@it ; 
-    skos:broader odi:Representation ;
     rdfs:subClassOf odi:Representation .
 
 odi:Typology a owl:Class, skos:Concept ;
@@ -871,40 +860,45 @@ odi:isContainedIn a owl:ObjectProperty, skos:Concept ;
     rdfs:range odi:TarotDeck ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-owl:inverseOf a rdf:Property ;
-     rdfs:label "inverseOf"@en ;
-     rdfs:comment "The property that determines that two given properties are inverse."@en ;
-     skos:definition "The property that determines that two given properties are inverse."@en ;
-     rdfs:domain owl:ObjectProperty ;
-     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
-     rdfs:range owl:ObjectProperty . 
+#SKOSMOS specific classes and properties for display purposes 
 
 rdfs:domain a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "domain"@en ;
-	rdfs:comment "A domain of the subject property."@en ;
-    skos:definition  "A domain of the subject property."@en ;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdf:Property .
+	rdfs:label "domain"@en, "dominio"@it ;
+    skos:definition  "A domain of the subject property."@en, "Il dominio della proprietà."@it .
 
 rdfs:range a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "range"@en ;
-	rdfs:comment "A range of the subject property."@en ;
-    skos:definition "A range of the subject property."@en ;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdf:Property .
+	rdfs:label "range"@en, "codominio"@it ;
+    skos:definition "A range of the subject property."@en, "Il codominio della proprietà."@it.
+
+rdfs:isDefinedBy a rdf:Property ;
+	rdfs:label "isDefinedBy"@en, "eDefinitoDa"@it ;
+	skos:definition "The defininition of the subject resource."@en, "La fonte della definizione dell'entità."@it .
 
 rdfs:subClassOf a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subClassOf" ;
-	rdfs:comment "The subject is a subclass of a class." ;
-    skos:definition "The subject is a subclass of a class." ;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdfs:Class .
+	rdfs:label "subClassOf"@en, "sottoclasseDi"@it ;
+    skos:definition "The subject is a subclass of a class."@en, "Il soggetto è una sottoclasse di una classe."@it .
+
+rdfs:subPropertyOf a rdf:Property ;
+	rdfs:label "subPropertyOf"@en, "sottoproprietaDi"@it ;
+	rdfs:comment "The subject is a subproperty of a property."@en, "Il soggetto è una sottoproprietà di una proprietà"@it .
+
+rdfs:comment a rdf:Property ;
+	rdfs:label "comment"@en, "commento"@it ;
+	rdfs:comment "A description of the subject resource."@en, "Una descrizione della risorsa oggetto."@it .
+
+dcat:downloadURL a rdf:Property ;
+    rdfs:label "download URL"@en, "URL di scarico"@it .
 
 owl:Class a rdfs:Class ;
-     rdfs:label "Class" ;
-     rdfs:comment "The class of OWL classes." ;
-     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
-     rdfs:subClassOf rdfs:Class . 
+     rdfs:label "Class"  . 
+
+owl:ObjectProperty a rdfs:Class ;
+     rdfs:label "ObjectProperty"  . 
+
+owl:DatatypeProperty a rdfs:Class ;
+     rdfs:label "DatatypeProperty" . 
+
+owl:inverseOf a rdf:Property ;
+     rdfs:label "inverseOf" ;
+     rdfs:comment "The property that determines that two given properties are inverse." . 
+

@@ -202,16 +202,16 @@
     skosmos:shortName "WRITE";
     dc:subject :cat_ontos ;
     void:uriSpace "https://w3id.org/write/ontology/";
-    skosmos:language "en";
+    skosmos:language "en", "it";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/write-skos.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/write-skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> .
 
 :categories a skos:ConceptScheme;
-    skos:prefLabel "Browse Vocabularies by Project"@en .
+    skos:prefLabel "Browse Vocabularies by Project or Type"@en .
 
 :cat_knot a skos:Concept ;
     skos:topConceptOf :categories ;
