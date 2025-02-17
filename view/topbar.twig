@@ -46,6 +46,9 @@
   <a href="{{ request.lang }}/about{% if request.contentLang and request.contentLang != request.lang %}?clang={{ request.contentLang }}{% endif %}{% if request.queryParam('anylang') == 'on' %}{% if request.contentLang == request.lang %}?{% else %}&{% endif %}anylang=on{% endif %}" id="navi2" class="navigation-font">
   {% trans "About page" %}
   </a>
+    <a href="https://lab.dharc.unibo.it/skosmos/dist/index.html" target="_blank" id="navi2" class="navigation-font">
+  API
+  </a>
   <span class="skosmos-tooltip-wrapper skosmos-tooltip t-bottom" id="navi4" tabindex="0" data-title="{% trans "helper_help" %} &#xa; &#xa; {% trans "search_example_text" %}">
     <span class="navigation-font">{% trans "Help" %}</span>
   </span>

@@ -361,3 +361,7 @@ owl:ObjectProperty a rdfs:Class ;
 
 owl:DatatypeProperty a rdfs:Class ;
      rdfs:label "DatatypeProperty" . 
+
+owl:inverseOf a rdf:Property ;
+     rdfs:label "inverseOf" ;
+     rdfs:comment "The property that determines that two given properties are inverse." . 

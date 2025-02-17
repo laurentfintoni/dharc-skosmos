@@ -155,18 +155,18 @@
     skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl> .
 
 :fentry a skosmos:Vocabulary, void:Dataset ;
-    dc:title "F Entry (Scheda F) Ontology"@en ;
-    dc:description "F Entry (Scheda F) Ontology"@en ;
+    dc:title "F Entry (Scheda F) Ontology"@en, "Ontologia Scheda F"@it ;
+    dc:description "F Entry (Scheda F) Ontology"@en, "Ontologia Scheda F"@it ;
     skosmos:shortName "FEO";
     dc:subject :cat_ontos ;
     void:uriSpace "http://www.essepuntato.it/2014/03/fentry/";
-    skosmos:language "en";
+    skosmos:language "en", "it";
     skosmos:fullAlphabeticalIndex true ;
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/fentry_skos.ttl>;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/fentry_skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl>;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl> .
 
 :odi a skosmos:Vocabulary, void:Dataset ;
     dc:title "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en;
@@ -197,8 +197,8 @@
     skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl> .
 
 :write a skosmos:Vocabulary, void:Dataset ;
-    dc:title "WRITE Ontology"@en;
-    dc:description "WRITE Ontology"@en;
+    dc:title "WRITE Ontology"@en, "Ontologia WRITE"@it;
+    dc:description "WRITE Ontology"@en, "Ontologia Scheda F"@it;
     skosmos:shortName "WRITE";
     dc:subject :cat_ontos ;
     void:uriSpace "https://w3id.org/write/ontology/";
