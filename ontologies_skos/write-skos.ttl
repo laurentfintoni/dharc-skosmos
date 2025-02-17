@@ -27,300 +27,336 @@
 pr:CalliWritingUnit a owl:Class, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
     skos:topConceptOf <https://w3id.org/write/ontology/> ;
-    rdfs:label "Calli-Writing Unit"@en ;
-    skos:prefLabel "Calli-Writing Unit"@en ;
-    rdfs:comment "A content component of the described cultural item which somehow recognised to be contemporary calligraphy"@en .
+    rdfs:label "Calli-Writing Unit"@en, "Calli-Writing Unit"@it ;
+    skos:prefLabel "Calli-Writing Unit"@en, "Calli-Writing Unit"@it ;
+    rdfs:comment "A content component of the described cultural item which somehow recognised to be contemporary calligraphy."@en, "Un componente di contenuto dell'oggetto culturale descritto che in qualche modo è riconosciuto come calligrafia contemporanea."@it .
 
 pr:DecorativeAndAppliedArt a owl:Class, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
     skos:topConceptOf <https://w3id.org/write/ontology/> ;
-    rdfs:label "Decorative and Applied Art"@en ;
-    skos:prefLabel  "Decorative and Applied Art"@en ;
-    rdfs:comment "An artwork categorised as belonging to Decorative and Applied Arts"@en .
+    rdfs:label "Decorative and Applied Art"@en, "Arti decorative e applicate"@it ;
+    skos:prefLabel  "Decorative and Applied Art"@en, "Arti decorative e applicate"@it ;
+    rdfs:comment "An artwork categorised as belonging to Decorative and Applied Arts."@en, "Un'opera d'arte classificata come appartenente alle arti decorative e applicate."@it .
 
 pr:LifeEvent a owl:Class, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
     skos:topConceptOf <https://w3id.org/write/ontology/> ;
-    rdfs:label "Life Event"@en ;
-    skos:prefLabel "Life Event"@en ;
-    rdfs:comment "A life event (e.g. employment, residence, education)"@en .
+    rdfs:label "Life Event"@en, "Evento della vita"@it ;
+    skos:prefLabel "Life Event"@en, "Evento della vita"@it ;
+    rdfs:comment "A life event (e.g. employment, residence, education)."@en, "Un evento della vita (ad esempio impiego, residenza, istruzione)."@it .
 
 pr:TraditionalArtwork a owl:Class, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
     skos:topConceptOf <https://w3id.org/write/ontology/> ;
-    rdfs:label "Traditional Artwork"@en ;
-    skos:prefLabel "Traditional Artwork"@en ;
-    rdfs:comment "An artwork categorised as being made before 1980"@en .
+    rdfs:label "Traditional Artwork"@en, "Opera d'arte tradizionale"@it ;
+    skos:prefLabel "Traditional Artwork"@en, "Opera d'arte tradizionale"@it ;
+    rdfs:comment "An artwork categorised as being made before 1980."@en, "Un'opera d'arte classificata come realizzata prima del 1980."@it .
 
 pr:academic-artistic-formation a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "academic artistic formation"@en ;
-    skos:prefLabel "academic artistic formation"@en ;
-    rdfs:comment "The academic specialisation of a person. Do not specify the type of degree (e.g. Master), but just the subject (e.g. visual arts)"@en .
+    rdfs:label "academic artistic formation"@en, "formazione artistica accademica"@it ;
+    skos:prefLabel "academic artistic formation"@en, "formazione artistica accademica"@it ;
+    rdfs:comment "The academic specialisation of a person. Do not specify the type of degree (e.g. Master), but just the subject (e.g. visual arts)."@en, "La specializzazione accademica di una persona. Non specificare il tipo di laurea (ad esempio Master), ma solo la materia (ad esempio arti visive)."@it .
 
 pr:artistic-collective-type a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "artistic collective type"@en ;
-    skos:prefLabel "artistic collective type"@en ;
-    rdfs:comment "The type of an artistic collective"@en .
+    rdfs:label "artistic collective type"@en, "tipo collettivo artistico"@it ;
+    skos:prefLabel "artistic collective type"@en, "tipo collettivo artistico"@it ;
+    rdfs:comment "The type of an artistic collective."@en, "Il tipo di collettivo artistico."@it .
 
 pr:artwork-type a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "artwork type"@en ;
-    skos:prefLabel "artwork type"@en ;
-    rdfs:comment "The type of an artwork"@en .
+    rdfs:label "artwork type"@en, "tipo di opera d'arte"@it ;
+    skos:prefLabel "artwork type"@en, "tipo di opera d'arte"@it ;
+    rdfs:comment "The type of an artwork."@en, "Il tipo di un'opera d'arte."@it .
 
 pr:attributed-name a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "attributed name"@en ;
-    skos:prefLabel "attributed name"@en ;
-    rdfs:comment "The name attributed to the resource"@en .
+    rdfs:label "attributed name"@en, "nome attribuito"@it ;
+    skos:prefLabel "attributed name"@en, "nome attribuito"@it ;
+    rdfs:comment "The name attributed to the resource."@en, "Il nome attribuito alla risorsa."@it .
 
 pr:background-color a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "background color"@en ;
-    skos:prefLabel "background color"@en ;
-    rdfs:comment "The color(s) in the background of the object"@en .
+    rdfs:label "background color"@en, "colore di sfondo"@it;
+    skos:prefLabel "background color"@en, "colore di sfondo"@it ;
+    rdfs:comment "The color(s) in the background of the object."@en, "Il/i colore/i sullo sfondo dell'oggetto."@it .
 
 pr:belongs-to-write-collection a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "belongs to WRITE collection"@en ;
-    skos:prefLabel "belongs to WRITE collection"@en ;
-    rdfs:comment "The item belongs to one of the four collections of WRITE project (Graffiti, Contemporary Visual Art, Decorative and Applied Arts and Performative Arts)"@en .
+    rdfs:label "belongs to WRITE collection"@en, "appartiene alla collezione WRITE"@it ;
+    skos:prefLabel "belongs to WRITE collection"@en, "appartiene alla collezione WRITE"@it ;
+    rdfs:comment "The item belongs to one of the four collections of WRITE project (Graffiti, Contemporary Visual Art, Decorative and Applied Arts and Performative Arts)."@en, "L'oggetto appartiene a una delle quattro collezioni del progetto WRITE (Graffiti, Arte visiva contemporanea, Arti decorative e applicate e Arti performative)."@it .
 
 pr:calligrapher a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "calligrapher"@en ;
-    skos:prefLabel "calligrapher"@en ;
-    rdfs:comment "The calligrapher who is involved in a performance"@en .
+    rdfs:label "calligrapher"@en, "calligrafo"@it ;
+    skos:prefLabel "calligrapher"@en, "calligrafo"@it ;
+    rdfs:comment "The calligrapher who is involved in a performance."@en, "Il calligrafo che è coinvolto in una performance."@it .
 
 pr:calligraphic-formation a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "has calligraphic formation"@en ;
-    skos:prefLabel "has calligraphic formation"@en ;
-    rdfs:comment "The type of calligraphic formation of a person (e.g. familiar, self-taught)"@en .
+    rdfs:label "has calligraphic formation"@en, "ha una formazione calligrafica"@it ;
+    skos:prefLabel "has calligraphic formation"@en, "ha una formazione calligrafica"@it ;
+    rdfs:comment "The type of calligraphic formation of a person (e.g. familiar, self-taught)."@en, "Il tipo di formazione calligrafica di una persona (ad esempio familiare, autodidatta)."@it .
 
 pr:calligraphic-line a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "calligraphic line"@en ;
-    skos:prefLabel "calligraphic line"@en ;
-    rdfs:comment "Indicates the presence (or absence) of calligraphic line features in the unit"@en .
+    rdfs:label "calligraphic line"@en, "linea calligrafica"@it ;
+    skos:prefLabel "calligraphic line"@en, "linea calligrafica"@it ;
+    rdfs:comment "Indicates the presence (or absence) of calligraphic line features in the unit."@en, "Indica la presenza (o l'assenza) di caratteristiche di linee calligrafiche nell'unità."@it .
 
 pr:character-form a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "character form"@en ;
-    skos:prefLabel "character form"@en ;
-    rdfs:comment "The character form of a calligraphic unit"@en .
+    rdfs:label "character form"@en, "forma del carattere"@it ;
+    skos:prefLabel "character form"@en, "forma del carattere"@it ;
+    rdfs:comment "The character form of a calligraphic unit."@en, "La forma del carattere di un'unità calligrafica."@it .
 
 pr:chinese-concept a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "chinese concept"@en ;
-    skos:prefLabel "chinese concept"@en ;
-    rdfs:comment "A philosophical, literary, cultural, social or other concept or notion present in the resource"@en .
+    rdfs:label "chinese concept"@en, "concetto cinese"@it ;
+    skos:prefLabel "chinese concept"@en, "concetto cinese"@it ;
+    rdfs:comment "A philosophical, literary, cultural, social or other concept or notion present in the resource."@en, "Un concetto o una nozione filosofica, letteraria, culturale, sociale o di altro tipo presente nella risorsa."@it .
 
 pr:chinese-visual-element a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "chinese visual element"@en ;
-    skos:prefLabel "chinese visual element"@en ;
-    rdfs:comment "A visual element (motif) from chinese culture present in the resource"@en .
+    rdfs:label "chinese visual element"@en, "elemento visivo cinese"@it ;
+    skos:prefLabel "chinese visual element"@en, "chinese visual element"@en ;
+    rdfs:comment "A visual element (motif) from chinese culture present in the resource."@en, "Un elemento visivo (motivo) della cultura cinese presente nella risorsa."@it .
 
 pr:creates-artwork a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "creates artwork"@en ;
-    skos:prefLabel "creates artwork"@en ;
-    rdfs:comment "The artwork produced during a performance"@en .
+    rdfs:label "creates artwork"@en, "crea opere d'arte"@it ;
+    skos:prefLabel "creates artwork"@en, "crea opere d'arte"@it ;
+    rdfs:comment "The artwork produced during a performance."@en, "L'opera d'arte prodotta durante una performance."@it .
 
 pr:dance-company a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "dance company"@en ;
-    skos:prefLabel "dance company"@en ;
-    rdfs:comment "The dance company who is involved in a performance"@en .
+    rdfs:label "dance company"@en, "compagnia di danza"@it ;
+    skos:prefLabel "dance company"@en, "compagnia di danza"@it ;
+    rdfs:comment "The dance company who is involved in a performance."@en, "La compagnia di danza che è coinvolta in uno spettacolo."@it .
 
 pr:dance-style a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "dance style"@en ;
-    skos:prefLabel "dance style"@en ;
-    rdfs:comment "The dance style in a performance"@en .
+    rdfs:label "dance style"@en, "stile di danza"@it ;
+    skos:prefLabel "dance style"@en, "stile di danza"@it ;
+    rdfs:comment "The dance style in a performance."@en, "Lo stile di danza in una performance."@it .
 
 pr:dancer a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "dancer"@en ;
-    skos:prefLabel "dancer"@en ;
-    rdfs:comment "The dancer who is involved in a performance"@en .
+    rdfs:label "dancer"@en, "ballerino/a"@it ;
+    skos:prefLabel "dancer"@en, "ballerino/a"@it ;
+    rdfs:comment "The dancer who is involved in a performance."@en, "Il ballerino/a che è coinvolto/a in una performance."@it .
 
 pr:description a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "description"@en ;
-    skos:prefLabel "description"@en ;
-    rdfs:comment "A textual description of the resource"@en .
+    rdfs:label "description"@en, "descrizione"@it ;
+    skos:prefLabel "description"@en, "descrizione"@it ;
+    rdfs:comment "A textual description of the resource."@en, "Una descrizione testuale della risorsa."@it .
 
 pr:graduated-in a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "graduated in"@en ;
-    skos:prefLabel "graduated in"@en ;
-    rdfs:comment "The name of the field in which the person graduated in, The specialisation taken by a student."@en .
+    rdfs:label "graduated in"@en, "laureato in"@it ;
+    skos:prefLabel "graduated in"@en, "laureato in"@it ;
+    rdfs:comment "The name of the field in which the person graduated in. The specialisation taken by a student."@en, "Il nome del campo in cui la persona si è laureata. La specializzazione intrapresa da uno studente."@it .
 
 pr:graffiti-style a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "graffiti style"@en ;
-    skos:prefLabel "graffiti style"@en ;
-    rdfs:comment "A style of graffiti implied in the making of the resource"@en .
+    rdfs:label "graffiti style"@en, "stile di graffiti"@it ;
+    skos:prefLabel "graffiti style"@en, "stile di graffiti"@it ;
+    rdfs:comment "A style of graffiti implied in the making of the resource."@en, "Uno stile di graffiti implicito nella realizzazione della risorsa."@it .
 
 pr:has-chengyu a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "has chengyu"@en ;
-    skos:prefLabel "has chengyu"@en ;
-    rdfs:comment "The presence of the four-character traditional Chinese idiomatic expression"@en .
+    rdfs:label "has chengyu"@en, "ha chengyu"@it ;
+    skos:prefLabel "has chengyu"@en, "ha chengyu"@it ;
+    rdfs:comment "The presence of the four-character traditional Chinese idiomatic expression."@en, "La presenza dell'espressione idiomatica tradizionale cinese di quattro caratteri."@it .
 
 pr:has-seal a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "has seal"@en ;
-    skos:prefLabel "has seal"@en ;
-    rdfs:comment "The presence of the seal(s)"@en .
+    rdfs:label "has seal"@en, "ha il sigillo"@it ;
+    skos:prefLabel "has seal"@en, "ha il sigillo"@it ;
+    rdfs:comment "The presence of the seal(s)."@en, "La presenza del/dei sigillo/i."@it .
 
 pr:has-unit a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "has unit"@en ;
-    skos:prefLabel "has unit"@en ;
-    rdfs:comment "A content unit (calli-writing unit) expressed by a work of art"@en .
+    rdfs:label "has unit"@en, "ha unità"@it ;
+    skos:prefLabel "has unit"@en, "ha unità"@it ;
+    rdfs:comment "A content unit (Calli-Writing Unit) expressed by a work of art."@en, "Un'unità di contenuto (Calli-Writing Unit) espressa da un'opera d'arte."@it .
 
 pr:music-style a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "music style"@en ;
-    skos:prefLabel "music style"@en ;
-    rdfs:comment "The music style in a performance"@en .
+    rdfs:label "music style"@en, "stile musicale"@it ;
+    skos:prefLabel "music style"@en, "stile musicale"@it ;
+    rdfs:comment "The music style in a performance."@en, "Lo stile musicale in una performance."@it .
 
 pr:musician a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "musician"@en ;
-    skos:prefLabel "musician"@en ;
-    rdfs:comment "The musician who is involved in a performance"@en .
+    rdfs:label "musician"@en, "musicista"@it ;
+    skos:prefLabel "musician"@en, "musicista"@it ;
+    rdfs:comment "The musician who is involved in a performance."@en, "Il musicista che è coinvolto in una performance."@it .
 
 pr:note a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "notes"@en ;
-    skos:prefLabel "notes"@en ;
-    rdfs:comment "Notes on resources related to the record"@en .
+    rdfs:label "notes"@en, "note"@it ;
+    skos:prefLabel "notes"@en, "note"@it ;
+    rdfs:comment "Notes on resources related to the record."@en, "Note sulle risorse relative al record."@it .
 
 pr:number-of-characters a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "number of characters"@en ;
-    skos:prefLabel "number of characters"@en ;
-    rdfs:comment "The number of Chinese characters in a Calli-Writing Unit"@en .
+    rdfs:label "number of characters"@en, "numero di caratteri"@it ;
+    skos:prefLabel "number of characters"@en, "numero di caratteri"@it ;
+    rdfs:comment "The number of Chinese characters in a Calli-Writing Unit."@en, "Il numero di caratteri cinesi in una Calli-Writing Unit."@it .
 
 pr:organisation-type a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "organisation type"@en ;
-    skos:prefLabel "organisation type"@en ;
-    rdfs:comment "The type of an organisation"@en .
+    rdfs:label "organisation type"@en, "tipo di organizzazione"@it ;
+    skos:prefLabel "organisation type"@en, "tipo di organizzazione"@it ;
+    rdfs:comment "The type of an organisation."@en, "Il tipo di organizzazione."@en .
 
 pr:performance-art-type a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "performing art type"@en ;
-    skos:prefLabel "performing art type"@en ;
-    rdfs:comment "The type of a performing art"@en .
+    rdfs:label "performing art type"@en, "tipo di arte performativa"@it ;
+    skos:prefLabel "performing art type"@en, "tipo di arte performativa"@it ;
+    rdfs:comment "The type of performing art."@en, "Il tipo di arte performativa."@it .
 
 pr:product-type a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "product type"@en ;
-    skos:prefLabel "product type"@en ;
-    rdfs:comment "The type of a product"@en .
+    rdfs:label "product type"@en, "tipo di prodotto"@it ;
+    skos:prefLabel "product type"@en, "tipo di prodotto"@it ;
+    rdfs:comment "The type of a product."@en, "Il tipo di prodotto."@it .
 
 pr:projected_work a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "projected work"@en ;
-    skos:prefLabel "projected work"@en ;
-    rdfs:comment "The work of art projected during a performance"@en .
+    rdfs:label "projected work"@en, "opera proiettata"@it ;
+    skos:prefLabel "projected work"@en, "opera proiettata"@it ;
+    rdfs:comment "The work of art projected during a performance."@en, "L'opera d'arte proiettata durante una performance."@it .
 
 pr:publication-type a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "publication type"@en ;
-    skos:prefLabel "publication type"@en ;
-    rdfs:comment "The type of a publication"@en .
+    rdfs:label "publication type"@en, "tipo di pubblicazione"@it ;
+    skos:prefLabel "publication type"@en, "tipo di pubblicazione"@it ;
+    rdfs:comment "The type of a publication."@en, "Il tipo di pubblicazione."@it .
 
 pr:relevant-activity-location a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "relevant activity location"@en ;
-    skos:prefLabel "relevant activity location"@en ;
-    rdfs:comment "The relevant place(s) where the person performs her activity"@en .
+    rdfs:label "relevant activity location"@en, "posizione attività rilevante"@it ;
+    skos:prefLabel "relevant activity location"@en, "posizione attività rilevante"@it ;
+    rdfs:comment "The relevant place(s) where the person performs her activity."@en, "Il luogo/i rilevante/i in cui la persona svolge la sua attività."@it .
 
 pr:shows-items-of-artist a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "shows items of artist"@en ;
-    skos:prefLabel "shows items of artist"@en ;
-    rdfs:comment "The artist whose artwork(s) has been exihibited at an exhibition"@en .
+    rdfs:label "shows items of artist"@en, "mostra elementi dell'artista"@it;
+    skos:prefLabel "shows items of artist"@en, "mostra elementi dell'artista"@it ;
+    rdfs:comment "The artist whose artwork(s) has been exihibited at an exhibition."@en, "L'artista la cui opera è stata esposta in una mostra."@it .
 
 pr:significance a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "significance"@en ;
-    skos:prefLabel "significance"@en ;
-    rdfs:comment "Indicates the presence (or absence) of meaning of a unit"@en .
+    rdfs:label "significance"@en, "significato"@it ;
+    skos:prefLabel "significance"@en, "significato"@it ;
+    rdfs:comment "Indicates the presence (or absence) of meaning in a unit."@en, "Indica la presenza (o l'assenza) di significato in un'unità."@it .
 
 pr:song-title a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "song title"@en ;
-    skos:prefLabel "song title"@en ;
-    rdfs:comment "The title of a song played during a performance"@en .
+    rdfs:label "song title"@en, "titolo della canzone"@it ;
+    skos:prefLabel "song title"@en, "titolo della canzone"@it ;
+    rdfs:comment "The title of a song played during a performance."@en, "Il titolo di una canzone suonata durante un'esibizione."@it .
 
 pr:source a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "source (public)"@en ;
-    skos:prefLabel "source (public)"@en ;
-    rdfs:comment "Public source related to the record"@en .
+    rdfs:label "source (public)"@en, "fonte (pubblica)"@it ;
+    skos:prefLabel "source (public)"@en, "fonte (pubblica)"@it ;
+    rdfs:comment "Public source related to the record."@en, "Fonte pubblica relativa al record."@it .
 
 pr:tag a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "tag"@en ;
-    skos:prefLabel "tag"@en ;
-    rdfs:comment "The signature of the artist"@en .
+    rdfs:label "tag"@en, "tag"@it ;
+    skos:prefLabel "tag"@en, "tag"@it ;
+    rdfs:comment "The signature of the artist."@en, "La firma dell'artista."@it .
 
 pr:tag_of a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "tag of"@en ;
-    skos:prefLabel "tag of"@en ;
-    rdfs:comment "The name of the artist or crew or symbol represented by a tag"@en .
+    rdfs:label "tag of"@en, "tag di"@it ;
+    skos:prefLabel "tag of"@en, "tag di"@it ;
+    rdfs:comment "The name of the artist or crew or symbol represented by a tag."@en, "Il nome dell'artista o della troupe o il simbolo rappresentato da un tag."@it .
 
 pr:teaching-subject a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "teaching subject"@en ;
-    skos:prefLabel "teaching subject"@en ;
-    rdfs:comment "The subject which has been taught by a professor"@en .
+    rdfs:label "teaching subject"@en, "materia didattica"@it ;
+    skos:prefLabel "teaching subject"@en, "materia didattica"@it ;
+    rdfs:comment "The subject which has been taught by a professor."@en, "La materia che è stata insegnata da un professore."@it .
 
 pr:trascription-and-translation a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "transcription and translation"@en ;
-    skos:prefLabel "transcription and translation"@en ;
-    rdfs:comment "The transcription and translation of the resource"@en .
+    rdfs:label "transcription and translation"@en, "trascrizione e traduzione"@it ;
+    skos:prefLabel "transcription and translation"@en, "trascrizione e traduzione"@it ;
+    rdfs:comment "The transcription and translation of the resource."@en, "La trascrizione e la traduzione della risorsa."@it .
 
 pr:uses-artwork a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "uses artwork"@en ;
-    skos:prefLabel "uses artwork"@en ;
-    rdfs:comment "An artwork implied in a performance or in the creation of the artwork (use 'creates artwork' for those artworks which have been created during a performance)"@en .
+    rdfs:label "uses artwork"@en, "utilizza opere d'arte"@it ;
+    skos:prefLabel "uses artwork"@en, "utilizza opere d'arte"@it ;
+    rdfs:comment "An artwork implied in a performance or in the creation of the artwork (use 'creates artwork' for those artworks which have been created during a performance)."@en, "Un'opera d'arte implicita in una performance o nella creazione dell'opera d'arte (usare 'crea un'opera d'arte' per quelle opere d'arte che sono state create durante una performance)."@it .
 
 pr:vectorised-digitised-artwork a owl:DatatypeProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "vectorised or digitised"@en ;
-    skos:prefLabel "vectorised or digitised"@en ;
-    rdfs:comment "Indicates whether the artwork has been vectorised or digitised"@en .
+    rdfs:label "vectorised or digitised"@en, "vettorializzato o digitalizzato"@it ;
+    skos:prefLabel "vectorised or digitised"@en, "vettorializzato o digitalizzato"@it ;
+    rdfs:comment "Indicates whether the artwork has been vectorised or digitised."@en, "Indica se l'opera d'arte è stata vettorializzata o digitalizzata."@it .
 
 pr:visual-element a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "visual element"@en ;
-    skos:prefLabel "visual element"@en ;
-    rdfs:comment "A visual element (motif)"@en .
+    rdfs:label "visual element"@en, "elemento visivo"@it ;
+    skos:prefLabel "visual element"@en, "elemento visivo"@it ;
+    rdfs:comment "A visual element (motif)."@en, "Un elemento visivo (motivo)."@it .
 
 pr:wikidata-resource a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "wikidata resource"@en ;
-    skos:prefLabel "wikidata resource"@en ;
-    rdfs:comment "The wikidata resource which identifies this record"@en .
+    rdfs:label "wikidata resource"@en, "risorsa wikidata"@it ;
+    skos:prefLabel "wikidata resource"@en, "risorsa wikidata"@it ;
+    rdfs:comment "The wikidata resource which identifies this record."@en, "La risorsa Wikidata che identifica questo record."@it .
 
 pr:write-id a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <https://w3id.org/write/ontology/> ;
-    rdfs:label "write ID"@en ;
-    skos:prefLabel "write ID"@en ;
-    rdfs:comment "An internal identifier for the resource"@en .
+    rdfs:label "write ID"@en, "write ID"@it ;
+    skos:prefLabel "write ID"@en, "write ID"@it ;
+    rdfs:comment "An internal identifier for the resource."@en, "Un identificatore interno per la risorsa."@it .
 
 
+#SKOSMOS specific classes and properties for display purposes 
 
+rdfs:domain a rdf:Property ;
+	rdfs:label "domain"@en, "dominio"@it ;
+    skos:definition  "A domain of the subject property."@en, "Il dominio della proprietà."@it .
+
+rdfs:range a rdf:Property ;
+	rdfs:label "range"@en, "codominio"@it ;
+    skos:definition "A range of the subject property."@en, "Il codominio della proprietà."@it.
+
+rdfs:isDefinedBy a rdf:Property ;
+	rdfs:label "isDefinedBy"@en, "eDefinitoDa"@it ;
+	skos:definition "The defininition of the subject resource."@en, "La fonte della definizione dell'entità."@it .
+
+rdfs:subClassOf a rdf:Property ;
+	rdfs:label "subClassOf"@en, "sottoclasseDi"@it ;
+    skos:definition "The subject is a subclass of a class."@en, "Il soggetto è una sottoclasse di una classe."@it .
+
+rdfs:subPropertyOf a rdf:Property ;
+	rdfs:label "subPropertyOf"@en, "sottoproprietaDi"@it ;
+	rdfs:comment "The subject is a subproperty of a property."@en, "Il soggetto è una sottoproprietà di una proprietà"@it .
+
+rdfs:comment a rdf:Property ;
+	rdfs:label "comment"@en, "commento"@it ;
+	rdfs:comment "A description of the subject resource."@en, "Una descrizione della risorsa oggetto."@it .
+
+dcat:downloadURL a rdf:Property ;
+    rdfs:label "download URL"@en, "URL di scarico"@it .
+
+owl:Class a rdfs:Class ;
+     rdfs:label "Class"  . 
+
+owl:ObjectProperty a rdfs:Class ;
+     rdfs:label "ObjectProperty"  . 
+
+owl:DatatypeProperty a rdfs:Class ;
+     rdfs:label "DatatypeProperty" . 
