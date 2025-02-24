@@ -53,7 +53,7 @@
     # a default location for Twig template rendering
     skosmos:templateCache "/tmp/skosmos-template-cache" ;
     # customize the css by adding your own stylesheet
-    skosmos:customCss "resource/css/stylesheet.css" ;
+    #skosmos:customCss "resource/css/stylesheet.css" ;
     # default email address where to send the feedback
     skosmos:feedbackAddress "laurent.fintoni2@unibo.it" ;
     # email address to set as the sender for feedback messages
