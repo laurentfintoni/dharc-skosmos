@@ -1,10 +1,10 @@
 # load KNOT vocabs 
 
-curl -L -o ktx.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/ktx.ttl
-curl -I -X POST -H Content-Type:text/turtle -T ktx.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/ktx.ttl
+curl -L -o ktx.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/ktx.ttl
+curl -I -X POST -H Content-Type:text/turtle -T ktx.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/ktx.ttl
 
-curl -L -o kth.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/kth.ttl
-curl -I -X POST -H Content-Type:text/turtle -T kth.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.3/kth.ttl
+curl -L -o kth.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/kth.ttl
+curl -I -X POST -H Content-Type:text/turtle -T kth.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/kth.ttl
 
 # load Aldo Moro vocabs 
 
