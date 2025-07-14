@@ -199,8 +199,8 @@
 :write a skosmos:Vocabulary, void:Dataset ;
     dc:title "WRITE Ontology"@en, "Ontologia WRITE"@it;
     dc:description "WRITE Ontology"@en, "Ontologia Scheda F"@it;
-    skosmos:shortName "WRITE";
-    dc:subject :cat_ontos ;
+    skosmos:shortName "WT";
+    dc:subject :cat_write ;
     void:uriSpace "https://w3id.org/write/ontology/";
     skosmos:language "en", "it";
     skosmos:fullAlphabeticalIndex false ;
@@ -210,18 +210,42 @@
     void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> ;
     skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> .
 
-:categories a skos:ConceptScheme;
-    skos:prefLabel "Browse vocabularies by project or type"@en .
+:write_thesaurus a skosmos:Vocabulary, void:Dataset ;
+    dc:title "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
+    dc:description "The WRITE Thesaurus is a carefully curated resource dedicated to Chinese cultural heritage, with a particular focus on contemporary arts and calligraphy. Developed by domain experts as part of the WenDAng project, this thesaurus provides a structured vocabulary that captures the evolving landscape of Chinese (contemporary) calligraphy and its role in redefining cultural identity. Designed as both a research tool for WRITE scholars and a comprehensive reference for a wider audience, the thesaurus categorises key concepts essential to understanding traditional and contemporary Chinese artistic expressions. By offering precise definitions and classifications, it serves as a bridge between traditions and emerging artistic practices in contemporary China. This thesaurus is an invaluable resource for researchers, artists, and anyone interested in the dynamic interplay between Chinese calligraphy, cultural heritage, and contemporary artistic innovation."@en, "TK"@it ;
+    skos:prefLabel "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
+    skosmos:shortName "WTH";
+    dc:subject :cat_write ;
+    void:uriSpace "https://wendang-project.github.io/vocabulary/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:defaultSidebarView 'groups' ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl> .
 
-:cat_knot a skos:Concept ;
-    skos:topConceptOf :categories ;
-    skos:inScheme :categories ;
-    skos:prefLabel "KNOT"@en , "KNOT"@it .
+:categories a skos:ConceptScheme;
+    skos:prefLabel "Browse semantic artefacts by project or type"@en .
 
 :cat_moro a skos:Concept ;
     skos:topConceptOf :categories ;
     skos:inScheme :categories ;
     skos:prefLabel "National Edition of Aldo Moro's Works"@it , "National Edition of Aldo Moro's Works"@en .
+
+:cat_knot a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "KNOT"@en , "KNOT"@it ;
+    dc:description "Example description."@en .
+
+:cat_write a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "WRITE"@en , "WRITE"@it .
 
 :cat_ontos a skos:Concept ;
     skos:topConceptOf :categories ;
