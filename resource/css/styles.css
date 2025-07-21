@@ -78,7 +78,7 @@ h6, .h6 { font-size: 12px; }
 }
 
 h2, h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 li, td > a {
@@ -675,6 +675,7 @@ ul.dropdown-menu > li:last-child > input {
   display: inline-flex;
   align-items: center;
   margin-left: auto;
+  margin-right: 15px;
 }
 
 .frontpage-spacing > .header-float {
@@ -949,6 +950,8 @@ span.xl-pref-label > img {
 
 .logo-header > h2 {
   word-break: initial;
+  text-decoration-line: underline;
+  font-size: 24px !important;
 }
 
 .voclist-wide #vocabulary-list {

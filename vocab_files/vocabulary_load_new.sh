@@ -17,6 +17,14 @@ curl -X POST -H Content-Type:text/turtle --data-binary "@mrv.ttl" "http://localh
 curl -L -o msv.ttl https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@msv.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl"
 
+#load WRITE vocabs 
+
+curl -L -o WRITEthesaurus_v.1.0.ttl https://wendang-project.github.io/thesaurus/WRITEthesaurus_v.1.0.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@WRITEthesaurus_v.1.0.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl"
+
+curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@write-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl"
+
 # load ontologies
 
 curl -L -o fentry_skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl
@@ -28,5 +36,3 @@ curl -X POST -H Content-Type:text/turtle --data-binary "@odi-skos.ttl" "http://l
 curl -L -o hico-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@hico-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl"
 
-curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@write-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl"
