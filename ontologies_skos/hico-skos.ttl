@@ -56,7 +56,7 @@ hico:InterpretationAct a owl:Class, skos:Concept ;
     skos:prefLabel "Interpretation Act"@en, "Atto Interpretativo"@it ;
     rdfs:comment "The hermeneutical activity performed by an agent in order to generate new information (e.g. an artwork attribution)."@en, "L'attività ermeneutica svolta da un agente per proporre un'asserzione (e.g. attribuzione di un'opera d'arte)."@it ;
     rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
-    skos:note "This class makes use of OWL hasValue restrictions which cannot be displayed correctly in SKOS. Please see the original OWL file to view these restrictions." ;
+    skos:note "This class makes use of OWL hasValue restrictions which cannot be displayed correctly in SKOS. Please see the original OWL file to view these restrictions."@en, "Questa classe fa uso delle restrizioni di OWL hasValue che non possono essere visualizzate correttamente in SKOS. Per visualizzare queste restrizioni, consultare il file OWL originale."@it ;
     rdfs:subClassOf prov:Activity .
 
 hico:hasInterpretationCriterion a owl:ObjectProperty, skos:Concept ;
@@ -184,14 +184,13 @@ dcat:downloadURL a rdf:Property ;
     rdfs:label "download URL"@en, "URL di scarico"@it .
 
 owl:Class a rdfs:Class ;
-     rdfs:label "Class" . 
+     rdfs:label "Class"@en, "Classe"@it . 
 
 owl:ObjectProperty a rdfs:Class ;
-     rdfs:label "ObjectProperty" . 
+     rdfs:label "ObjectProperty"@en, "Proprieta di oggeto"@it . 
 
 owl:DatatypeProperty a rdfs:Class ;
-     rdfs:label "DatatypeProperty" . 
+     rdfs:label "DatatypeProperty"@en, "Proprieta datatype"@it . 
 
 owl:inverseOf a rdf:Property ;
-     rdfs:label "inverseOf" ;
-     rdfs:comment "The property that determines that two given properties are inverse." . 
+     rdfs:label "inverseOf"@en, "inverso di"@it . 

@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix wt: <https://wendang-project.github.io/vocabulary/> .
+@prefix wt: <http://w3id.org/write/thesaurus/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -19,7 +19,7 @@ wt:write_thesaurus a skos:ConceptScheme ;
 		dcterms:language "English"@en ;
 		foaf:homepage <https://wendang-project.github.io/documentation/> ;
 		dcterms:relation <https://writecalligraphyproject.eu/> ;
-		dcterms:subject "Chinese (contemporary) calligraphy"@en , "contemporary arts"@en ; 
+		dcterms:subject "Chinese (contemporary) Calligraphy"@en , "Contemporary Arts"@en ; 
 		dcterms:title "WRITE Thesaurus" ;
 		dcterms:created "2025-04-01"^^xsd:date ;
 		dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
@@ -121,7 +121,6 @@ wt:plum a skos:Concept ;
 			skos:altLabel "mei"@zh-Latn , "梅"@zh ;
 			skos:definition "One of the most beloved flowers in China, frequently depicted in Chinese painting and poetry; symbol of winter as well as a harbinger of spring, of resilience and perseverance in the face, and of adversity, inner beauty and humble display under adverse conditions. It is one of the “Four Noble Plants” (si junzi) and the “Three Friends of Winter” (suihansanyou)."@en ;
 			skos:broader wt:four_noble_plants ;
-			skos:related wt:orchid , wt:bamboo , wt:chrysanthemum ;
 			skos:exactMatch <https://chineseiconography.org/terms/CIT279231> ;
 			dcterms:source <http://www.chinaonlinemuseum.com/painting-plum-blossom.php> .
 
@@ -132,7 +131,6 @@ wt:orchid a skos:Concept ;
 			skos:altLabel "lan"@zh-Latn , "兰"@zh ;
 			skos:definition "Symbol of spring, humility and nobility. It is one of the “Four Noble Plants” (si junzi)."@en ;
 			skos:broader wt:four_noble_plants ;
-			skos:related wt:plum , wt:bamboo , wt:chrysanthemum ;
 			skos:exactMatch <https://chineseiconography.org/terms/CIT280897> ;
 			dcterms:source <http://www.chinaonlinemuseum.com/painting-orchid.php> .
 		
@@ -143,7 +141,6 @@ wt:bamboo a skos:Concept ;
 			skos:altLabel "zhu"@zh-Latn , "竹"@zh ;
 			skos:definition "Symbol of summer and of the true gentleman (junzi). It is associated with the human values of cultivation, integrity, tolerance and open-mindedness. It is one of the “Four Noble Plants” (si junzi) and the “Three Friends of Winter” (suihansanyou)."@en ;
 			skos:broader wt:four_noble_plants ;
-			skos:related wt:plum , wt:orchid , wt:chrysanthemum ;
 			skos:exactMatch <https://chineseiconography.org/terms/CIT280244> ;
 			dcterms:source <http://www.chinaonlinemuseum.com/painting-bamboo.php> .
 
@@ -154,7 +151,6 @@ wt:chrysanthemum a skos:Concept ;
 				skos:altLabel "ju"@zh-Latn , "菊"@zh ;
 				skos:definition "Symbol of autumn and virtue to withstand all adversities. It is one of the “Four Noble Plants” (si junzi)."@en ;
 				skos:broader wt:four_noble_plants ;
-				skos:related wt:plum , wt:orchid , wt:bamboo ;
 				skos:exactMatch <https://chineseiconography.org/terms/CIT280680> ;
 				dcterms:source <http://www.chinaonlinemuseum.com/painting-chrysanthemum.php> .
 
@@ -426,7 +422,7 @@ wt:public_free_art a skos:Concept ;
 			skos:inScheme wt:write_thesaurus ;
 			skos:prefLabel "public free art"@en ;
 			skos:definition "A genre that embodies the core motivation behind graffiti writing, emphasizing the spontaneous and unrestricted expression of self-identity and artistic freedom in public spaces."@en ;
-			skos:narrower wt:public_social_political_art , wt:memorial_art ;
+			skos:narrower wt:public_social_political_art;
 			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
 
 
@@ -464,7 +460,7 @@ wt:memorial_art a skos:Concept ;
 			skos:inScheme wt:write_thesaurus ;
 			skos:prefLabel "memorial art"@en ;
 			skos:definition "A genre that encompasses graffiti created to commemorate significant events or individuals, serving as a memorial or tribute to a dramatic occurrence or person."@en ;
-			skos:broader wt:public_social_political_art , wt:public_free_art ;
+			skos:broader wt:public_social_political_art ;
 			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
 
 
@@ -732,7 +728,7 @@ wt:seal_script a skos:Concept ;
 			skos:prefLabel "seal script"@en ;
 			skos:altLabel "zhuanshu"@zh-Latn, "篆书"@zh ;
 			skos:definition "An ancient Chinese writing forms originated during the Zhou dynasty (c. 1046–256 BC), persisted during the Warring States period (c. 475 – 221 BC) and evolved during the Qin dynasty (221-206 BC). It is characterized by a strong pictographic nature."@en ;
-			skos:narrower wt:bird_insect_script , wt:great_seal_script , wt:small_seal_script ;
+			skos:narrower wt:great_seal_script , wt:small_seal_script ;
 			skos:exactMatch <https://vocab.getty.edu/aat/300343588> ;
 			dcterms:source "Qiu, X. 2000. Chinese writing (G. L. Mattos & J. Norman, Trans.). Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." , "Boltz, W. G. 1994. The origin and early development of the Chinese writing system. New Haven, CT: American Oriental Society." .
 
@@ -769,7 +765,7 @@ wt:bird_insect_script a skos:Concept ;
 			skos:prefLabel "bird and insect script"@en ;
 			skos:altLabel "niaochongshu"@zh-Latn , "鸟虫书"@zh , "bird-worm seal script"@en , "niaochongzhuan"@zh-Latn , "鸟虫篆"@zh , "bird-and-worm script"@en , "niaochongwen"@zh-Latn , "鸟虫文"@zh ;
 			skos:definition "This is a highly decorative variant of seal script. Dating back to the Spring and Autumn (770-476 BCE) and Warring States (475-221 BCE) periods, it was mainly cast or engraved on weapons. (zdic.net). It is characterized by intricate, intertwined strokes, that form characters with bird, fish, worm and insect-like elements added to the semantic element. It has two sub-styles: Bird Seal Script (niaozhuan 鸟篆), which incorporates bird-like heads and tails, and Worm Seal Script (chongzhuan 虫篆), characterized by winding, worm-like strokes. During the Qin (221–206 BCE) and Han (206 BCE–220 CE) dynasties, an ornamental writing style, also called niaochongshu 鸟虫书 or huaniaoshu (花鸟书), was used for writing on banners and credentials. This style features swift strokes adorned with birds, fish or other animals incorporated into the semantic elements of the characters."@en ;
-			skos:broader wt:seal_script, wt:great_seal_script ;
+			skos:broader wt:great_seal_script ;
 			dcterms:source "Daniels, Benjamin. 2022. 'Bird Script' is not Bird Script. Bulletin de l'École française d'Extrême-Orient 108: 325-370" , "Ulrich, Theobald (2011) Writing styles of Chinese characters. ChinaKnowledge.de - An Encyclopaedia on Chinese History, Literature and Art. http://www.chinaknowledge.de/Literature/Script/hanzi-writingstyles.html " .
 
 
@@ -869,7 +865,7 @@ wt:slender_gold_script a skos:Concept ;
 
 wt:lacquer_calligraphy a skos:Concept ;
 			skos:inScheme wt:write_thesaurus ;
-			skos:prefLabel "lacquer calligraphy script"@en ;
+			skos:prefLabel "lacquer calligraphy"@en ;
 			skos:altLabel "qishu"@zh-Latn , "漆书"@zh , "flat brush script"@en ;
 			skos:definition "Also known as Flat Brush Script, is a distinctive calligraphic style developed by Jin Nong (金農, 1687-1763) during the Qing dynasty (1644-1911). It is characterized by angular, square-shaped strokes, resembling characters painted with a flat-edged brush."@en ;
 			skos:broader wt:regular_script ;
@@ -900,19 +896,3 @@ wt:ugly_calligraphy a skos:Concept ;
 			skos:definition "Refers to a contemporary calligraphic style that deliberately challenges traditional aesthetic norms by embracing rough, distorted, and exaggerated forms. It often features irregular stroke thickness, unconventional character structures, and an expressive, almost rebellious quality. Rather than adhering to classical notions of beauty, choushu explores raw emotion, spontaneity, and anti-traditional aesthetics, often overlapping with avant-garde art movements and ignorant style graffiti. Choushu  traces its origins to sushu 俗书 (popular or vernacular calligraphy) and defines calligraphic works that appear disharmonious, asymmetric, and inconsistent in form."@en ;
 			dcterms:source "Liu, Zongchao. 2016. “‘Choushu’ zhong de ‘Zhen’ he ‘Shan’ 丑书’中的‘真’与 ‘善’ (The ‘Real’ and the ‘Good’ in ‘Ugly Calligraphy’).” Renmin Taolun  36: 139." , "Vermeeren, Laura. 2020. Inquisitive Ink. A study of contemporary practice of calligraphy in China. M. Phil. Dissertation, University of Amsterdam, 137." . 
 
-
-#################################################################
-#    Performing arts types
-#################################################################
-
-#################################################################
-#    Visual arts types
-#################################################################
-
-#################################################################
-#    Calligraphic training types
-#################################################################
-
-#################################################################
-#    Character directionalites
-#################################################################

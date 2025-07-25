@@ -99,14 +99,13 @@ dcat:downloadURL a rdf:Property ;
     rdfs:label "download URL"@en, "URL di scarico"@it .
 
 owl:Class a rdfs:Class ;
-     rdfs:label "Class" . 
+     rdfs:label "Class"@en, "Classe"@it . 
 
 owl:ObjectProperty a rdfs:Class ;
-     rdfs:label "ObjectProperty" . 
+     rdfs:label "ObjectProperty"@en, "Proprieta di oggeto"@it . 
 
 owl:DatatypeProperty a rdfs:Class ;
-     rdfs:label "DatatypeProperty" . 
+     rdfs:label "DatatypeProperty"@en, "Proprieta datatype"@it . 
 
 owl:inverseOf a rdf:Property ;
-     rdfs:label "inverseOf" ;
-     rdfs:comment "The property that determines that two given properties are inverse." . 
+     rdfs:label "inverseOf"@en, "inverso di"@it . 

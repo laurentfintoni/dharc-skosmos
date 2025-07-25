@@ -950,7 +950,7 @@ span.xl-pref-label > img {
 
 .logo-header > h2 {
   word-break: initial;
-  text-decoration-line: underline;
+  color: var(--medium-color);
   font-size: 24px !important;
 }
 

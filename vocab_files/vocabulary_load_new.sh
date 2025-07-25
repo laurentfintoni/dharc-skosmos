@@ -1,10 +1,10 @@
 # load KNOT vocabs 
 
-curl -L -o ktx.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/ktx.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@ktx.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/ktx.ttl"
+curl -L -o ktx.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@ktx.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl"
 
-curl -L -o kth.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/kth.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@kth.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/kth.ttl"
+curl -L -o kth.ttl https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/kth.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@kth.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/kth.ttl"
 
 # load Aldo Moro vocabs 
 
@@ -19,7 +19,7 @@ curl -X POST -H Content-Type:text/turtle --data-binary "@msv.ttl" "http://localh
 
 #load WRITE vocabs 
 
-curl -L -o WRITEthesaurus_v.1.0.ttl https://wendang-project.github.io/thesaurus/WRITEthesaurus_v.1.0.ttl
+curl -L -o WRITEthesaurus_v.1.0.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@WRITEthesaurus_v.1.0.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl"
 
 curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl
