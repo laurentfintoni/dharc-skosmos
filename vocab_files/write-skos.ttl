@@ -6,7 +6,6 @@
 @prefix wdt: <http://www.wikidata.org/prop/> .
 @prefix write: <http://w3id.org/write/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 write: a skos:ConceptScheme, owl:Ontology ;
     dct:title "WRITE Ontology"@en, "Ontologia WRITE"@it;

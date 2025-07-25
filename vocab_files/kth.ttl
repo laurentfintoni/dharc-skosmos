@@ -22,17 +22,17 @@
   dct:license <https://creativecommons.org/licenses/by-sa/4.0/>;
   dct:language "English"@en, "Italiano"@it ;
   dct:issued "2023-06-30"^^xsd:date ;
-  dct:modified "2024-02-10"^^xsd:date ;
+  dct:modified "2025-07-22"^^xsd:date ;
   foaf:homepage <https://icdp-digital-library.github.io/KNOT/> ;
-  skos:hasTopConcept kth:comp_viz, kth:data_viz, kth:nlp, kth:ner, kth:ocr,
+  skos:hasTopConcept kth:comp_viz, kth:data_viz, kth:nlp,
     kth:graph_database, kth:object_database, kth:relational_database,
     kth:triplestore, kth:markup_language, kth:ontology_language,
     kth:programming_language, kth:query_language, kth:backend,
     kth:content_management, kth:framework, kth:frontend,
     kth:metadata, kth:api, kth:sparql_endpoint ;
   owl:imports <http://www.w3.org/2004/02/skos/core#> ;
-  owl:versionInfo "1.4" ;
-  skos:editorialNote "Updated namespace from PURL to W3id."@en. 
+  owl:versionInfo "1.5" ;
+  skos:editorialNote "Fixed SKOS errors."@en. 
 
 kth:comp_inf_sciences a skos:Collection;
   skos:definition "This group comprises concepts that relate to the academic fields of computer and information sciences, understood as the use of technology to problem-solve as well as to design, produce, and use information systems for innovation. In the context of this thesaurus, this collection refers in particular to sub fields within those two larger and related academic disciplines."@en,
@@ -139,6 +139,7 @@ kth:relational_database a skos:Concept;
     <http://id.loc.gov/authorities/subjects/sh86007767>, <http://w3id.org/knot/taxonomy/database>;
   skos:prefLabel "relational database"@en, "database relazionale"@it;
   skos:altLabel "relational databases"@en ;
+  skos:related kth:mysql ;
   skos:inScheme <http://w3id.org/knot/thesaurus/>;
   skos:topConceptOf <http://w3id.org/knot/thesaurus/> .
 
@@ -194,6 +195,7 @@ kth:xml a skos:Concept;
     <http://id.loc.gov/authorities/subjects/sh97007825>, <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/1879>;
   skos:altLabel "Extensible Markup Language"@en;
   skos:prefLabel "XML"@en, "XML"@it;
+  skos:related kth:xslt, kth:marc, kth:mods, kth:tei, kth:mets ;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:json a skos:Concept;
@@ -238,6 +240,7 @@ kth:owl a skos:Concept;
   skos:relatedMatch <http://id.loc.gov/authorities/subjects/sh2012003486>, <http://w3id.org/knot/taxonomy/ontology>;
   skos:altLabel "Web Ontology Language"@en;
   skos:prefLabel "OWL"@en, "OWL"@it;
+  skos:related kth:rdf ;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:programming_language a skos:Concept;
@@ -260,6 +263,7 @@ kth:java a skos:Concept;
   skos:closeMatch <http://id.loc.gov/authorities/subjects/sh95008574>, <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/2668>;
   skos:altLabel "JAVA"@en;
   skos:prefLabel "Java"@en, "Java"@it;
+  skos:related kth:elastic_search, kth:xtf, kth:apache_tomcat, kth:solr ;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:javascript a skos:Concept;
@@ -270,6 +274,7 @@ kth:javascript a skos:Concept;
   skos:closeMatch <http://id.loc.gov/authorities/subjects/sh96004880>, <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/5717>;
   skos:altLabel "JS"@en;
   skos:prefLabel "JavaScript"@en, "JavaScript"@it;
+  skos:related kth:leaflet, kth:vue_js, kth:react, kth:node_js ;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:php a skos:Concept;
@@ -279,6 +284,7 @@ kth:php a skos:Concept;
   skos:broader kth:programming_language;
   skos:closeMatch <http://id.loc.gov/authorities/subjects/sh99002710>, <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/4045>;
   skos:prefLabel "PHP"@en, "PHP"@it;
+  skos:related kth:mediawiki, kth:wordpress ;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:python a skos:Concept;
@@ -296,7 +302,7 @@ kth:xslt a skos:Concept;
   dct:source "“XSLT: Extensible Stylesheet Language Transformations.” n.d. Mozilla.org. Accessed June 20, 2023. https://developer.mozilla.org/en-US/docs/Web/XSLT. “XSL Transformations (XSLT) Version 3.0.” n.d. Www.w3.org. Accessed June 20, 2023. https://www.w3.org/TR/xslt-30/."@en ;
   skos:broader kth:programming_language;
   skos:closeMatch <http://id.loc.gov/authorities/subjects/sh2001001708>, <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/4533>;
-  skos:related kth:xml;
+  skos:related kth:xml, kth:xtf;
   skos:altLabel "Extensible Stylesheet Language Transformations"@en;
   skos:prefLabel "XSLT"@en, "XSLT"@it;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
@@ -321,6 +327,7 @@ kth:sparql a skos:Concept;
     <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/6297>;
   skos:altLabel "SPARQL Protocol and RDF Query Language"@en;
   skos:prefLabel "SPARQL"@en, "SPARQL"@it;
+  skos:related kth:sparql_endpoint, kth:rdf;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:sql a skos:Concept;
@@ -332,6 +339,7 @@ kth:sql a skos:Concept;
     <https://isl.ics.forth.gr/parthenos_vocabularies/Concept/6241>;
   skos:altLabel "Structured Query Language"@en;
   skos:prefLabel "SQL"@en, "SQL"@it;
+  skos:related kth:mediawiki, kth:mysql ;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
 kth:information_architecture a skos:Collection;
@@ -406,7 +414,7 @@ kth:mysql a skos:Concept;
   skos:broader kth:backend;
   skos:relatedMatch <https://cerif.eurocris.org/vocab/OutputTypes#Software>, <http://vocab.getty.edu/aat/300028566>,
     <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept7.01>, <http://w3id.org/knot/taxonomy/software> ;
-  skos:related kth:sql, kth:relational_database ;
+  skos:related kth:sql, kth:relational_database, kth:wordpress ;
   skos:prefLabel "MySQL"@en, "MySQL"@it;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
 
@@ -565,7 +573,7 @@ kth:rdf a skos:Concept;
     "RDF è un modello standard per l'interscambio di dati online, sviluppato dal W3C, che si basa su un grafo diretto leggibile dalla macchina e composto da dichiarazioni triple (soggetto, predicato, oggetto). Fornisce una varietà di notazioni sintattiche e formati di serializzazione e consente di mescolare, esporre e condividere dati strutturati e semistrutturati tra le applicazioni. È più comunemente usato come metodo per modellare le informazioni e per la descrizione concettuale nel contesto del Web Semantico."@it;
   dct:source "“RDF - Semantic Web Standards.” n.d. Www.w3.org. Accessed June 20, 2023. https://www.w3.org/RDF/."@en;
   skos:broader kth:framework;
-  skos:related kth:sparql, kth:owl, kth:lod;
+  skos:related kth:sparql, kth:owl, kth:lod, kth:dc, kth:sparql_endpoint, kth:fabio, kth:skos, kth:linked_data;
   skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept3.02>, <http://id.loc.gov/authorities/subjects/sh2003010124>;
   skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept59>;
   skos:altLabel "Resource Description Framework"@en;
@@ -714,7 +722,7 @@ kth:lod a skos:Concept;
   skos:broader kth:metadata;
   skos:relatedMatch <http://id.loc.gov/authorities/subjects/sh2013002090>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept59.01>,
     <http://id.loc.gov/authorities/subjects/sh2002000569>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept59> ;
-  skos:related kth:rdf ;
+  skos:related kth:rdf, kth:omeka, kth:sparql_endpoint ;
   skos:altLabel "LOD"@en;
   skos:prefLabel "Linked Open Data"@en, "Linked Open Data"@it;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
@@ -724,7 +732,7 @@ kth:marc a skos:Concept;
     "Il Machine-Readable Cataloging (MARC) è un formato di comunicazione sviluppato dalla Biblioteca del Congresso per la produzione e la distribuzione di record bibliografici leggibili a macchina su nastro magnetico e ora utilizzato come standard internazionale di formati digitali per la descrizione degli articoli catalogati dalle biblioteche. L'insieme di standard comprende formati per i record di autorità, i record di posseduti, i programmi di classificazione e le informazioni sulla comunità, oltre ai record bibliografici."@it;
   dct:source "Wikipedia Contributors. 2023b. “MARC Standards.” Wikipedia, The Free Encyclopedia. May 30, 2023. https://en.wikipedia.org/w/index.php?title=MARC_standards&oldid=1157684049. “MARC Formats.” Loc.gov. Accessed June 20, 2023g. https://id.loc.gov/authorities/subjects/sh85080966.html."@en;
   skos:broader kth:metadata;
-  skos:related kth:mets, kth:mods, kth:xml ;
+  skos:related kth:xml ;
   skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85080966>;
   skos:altLabel "Machine-Readable Cataloging"@en;
   skos:prefLabel "MARC"@en, "MARC"@it;
@@ -737,7 +745,7 @@ kth:mets a skos:Concept;
   skos:broader kth:metadata;
   skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.02>,
     <http://vocab.getty.edu/aat/300266741>, <http://id.loc.gov/authorities/subjects/sh2005006014>;
-  skos:related kth:xml, kth:marc ;
+  skos:related kth:xml ;
   skos:altLabel "Metadata Encoding and Transmission Standard"@en;
   skos:prefLabel "METS"@en, "METS"@it;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
@@ -749,7 +757,7 @@ kth:mods a skos:Concept;
   skos:broader kth:metadata;
   skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.02>,
     <http://vocab.getty.edu/aat/300266741>, <http://id.loc.gov/authorities/subjects/sh2005006014>;
-  skos:related kth:xml, kth:marc, kth:dc ;
+  skos:related kth:xml ;
   skos:altLabel "Metadata Object Description Schema"@en;
   skos:prefLabel "MODS"@en, "MODS"@it;
   skos:inScheme <http://w3id.org/knot/thesaurus/> .
@@ -795,6 +803,7 @@ kth:api a skos:Concept;
     <http://vocab.getty.edu/aat/300028566>, <http://w3id.org/knot/taxonomy/endpoint>;
   skos:altLabel "Application Programming Interface"@en;
   skos:prefLabel "API"@en, "API"@it;
+  skos:related kth:iiif;
   skos:inScheme <http://w3id.org/knot/thesaurus/>;
   skos:topConceptOf <http://w3id.org/knot/thesaurus/> .
 
