@@ -86,8 +86,8 @@
     skosmos:conceptSchemesInHierarchy true ;
     skosmos:defaultSidebarView 'hierarchy' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/ktx.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/ktx.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl> .
 
 :kth a skosmos:Vocabulary, void:Dataset ;
     dc:title "KNOT Technology Thesaurus"@en, "KNOT Thesaurus Tecnologico"@it;
@@ -104,8 +104,8 @@
     skosmos:groupClass skos:Collection ;
     skosmos:defaultSidebarView 'groups' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/kth.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.4/kth.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/kth.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/kth.ttl> .
 
 :mtv a skosmos:Vocabulary, void:Dataset ;
     dc:title "Controlled vocabulary of Aldo Moro's works types"@en, "Vocabolario controllato delle tipologie delle opere di Aldo Moro"@it ;
