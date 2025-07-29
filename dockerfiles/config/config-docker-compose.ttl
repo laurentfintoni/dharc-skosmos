@@ -201,7 +201,7 @@
     dc:description "WRITE Ontology"@en, "Ontologia Scheda F"@it;
     skosmos:shortName "write";
     dc:subject :cat_write ;
-    void:uriSpace "https://w3id.org/write/ontology/";
+    void:uriSpace "https://w3id.org/write/ontology/#";
     skosmos:language "en", "it";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts false ;
@@ -225,8 +225,8 @@
     skosmos:groupClass skos:Collection ;
     skosmos:defaultSidebarView 'groups' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/WRITEthesaurus_v.1.0.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl> .
 
 :categories a skos:ConceptScheme;
     skos:prefLabel "Browse semantic artefacts by project or type"@en .

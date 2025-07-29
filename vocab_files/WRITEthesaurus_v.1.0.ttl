@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix wt: <http://w3id.org/write/thesaurus/> .
+@prefix wt: <https://wendang-project.github.io/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -19,7 +19,7 @@ wt:write_thesaurus a skos:ConceptScheme ;
 		dcterms:language "English"@en ;
 		foaf:homepage <https://wendang-project.github.io/documentation/> ;
 		dcterms:relation <https://writecalligraphyproject.eu/> ;
-		dcterms:subject "Chinese (contemporary) Calligraphy"@en , "Contemporary Arts"@en ; 
+		dcterms:subject "Chinese (contemporary) calligraphy"@en , "contemporary arts"@en ; 
 		dcterms:title "WRITE Thesaurus" ;
 		dcterms:created "2025-04-01"^^xsd:date ;
 		dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
@@ -422,7 +422,7 @@ wt:public_free_art a skos:Concept ;
 			skos:inScheme wt:write_thesaurus ;
 			skos:prefLabel "public free art"@en ;
 			skos:definition "A genre that embodies the core motivation behind graffiti writing, emphasizing the spontaneous and unrestricted expression of self-identity and artistic freedom in public spaces."@en ;
-			skos:narrower wt:public_social_political_art;
+			skos:narrower wt:public_social_political_art ;
 			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
 
 
@@ -895,4 +895,5 @@ wt:ugly_calligraphy a skos:Concept ;
 			skos:altLabel "choushu"@zh-Latn , "丑书"@zh ;
 			skos:definition "Refers to a contemporary calligraphic style that deliberately challenges traditional aesthetic norms by embracing rough, distorted, and exaggerated forms. It often features irregular stroke thickness, unconventional character structures, and an expressive, almost rebellious quality. Rather than adhering to classical notions of beauty, choushu explores raw emotion, spontaneity, and anti-traditional aesthetics, often overlapping with avant-garde art movements and ignorant style graffiti. Choushu  traces its origins to sushu 俗书 (popular or vernacular calligraphy) and defines calligraphic works that appear disharmonious, asymmetric, and inconsistent in form."@en ;
 			dcterms:source "Liu, Zongchao. 2016. “‘Choushu’ zhong de ‘Zhen’ he ‘Shan’ 丑书’中的‘真’与 ‘善’ (The ‘Real’ and the ‘Good’ in ‘Ugly Calligraphy’).” Renmin Taolun  36: 139." , "Vermeeren, Laura. 2020. Inquisitive Ink. A study of contemporary practice of calligraphy in China. M. Phil. Dissertation, University of Amsterdam, 137." . 
+
 
