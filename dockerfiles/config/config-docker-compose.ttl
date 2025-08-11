@@ -225,8 +225,8 @@
     skosmos:groupClass skos:Collection ;
     skosmos:defaultSidebarView 'groups' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl> .
 
 :categories a skos:ConceptScheme;
     skos:prefLabel "Browse semantic artefacts by project or type"@en .
