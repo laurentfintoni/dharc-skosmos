@@ -19,8 +19,8 @@ curl -I -X POST -H Content-Type:text/turtle -T msv.ttl -G http://localhost:9030/
 
 #load WRITE vocabs 
 
-curl -L -o WRITEthesaurus_v.1.0.ttl https://wendang-project.github.io/thesaurus/WRITEthesaurus_v.1.0.ttl
-curl -I -X POST -H Content-Type:text/turtle -T WRITEthesaurus_v.1.0.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl
+curl -L -o writeThesaurus_v.1.0.ttl https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl
+curl -I -X POST -H Content-Type:text/turtle -T writeThesaurus_v.1.0.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl
 
 curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl
 curl -I -X POST -H Content-Type:text/turtle -T write-skos.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl

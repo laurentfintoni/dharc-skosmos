@@ -19,8 +19,8 @@ curl -X POST -H Content-Type:text/turtle --data-binary "@msv.ttl" "http://localh
 
 #load WRITE vocabs 
 
-curl -L -o WRITEthesaurus_v.1.0.ttl https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@WRITEthesaurus_v.1.0.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/WRITEthesaurus_v.1.0.ttl"
+curl -L -o writeThesaurus_v.1.0.ttl https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@writeThesaurus_v.1.0.ttl" "https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl"
 
 curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@write-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl"
