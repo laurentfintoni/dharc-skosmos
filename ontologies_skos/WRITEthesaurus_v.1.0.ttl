@@ -16,7 +16,7 @@
 		dcterms:creator "Katarina Lučić" ;
 		dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
 		dcterms:description "The WRITE Thesaurus is a carefully curated resource dedicated to Chinese cultural heritage, with a particular focus on contemporary arts and calligraphy. Developed by domain experts as part of the WenDAng project, this thesaurus provides a structured vocabulary that captures the evolving landscape of Chinese (contemporary) calligraphy and its role in redefining cultural identity. Designed as both a research tool for WRITE scholars and a comprehensive reference for a wider audience, the thesaurus categorises key concepts essential to understanding traditional and contemporary Chinese artistic expressions. By offering precise definitions and classifications, it serves as a bridge between traditions and emerging artistic practices in contemporary China. This thesaurus is an invaluable resource for researchers, artists, and anyone interested in the dynamic interplay between Chinese calligraphy, cultural heritage, and contemporary artistic innovation."@en ;
-		dcterms:language <http://lexvo.org/id/iso639-3/eng>, <http://lexvo.org/page/iso639-3/zho> ;
+		dcterms:language "English"@en, "Chinese"@en ;
 		foaf:homepage <https://wendang-project.github.io/documentation/> ;
 		dcterms:relation <https://writecalligraphyproject.eu/> ;
 		dcterms:subject "Chinese (contemporary) calligraphy"@en , "contemporary arts"@en ; 
@@ -25,11 +25,6 @@
 		dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
 		dcterms:rightsHolder <https://writecalligraphyproject.eu/> ;
 		owl:versionInfo "1.0" .
-
-
-<http://lexvo.org/id/iso639-3/eng> a dcterms:LinguisticSystem .
-
-<http://lexvo.org/page/iso639-3/zho> a dcterms:LinguisticSystem .
 
 #################################################################
 #    Chinese Visual Elements
@@ -47,7 +42,7 @@ wt:chivel a skos:Collection ;
 wt:ink_wash_painting a skos:Concept ;
           	skos:inScheme wt:write_thesaurus ;
 			skos:prefLabel "ink wash painting"@en ;
-			skos:altLabel "水墨画"@zh ;
+			skos:altLabel "shuimohua"@zh-Latn , "水墨画"@zh ;
 			skos:definition "A type of Chinese ink brush painting which uses washes of black ink in different concentrations."@en ;
 			skos:narrower wt:landscape_painting , wt:birds_flowers_painting , wt:bamboo_painting ;
 			skos:related wt:wrinkle_method ;
@@ -172,8 +167,8 @@ wt:lotus_flower a skos:Concept ;
 
 wt:handscroll a skos:Concept ;
           		skos:inScheme wt:write_thesaurus ;
-				skos:prefLabel "handscroll"@en ;
-				skos:altLabel "horizontal scroll"@en , "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh ;
+				skos:prefLabel "handscroll"@en, "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh  ;
+				skos:altLabel "horizontal scroll"@en ;
 				skos:definition "Long, narrow, horizontal scroll format in East Asia used for calligraphy or paintings."@en ;
 				skos:exactMatch <https://chineseiconography.org/terms/CIT286105> ;
 				dcterms:source <https://en.wikipedia.org/wiki/Handscroll> .
