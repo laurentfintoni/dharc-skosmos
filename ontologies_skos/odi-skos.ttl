@@ -16,7 +16,7 @@
     dct:publisher "/DH.ARC - Digital Humanities Advanced Research Centre"@en, "Dipartimento di Filologia Classica e Italianistica - FICLIT"@it;
     dct:description "ODI (Ontologia dei Destini incrociati di Italo Calvino) is a conceptualization of Italo Calvino's Il castello dei destini incrociati. ODI modules formalise the edition of the work, the description of the cards - both as artefacts and narrative instances - and the semantic links and narrative relations between cards in each story."@en, "ODI (Ontologia dei Destini incrociati di Italo Calvino) è una concettualizzazione di Il castello dei destini incrociati di Italo Calvino. I moduli ODI formalizzano l'edizione dell'opera, la descrizione delle carte - sia come artefatti che come istanze narrative - e i collegamenti semantici e le relazioni narrative tra le carte in ogni racconto."@it ;
     owl:imports skos: ;
-    dct:language "English"@en, "Italiano"@it ;
+    dct:language "English"@en, "Italian"@en, "Italiano"@it, "Inglese"@it ;
     dct:created "2019" ;
     dct:issued "2019-02-01"^^xsd:date ;
     owl:versionInfo "1.0" ;
