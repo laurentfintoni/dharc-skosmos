@@ -167,8 +167,8 @@ wt:lotus_flower a skos:Concept ;
 
 wt:handscroll a skos:Concept ;
           		skos:inScheme wt:write_thesaurus ;
-				skos:prefLabel "handscroll"@en ;
-				skos:altLabel "horizontal scroll"@en , "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh ;
+				skos:prefLabel "handscroll"@en, "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh ;
+				skos:altLabel "horizontal scroll"@en ; 
 				skos:definition "Long, narrow, horizontal scroll format in East Asia used for calligraphy or paintings."@en ;
 				skos:exactMatch <https://chineseiconography.org/terms/CIT286105> ;
 				dcterms:source <https://en.wikipedia.org/wiki/Handscroll> .
