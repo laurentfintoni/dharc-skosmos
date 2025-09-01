@@ -210,14 +210,14 @@
     void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> ;
     skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> .
 
-:write_thesaurus a skosmos:Vocabulary, void:Dataset ;
+:wt a skosmos:Vocabulary, void:Dataset ;
     dc:title "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
     dc:description "The WRITE Thesaurus is a carefully curated resource dedicated to Chinese cultural heritage, with a particular focus on contemporary arts and calligraphy. Developed by domain experts as part of the WenDAng project, this thesaurus provides a structured vocabulary that captures the evolving landscape of Chinese (contemporary) calligraphy and its role in redefining cultural identity. Designed as both a research tool for WRITE scholars and a comprehensive reference for a wider audience, the thesaurus categorises key concepts essential to understanding traditional and contemporary Chinese artistic expressions. By offering precise definitions and classifications, it serves as a bridge between traditions and emerging artistic practices in contemporary China. This thesaurus is an invaluable resource for researchers, artists, and anyone interested in the dynamic interplay between Chinese calligraphy, cultural heritage, and contemporary artistic innovation."@en, "Il Thesaurus WRITE è una risorsa  curata dedicata al patrimonio culturale cinese, con particolare attenzione alle arti contemporanee e alla calligrafia. Sviluppato da esperti del settore nell'ambito del progetto WenDAng, questo thesaurus fornisce un vocabolario strutturato che cattura il panorama in evoluzione della calligrafia cinese (contemporanea) e il suo ruolo nella ridefinizione dell'identità culturale. Concepito sia come strumento di ricerca per gli studiosi di WRITE sia come riferimento completo per un pubblico più ampio, il thesaurus categorizza i concetti chiave essenziali per comprendere le espressioni artistiche cinesi tradizionali e contemporanee. Offrendo definizioni e classificazioni precise, funge da ponte tra le tradizioni e le pratiche artistiche emergenti nella Cina contemporanea. Questo thesaurus è una risorsa preziosa per ricercatori, artisti e chiunque sia interessato all'interazione dinamica tra calligrafia cinese, patrimonio culturale e innovazione artistica contemporanea."@it ;
     skos:prefLabel "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
     skosmos:shortName "wt";
     dc:subject :cat_write ;
     void:uriSpace "http://w3id.org/write/thesaurus/";
-    skosmos:language "en", "it";
+    skosmos:language "en", "zh", "zh-Latn";
     skosmos:defaultLanguage "en";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
