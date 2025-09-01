@@ -81,6 +81,7 @@
     void:uriSpace "http://w3id.org/knot/taxonomy/";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "en";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
     skosmos:conceptSchemesInHierarchy true ;
@@ -97,6 +98,7 @@
     dc:subject :cat_knot ;
     void:uriSpace "http://w3id.org/knot/thesaurus/";
     skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:defaultLanguage "en";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
@@ -114,6 +116,7 @@
     dc:subject :cat_moro ;
     void:uriSpace "https://www.w3id.org/moro/voc/types/";
     skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:defaultLanguage "it";
     skosmos:fullAlphabeticalIndex true ;
     skosmos:showTopConcepts false ;
@@ -130,6 +133,7 @@
     dc:subject :cat_moro ;
     void:uriSpace "https://www.w3id.org/moro/voc/roles/";
     skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:defaultLanguage "it";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts false ;
@@ -146,6 +150,7 @@
     dc:subject :cat_moro ;
     void:uriSpace "https://www.w3id.org/moro/voc/subjects/";
     skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:defaultLanguage "it";
     skosmos:fullAlphabeticalIndex true ;
     skosmos:showTopConcepts false ;
@@ -161,6 +166,8 @@
     dc:subject :cat_ontos ;
     void:uriSpace "http://www.essepuntato.it/2014/03/fentry/";
     skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:fullAlphabeticalIndex true ;
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
@@ -175,6 +182,8 @@
     dc:subject :cat_ontos ;
     void:uriSpace "https://purl.org/ebr/odi#";
     skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
@@ -189,6 +198,8 @@
     dc:subject :cat_ontos ;
     void:uriSpace "http://purl.org/emmedi/hico/";
     skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:fullAlphabeticalIndex true ;
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
@@ -203,6 +214,8 @@
     dc:subject :cat_write ;
     void:uriSpace "https://w3id.org/write/ontology/#";
     skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en], [skosmos:property];
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
@@ -218,6 +231,8 @@
     dc:subject :cat_write ;
     void:uriSpace "http://w3id.org/write/thesaurus/";
     skosmos:language "en", "zh", "zh-Latn";
+    skosmos:hasMultiLingualProperty skos:altLabel ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:defaultLanguage "en";
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts true ;
