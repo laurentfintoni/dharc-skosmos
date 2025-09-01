@@ -42,7 +42,7 @@ wt:chivel a skos:Collection ;
 wt:ink_wash_painting a skos:Concept ;
           	skos:inScheme wt:write_thesaurus ;
 			skos:prefLabel "ink wash painting"@en ;
-			skos:altLabel "shuimohua"@zh-Latn , "水墨画"@zh ;
+			skos:altLabel "水墨画"@zh ;
 			skos:definition "A type of Chinese ink brush painting which uses washes of black ink in different concentrations."@en ;
 			skos:narrower wt:landscape_painting , wt:birds_flowers_painting , wt:bamboo_painting ;
 			skos:related wt:wrinkle_method ;
