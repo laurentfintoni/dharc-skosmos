@@ -215,7 +215,7 @@
     void:uriSpace "https://w3id.org/write/ontology/#";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "en" ;
-    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en], [skosmos:property];
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en] ;
     skosmos:fullAlphabeticalIndex false ;
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
