@@ -35,3 +35,8 @@ curl -I -X POST -H Content-Type:text/turtle -T odi-skos.ttl -G http://localhost:
 
 curl -L -o hico-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
 curl -I -X POST -H Content-Type:text/turtle -T hico-skos.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
+
+# load ATLAS vocabs
+
+curl -L -o ETV.ttl https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl
+curl -I -X POST -H Content-Type:text/turtle -T ETV.ttl -G http://localhost:9030/skosmos/data --data-urlencode graph=https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl

@@ -36,3 +36,7 @@ curl -X POST -H Content-Type:text/turtle --data-binary "@odi-skos.ttl" "http://l
 curl -L -o hico-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@hico-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl"
 
+# load ATLAS vocabs
+
+curl -L -o ETV.ttl https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@ETV.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl"

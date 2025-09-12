@@ -243,6 +243,23 @@
     void:dataDump <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl> ;
     skosmos:sparqlGraph <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl> .
 
+:etv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Edition Types Vocabulary"@en, "Edition Types Vocabulary"@it;
+    dc:description: "The Edition Types Vocabulary is a knowledge organization system developed within the ATLAS project. Its purpose is to provide a structured and authoritative set of terms to describe various types of textual criticism products, specifically scholarly editions. The vocabulary encompasses a wide range of edition types—such as critical, diplomatic, genetic, and facsimile editions—offering standardized, stable labels and curated references to support the consistent classification and description of editorial practices in textual scholarship."@en,
+        "Edition Types Vocabulary è un sistema di organizzazione della conoscenza sviluppato nell’ambito del progetto ATLAS. Lo scopo del vocabolario è fornire un insieme strutturato e autorevole di termini per descrivere diverse tipologie di prodotti dell'ecdotica, in particolare le edizioni critiche. Il vocabolario comprende un’ampia gamma di tipologie editoriali—come le edizioni critiche, diplomatiche, genetiche e facsimilari—offrendo etichette standardizzate, stabili e riferimenti curati per supportare una classificazione e una descrizione coerente delle pratiche editoriali nel campo della filologia testuale."@it ;
+    skosmos:shortName "ETV";
+    dc:subject :cat_atlas ;
+    void:uriSpace "https://w3id.org/dh-atlas-vocabularies/etv/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> .
+
 :categories a skos:ConceptScheme;
     skos:prefLabel "Browse semantic artefacts by project or type"@en .
 
@@ -250,6 +267,12 @@
     skos:topConceptOf :categories ;
     skos:inScheme :categories ;
     skos:prefLabel "KNOT"@en , "KNOT"@it ;
+    dc:description "Example description."@en .
+
+:cat_atlas a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "ATLAS"@en , "ATLAS"@it ;
     dc:description "Example description."@en .
 
 :cat_moro a skos:Concept ;
