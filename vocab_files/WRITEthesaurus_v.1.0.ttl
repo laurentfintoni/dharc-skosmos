@@ -16,7 +16,7 @@
 		dcterms:creator "Katarina Lučić" ;
 		dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
 		dcterms:description "The WRITE Thesaurus is a carefully curated resource dedicated to Chinese cultural heritage, with a particular focus on contemporary arts and calligraphy. Developed by domain experts as part of the WenDAng project, this thesaurus provides a structured vocabulary that captures the evolving landscape of Chinese (contemporary) calligraphy and its role in redefining cultural identity. Designed as both a research tool for WRITE scholars and a comprehensive reference for a wider audience, the thesaurus categorises key concepts essential to understanding traditional and contemporary Chinese artistic expressions. By offering precise definitions and classifications, it serves as a bridge between traditions and emerging artistic practices in contemporary China. This thesaurus is an invaluable resource for researchers, artists, and anyone interested in the dynamic interplay between Chinese calligraphy, cultural heritage, and contemporary artistic innovation."@en ;
-		dcterms:language "English"@en, "Chinese"@en ;
+		dcterms:language "English"@en ;
 		foaf:homepage <https://wendang-project.github.io/documentation/> ;
 		dcterms:relation <https://writecalligraphyproject.eu/> ;
 		dcterms:subject "Chinese (contemporary) calligraphy"@en , "contemporary arts"@en ; 
@@ -167,8 +167,8 @@ wt:lotus_flower a skos:Concept ;
 
 wt:handscroll a skos:Concept ;
           		skos:inScheme wt:write_thesaurus ;
-				skos:prefLabel "handscroll"@en, "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh  ;
-				skos:altLabel "horizontal scroll"@en ;
+				skos:prefLabel "handscroll"@en ;
+				skos:altLabel "horizontal scroll"@en , "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh ;
 				skos:definition "Long, narrow, horizontal scroll format in East Asia used for calligraphy or paintings."@en ;
 				skos:exactMatch <https://chineseiconography.org/terms/CIT286105> ;
 				dcterms:source <https://en.wikipedia.org/wiki/Handscroll> .
@@ -895,5 +895,8 @@ wt:ugly_calligraphy a skos:Concept ;
 			skos:altLabel "choushu"@zh-Latn , "丑书"@zh ;
 			skos:definition "Refers to a contemporary calligraphic style that deliberately challenges traditional aesthetic norms by embracing rough, distorted, and exaggerated forms. It often features irregular stroke thickness, unconventional character structures, and an expressive, almost rebellious quality. Rather than adhering to classical notions of beauty, choushu explores raw emotion, spontaneity, and anti-traditional aesthetics, often overlapping with avant-garde art movements and ignorant style graffiti. Choushu  traces its origins to sushu 俗书 (popular or vernacular calligraphy) and defines calligraphic works that appear disharmonious, asymmetric, and inconsistent in form."@en ;
 			dcterms:source "Liu, Zongchao. 2016. “‘Choushu’ zhong de ‘Zhen’ he ‘Shan’ 丑书’中的‘真’与 ‘善’ (The ‘Real’ and the ‘Good’ in ‘Ugly Calligraphy’).” Renmin Taolun  36: 139." , "Vermeeren, Laura. 2020. Inquisitive Ink. A study of contemporary practice of calligraphy in China. M. Phil. Dissertation, University of Amsterdam, 137." . 
+
+
+
 
 

@@ -70,7 +70,7 @@
     skosmos:globalPlugins () ;
     skosmos:baseHref "https://lab.dharc.unibo.it/skosmos/" .
 
-# Skosmos vocabularies
+# Skosmos vocabularies (add new vocabularies here)
 
 :ktx a skosmos:Vocabulary, void:Dataset ;
     dc:title "KNOT Taxonomy"@en, "KNOT Tassonomia"@it;
@@ -230,7 +230,7 @@
     skosmos:shortName "wt";
     dc:subject :cat_write ;
     void:uriSpace "http://w3id.org/write/thesaurus/";
-    skosmos:language "en", "zh", "zh-Latn";
+    skosmos:language "en", "zh", "zh-Latn", "it";
     skosmos:hasMultiLingualProperty skos:altLabel ;
     skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
     skosmos:defaultLanguage "en";
@@ -260,35 +260,42 @@
     void:dataDump <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> ;
     skosmos:sparqlGraph <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> .
 
-:categories a skos:ConceptScheme;
-    skos:prefLabel "Browse semantic artefacts by project or type"@en .
+# Skosmos categories (add new categories here)
 
-:cat_knot a skos:Concept ;
-    skos:topConceptOf :categories ;
-    skos:inScheme :categories ;
-    skos:prefLabel "KNOT"@en , "KNOT"@it ;
-    dc:description "Example description."@en .
+:categories a skos:ConceptScheme;
+    skos:prefLabel "Browse semantic artefacts by project or type"@en, "Sfoglia gli artefatti semantici per progetto o tipo"@it .
 
 :cat_atlas a skos:Concept ;
     skos:topConceptOf :categories ;
     skos:inScheme :categories ;
     skos:prefLabel "ATLAS"@en , "ATLAS"@it ;
-    dc:description "Example description."@en .
+    dc:description "The ATLAS of Italian Digital Humanities."@en, "The ATLAS of Italian Digital Humanities."@it .
+
+:cat_knot a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "KNOT"@en , "KNOT"@it ;
+    dc:description "Rethinking Scholarly Digital Objects as Digital Cultural Heritage."@en, "Rethinking Scholarly Digital Objects as Digital Cultural Heritage."@it .
 
 :cat_moro a skos:Concept ;
     skos:topConceptOf :categories ;
     skos:inScheme :categories ;
-    skos:prefLabel "National Edition of Aldo Moro's Works"@it , "National Edition of Aldo Moro's Works"@en .
-
-:cat_write a skos:Concept ;
-    skos:topConceptOf :categories ;
-    skos:inScheme :categories ;
-    skos:prefLabel "WRITE"@en , "WRITE"@it .
+    skos:prefLabel "National Edition of Aldo Moro's Works"@it , "National Edition of Aldo Moro's Works"@en ;
+    dc:description "Critical edition of Aldo Moro's published and unpublished texts, with their historical introduction."@en, "Edizione critica dei testi editi e inediti, con una loro introduzione storica"@it .
 
 :cat_ontos a skos:Concept ;
     skos:topConceptOf :categories ;
     skos:inScheme :categories ;
-    skos:prefLabel "Ontologie"@it , "Ontologies"@en .
+    skos:prefLabel "Ontologie"@it , "Ontologies"@en ;
+    dc:description "OWL formatted ontologies converted to SKOS for integration into the DH.arc Vocabularies repository."@en, "Ontologie formattate in OWL convertite in SKOS per l'integrazione nel repository DH.arc Vocabularies."@it .
+
+:cat_write a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "WRITE"@en , "WRITE"@it ;
+    dc:description "A major research initiative that explores how evolving forms of calligraphy in contemporary China are reshaping cultural identity."@en, "Un'iniziativa di ricerca che esplora come le forme evoluenti della calligrafia nella Cina contemporanea stiano ridefinendo l'identità culturale."@it . 
+
+# Additional properties
 
 dcat:downloadURL a rdf:Property ;
     rdfs:label "download URL"@en, "URL di scarico"@it .

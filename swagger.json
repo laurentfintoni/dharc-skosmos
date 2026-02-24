@@ -7,7 +7,6 @@
   },
   "host": "lab.dharc.unibo.it",
   "schemes": [
-    "http",
     "https"
   ],
   "basePath": "/skosmos/rest/v1",

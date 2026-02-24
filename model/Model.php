@@ -121,6 +121,35 @@ class Model
     }
 
     /**
+     * Returns descriptions for all vocabulary categories from the configuration graph.
+     * @param string $lang language code for the descriptions
+     * @return array associative array with category labels as keys and descriptions as values
+     */
+    public function getCategoryDescriptions($lang)
+    {
+        $cats = $this->getVocabularyCategories();
+        $descriptions = array();
+        
+        foreach ($cats as $cat) {
+            $label = $cat->getTitle();
+            $resource = $cat->getResource();
+            
+            // Try to get dc:description in the specified language
+            $description = $resource->getLiteral('dc:description', $lang);
+            if (!$description) {
+                // Fall back to dc11:description
+                $description = $resource->getLiteral('dc11:description', $lang);
+            }
+            
+            if ($description) {
+                $descriptions[$label] = $description->getValue();
+            }
+        }
+        
+        return $descriptions;
+    }
+
+    /**
      * Return all types (RDFS/OWL classes) present in the specified vocabulary or all vocabularies.
      * @return array Array with URIs (string) as key and array of (label, superclassURI) as value
      */

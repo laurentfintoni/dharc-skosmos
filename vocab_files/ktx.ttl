@@ -20,7 +20,7 @@
   dct:publisher "/DH.ARC - Digital Humanities Advanced Research Centre"@en, "Dipartimento di Filologia Classica e Italianistica - FICLIT"@it;
   dct:creator "Laurent Fintoni, Francesca Tomasi, Marilena Daquino" ;
   dct:license <https://creativecommons.org/licenses/by-sa/4.0/>;
-  dct:language "English"@en, "Italiano"@it ;
+  dct:language "English"@en, "Italian"@en, "Italiano"@it, "Inglese"@it ;
   dct:issued "2023-06-15"^^xsd:date ;
   dct:modified "2025-07-22"^^xsd:date ;
   skos:hasTopConcept ktx:corpus, ktx:database, ktx:dataset, 

@@ -4,7 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/> .
-@prefix write: <http://w3id.org/write/ontology/#> .
+@prefix write: <http://w3id.org/write/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -18,7 +18,7 @@ write: a skos:ConceptScheme, owl:Ontology ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     dct:created "2020" ;
     dct:modified "2025-01-09T00:00:00"^^xsd:dateTime ;
-    dct:language "English"@en, "Italiano"@it ;
+    dct:language "English"@en, "Italian"@en, "Italiano"@it, "Inglese"@it ;
     dct:subject "\"Chinese calligraphy\", \"contemporary calligraphy\", \"contemporary arts\", \"visual arts\", \"graffiti\", \"performing arts\", \"decorative and applied arts\"" ;
     owl:version "2.0.0" ;
     rdfs:comment "This ontology is designed to represent the intangible cultural heritage of Chinese calligraphy as it appears in contemporary artworks, alongside the broader tangible cultural heritage of contemporary arts. The WRITE ontology provides a structured way to describe artworks, their contextual elements, and the calligraphy integrated within them. Additionally, it facilitates the identification of similarities and differences between contemporary and traditional calligraphy, enabling a deeper understanding of their evolution and artistic connections. The ontology was developed with input from domain experts, all of whom are members of the WRITE project team."@en, "Questa ontologia è sviluppata per rappresentare il patrimonio culturale immateriale della calligrafia cinese così come appare nelle opere d'arte contemporanee, insieme al patrimonio culturale tangibile delle arti contemporanee. L'ontologia WRITE fornisce un modo strutturato per descrivere le opere d'arte, i loro elementi contestuali e la calligrafia integrate in esse. Inoltre, facilita l'identificazione delle somiglianze e delle differenze tra la calligrafia contemporanea e quella tradizionale, consentendo una comprensione più profonda della loro evoluzione e delle connessioni artistiche. L'ontologia è stata sviluppata con il contributo di esperti del dominio, tutti membri del team del progetto WRITE."@it ;

@@ -72,7 +72,7 @@ RUN rm index.html
 # composer and packages layer
 RUN curl -sS https://getcomposer.org/installer | php
 COPY composer.json /var/www/html
-RUN php composer.phar install --no-dev --no-autoloader
+RUN php composer.phar install --no-dev --no-autoloader --ignore-platform-req=php
 
 # skosmos layer
 COPY . /var/www/html

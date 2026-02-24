@@ -116,6 +116,10 @@ p {
   font-size: var(--font-size);
 }
 
+.category-description > p {
+  font-size: 14px;
+}
+
 .bread-crumb {
   font-size: var(--font-size);
 }

@@ -791,81 +791,81 @@ msgstr ""
 msgid "Skip to main"
 msgstr ""
 
-msgid "Available vocabularies and ontologies"
+msgid "Vocabolari e ontologie disponibili"
 msgstr ""
 
-msgid "Search from selected vocabularies"
+msgid "Ricerca da vocabolari selezionati"
 msgstr ""
 
-msgid "List vocabulary concepts alphabetically"
+msgid "Elenca i concetti del vocabolario in ordine alfabetico"
 msgstr ""
 
-msgid "List vocabulary concepts and groupings hierarchically"
+msgid "Elenca i concetti e i raggruppamenti del vocabolario in modo gerarchico"
 msgstr ""
 
-msgid "List vocabulary concepts by newest additions"
+msgid "Elenca i concetti del vocabolario in base alle ultime aggiunte"
 msgstr ""
 
-msgid "List vocabulary concepts hierarchically"
+msgid "Elenca i concetti del vocabolario in ordine gerarchico"
 msgstr ""
 
-msgid "Choose alphabetical listing letter"
+msgid "Scegli la lettera dell'elenco alfabetico"
 msgstr ""
 
-msgid "Concept information"
+msgid "Informazioni sul concetto"
 msgstr ""
 
-msgid "Hierarchical listing of vocabulary concepts"
+msgid "Elenco gerarchico dei concetti del vocabolario"
 msgstr ""
 
-msgid "Hierarchical listing of vocabulary concepts and groupings"
+msgid "Elenco gerarchico dei concetti e dei raggruppamenti lessicali"
 msgstr ""
 
-msgid "Listing vocabulary concepts alphabetically"
+msgid "Elenco dei concetti lessicali in ordine alfabetico"
 msgstr ""
 
-msgid "Listing vocabulary concepts by newest additions"
+msgid "Elenco dei concetti lessicali in ordine di aggiunta più recente"
 msgstr ""
 
-msgid "Prefer using"
+msgid "Preferisco usare"
 msgstr ""
 
-msgid "Search options tab"
+msgid "Scheda Opzioni di ricerca"
 msgstr ""
 
-msgid "Search results"
+msgid "Risultati della ricerca"
 msgstr ""
 
-msgid "Sidebar listing: list and traverse vocabulary contents by a criterion"
+msgid "Elenco nella barra laterale: elenca e attraversa i contenuti del vocabolario in base a un criterio"
 msgstr ""
 
-msgid "Subject:"
+msgid "Soggetto:"
 msgstr ""
 
-msgid "Write a subject"
+msgid "Scrivere un soggetto"
 msgstr ""
 
-msgid "Select a vocabulary"
+msgid "Seleziona un vocabolario"
 msgstr ""
 
 msgid ""
-"We're sorry but Skosmos doesn't work properly without JavaScript enabled. "
-"Please enable it to continue."
+"Siamo spiacenti, ma Skosmos non funziona correttamente senza JavaScript abilitato. "
+"Abilitalo per continuare."
 msgstr ""
 
-msgid "Deprecated concept"
+msgid "Concetto obsoleto"
 msgstr ""
 
-msgid "Error: Search failed!"
+msgid "Errore: ricerca non riuscita!"
 msgstr ""
 
-msgid "Error: Failed to retrieve vocabulary information!"
+msgid "Errore: impossibile recuperare le informazioni sul vocabolario!"
 msgstr ""
 
-msgid "Error: Loading more items failed!"
+msgid "Errore: impossibile caricare altri elementi!"
 msgstr ""
 
-msgid "Retry"
+msgid "Riprovare"
 msgstr ""
 
 msgid "skos:notation"
@@ -874,5 +874,5 @@ msgstr ""
 msgid "skos:notation_help"
 msgstr ""
 
-msgid "Information"
+msgid "Informazioni"
 msgstr ""

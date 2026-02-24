@@ -136,6 +136,7 @@ class WebController extends Controller
         // set template variables
         $categoryLabel = $this->model->getClassificationLabel($request->getLang());
         $sortedVocabs = $this->model->getVocabularyList(false, true);
+        $categoryDescriptions = $this->model->getCategoryDescriptions($request->getLang());
         $langList = $this->model->getLanguages($request->getLang());
         $listStyle = $this->listStyle();
 
@@ -143,6 +144,7 @@ class WebController extends Controller
         echo $template->render(
             array(
                 'sorted_vocabs' => $sortedVocabs,
+                'category_descriptions' => $categoryDescriptions,
                 'category_label' => $categoryLabel,
                 'languages' => $this->languages,
                 'lang_list' => $langList,
