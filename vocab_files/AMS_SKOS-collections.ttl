@@ -1,0 +1,725 @@
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix ams: <http://w3id.org/AMSHistorica/thesaurus/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://w3id.org/AMSHistorica/thesaurus> a skos:ConceptScheme;
+  dct:title "AMS Historica Thesaurus"@it, "AMS Historica Thesaurus"@en;
+  dct:description "Descrizione del thesaurus in italiano"@it, "Descrizione del thesaurus in inglese"@en;
+  skos:hasTopConcept ams:frutta, ams:dicotiledoni, ams:monocotiledoni, ams:epitaph,
+    ams:unclear, ams:iscrizioni_onorarie, ams:alphabet, ams:royal_letter, ams:road_signpost,
+    ams:iscrizioni_religiose, ams:iscrizioni_normative, ams:cataloghi, ams:iscrizioni_identificative .
+
+ams:SSD_07D a skos:Collection;
+  skos:prefLabel "07/D - Patologia vegetale e entomologia"@it, "07/D - Plant pathology and entomology"@en;
+  skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-07-D>;
+  dct:description "Il macrosettore concorsuale 07/D raggruppa le attività di ricerca e didattica relative alla diagnosi, epidemiologia e controllo delle malattie vegetali, all'identificazione degli agenti patogeni e alla gestione integrata dei parassiti animali in ambito agrario e forestale."@it,
+    "Macro-sector 07/D grouping research and teaching activities related to the diagnosis, epidemiology and control of plant diseases, the identification of pathogenic agents, and the integrated management of animal pests in agricultural and forest contexts."@en;
+  skos:member ams:patologiaVegetale;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:patologiaVegetale a skos:Collection;
+  skos:prefLabel "Patologia vegetale"@it, "Plant pathology"@en;
+  dct:description "La collezione \"Patologia vegetale: Malattie degli ortofrutticoli dopo la raccolta\" comprende materiale fotografico di numerosi campioni di frutta e ortaggi affetti da alterazioni microbiologiche e fisiologiche successive alla raccolta, durante la conservazione e la commercializzazione. I campioni sono stati raccolti e fotografati tra il 1970 e il 1990 nell'ambito delle attività di ricerca e sperimentazione del CRIOF, Centro per la conservazione e trasformazione dei prodotti ortofrutticoli dell'Università di Bologna."@it,
+    "The collection \"Plant Pathology: Post-Harvest Diseases of Fruit and Vegetables\" consists of photographic material from numerous samples of fruit and vegetables affected by microbiological and physiological alterations after harvest, during storage, and commercialization. The samples were collected and photographed between 1970 and 1990 as part of the research and experimentation activities of CRIOF, the Center for the Conservation and Processing of Fruit and Vegetable Products at the University of Bologna."@en;
+  skos:member ams:mela, ams:pera, ams:arancia, ams:patata, ams:melone, ams:cipolla,
+    ams:actinidia, ams:kaki, ams:melanzana, ams:nettarina, ams:pomodoro, ams:susina, ams:lattuga,
+    ams:peperone, ams:pesca, ams:aglio, ams:fagiolino, ams:limone, ams:uva, ams:zucca,
+    ams:albicocca, ams:carciofo, ams:carota, ams:ciliegia, ams:banana, ams:fico, ams:gladiolo,
+    ams:melagrana, ams:zucchino, ams:ananas, ams:mela_cotogna, ams:frutta, ams:agrumi,
+    ams:solanacee, ams:dicotiledoni, ams:allium, ams:cucurbita_pepo, ams:monocotiledoni;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:mela a skos:Concept;
+  skos:prefLabel "Mele"@it, "Apples"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=22316>;
+  skos:broader ams:frutta;
+  skos:related ams:mela_cotogna, ams:pera, ams:melone, ams:kaki, ams:susina, ams:pesca,
+    ams:uva, ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266417>, <https://www.wikidata.org/wiki/Q89>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:pera a skos:Concept;
+  skos:prefLabel "Pere"@it, "Pears"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=14168>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:kaki, ams:susina, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300435353>, <https://www.wikidata.org/wiki/Q13099586>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:arancia a skos:Concept;
+  skos:prefLabel "Arance"@it, "Oranges"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=40298>;
+  skos:broader ams:agrumi;
+  skos:related ams:limone;
+  skos:altLabel "Aranci"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266271>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:patata a skos:Concept;
+  skos:prefLabel "Patate"@it, "Potatoes"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=36123>;
+  skos:broader ams:solanacee;
+  skos:related ams:melanzana, ams:peperone, ams:pomodoro;
+  skos:altLabel "Solanum tuberosum"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300435305>, <http://id.loc.gov/authorities/subjects/sh85105652>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:melone a skos:Concept;
+  skos:prefLabel "Meloni"@it, "Melon"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62712>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Poponi"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266444>, <http://id.loc.gov/authorities/subjects/sh85083446>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cipolla a skos:Concept;
+  skos:prefLabel "Cipolle"@it, "Onions"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=65765>;
+  skos:broader ams:allium;
+  skos:related ams:aglio;
+  skos:altLabel "Allium cepa"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85094798>, <https://www.wikidata.org/wiki/Q23485>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:actinidia a skos:Concept;
+  skos:prefLabel "Actinidia"@it, "Actinidia"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62484>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:lattuga, ams:fagiolino, ams:carciofo;
+  skos:altLabel "Attinidia"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85000702>, <https://www.wikidata.org/wiki/Q164898>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:kaki a skos:Concept;
+  skos:prefLabel "Cachi"@it, "Kaki persimmon"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62608>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:susina, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Diosperi"@it, "Kaki"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85071315>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:melanzana a skos:Concept;
+  skos:prefLabel "Melanzane"@it, "Eggplant"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=53625>;
+  skos:broader ams:solanacee;
+  skos:related ams:patata, ams:peperone, ams:pomodoro;
+  skos:altLabel "Solanum melongena"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300311491>, <http://id.loc.gov/authorities/subjects/sh85041224>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:nettarina a skos:Concept;
+  skos:prefLabel "Pesche nettarine"@it, "Nectarine"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=72767>;
+  skos:broader ams:pesca;
+  skos:altLabel "Nettarine"@it, "Noci pesche"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85090580>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:pomodoro a skos:Concept;
+  skos:prefLabel "Pomodori"@it, "Tomato"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=26289>;
+  skos:broader ams:solanacee;
+  skos:related ams:patata, ams:melanzana, ams:peperone;
+  skos:altLabel "Solanum lycopersicum"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266435>, <http://id.loc.gov/authorities/subjects/sh85135924>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:susina a skos:Concept;
+  skos:prefLabel "Susine"@it, "Plums"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=63064>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266438>, <https://www.wikidata.org/wiki/Q12372598>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:lattuga a skos:Concept;
+  skos:prefLabel "Lattuga"@it, "Lettuce"@en;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:fagiolino, ams:carciofo;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85076251>, <https://www.wikidata.org/wiki/Q83193>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:peperone a skos:Concept;
+  skos:prefLabel "Peperoni"@it, "Sweet peppers"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=24151>;
+  skos:broader ams:solanacee;
+  skos:related ams:patata, ams:melanzana, ams:pomodoro;
+  skos:altLabel "Capsicum annuum"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85131181>, <https://www.wikidata.org/wiki/Q1548030>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:pesca a skos:Concept;
+  skos:prefLabel "Pesche"@it, "Peaches"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=45933>;
+  skos:broader ams:frutta;
+  skos:narrower ams:nettarina;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266272>, <https://www.wikidata.org/wiki/Q13202263>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:aglio a skos:Concept;
+  skos:prefLabel "Aglio"@it, "Garlic"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=21839>;
+  skos:broader ams:allium;
+  skos:related ams:cipolla;
+  skos:altLabel "Aglio bianco"@it, "Aglio comune"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300380519>, <http://id.loc.gov/authorities/subjects/sh85053172>,
+    <https://www.wikidata.org/wiki/Q21546392>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:fagiolino a skos:Concept;
+  skos:prefLabel "Fagiolini"@it, "Green bean"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=66278>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:lattuga, ams:carciofo;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh97004773>, <https://www.wikidata.org/wiki/Q2987371>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:limone a skos:Concept;
+  skos:prefLabel "Limoni"@it, "Lemons"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=44102>;
+  skos:broader ams:agrumi;
+  skos:related ams:arancia;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266423>, <http://id.loc.gov/authorities/subjects/sh85075957>,
+    <https://www.wikidata.org/wiki/Q1093742>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:uva a skos:Concept;
+  skos:prefLabel "Uva da tavola"@it, "Grape"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=37338>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Uva da mensa"@it, "Uva da pasto"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300379338>, <https://www.wikidata.org/wiki/Q10978>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zucca a skos:Concept;
+  skos:prefLabel "Zucche"@it, "Pumpkins"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=72444>;
+  skos:broader ams:cucurbita_pepo;
+  skos:related ams:zucchino;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300435293>, <https://www.wikidata.org/wiki/Q165308>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:albicocca a skos:Concept;
+  skos:prefLabel "Albicocche"@it, "Apricots"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=63044>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300375305>, <https://www.wikidata.org/wiki/Q3733836>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:carciofo a skos:Concept;
+  skos:prefLabel "Carciofi"@it, "Artichoke"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20270>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:lattuga, ams:fagiolino;
+  skos:altLabel "Cynara cardunculus"@it, "Cynara scolymus"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85020244>, <https://www.wikidata.org/wiki/Q134609>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:carota a skos:Concept;
+  skos:prefLabel "Carote"@it, "Carrots"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=40881>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:lattuga, ams:fagiolino, ams:carciofo;
+  skos:altLabel "Daucus carota"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85020481>, <https://www.wikidata.org/wiki/Q81>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ciliegia a skos:Concept;
+  skos:prefLabel "Ciliegie"@it, "Cherries"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62558>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Ciliege"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300440730>, <https://www.wikidata.org/wiki/Q196>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:banana a skos:Concept;
+  skos:prefLabel "Banane"@it, "Bananas"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=37008>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266434>, <https://www.wikidata.org/wiki/Q503>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:fico a skos:Concept;
+  skos:prefLabel "Fichi"@it, "Figs"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=23315>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300448624>, <https://www.wikidata.org/wiki/Q2746643>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:gladiolo a skos:Concept;
+  skos:prefLabel "Gladioli"@it, "Gladiolus"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=71445>;
+  skos:broader ams:monocotiledoni;
+  skos:altLabel "Gladiolus"@it, "Gladiolo"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85055084>, <https://www.wikidata.org/wiki/Q156207>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:melagrana a skos:Concept;
+  skos:prefLabel "Melagrane"@it, "Pomegranates"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=56748>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Granate"@it, "Mele granate"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300379961>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zucchino a skos:Concept;
+  skos:prefLabel "Zucchine"@it, "Zucchini"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=73103>;
+  skos:broader ams:cucurbita_pepo;
+  skos:related ams:zucca;
+  skos:altLabel "Zucchini"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300343543>, <http://id.loc.gov/authorities/subjects/sh85150038>,
+    <https://www.wikidata.org/wiki/Q7533>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ananas a skos:Concept;
+  skos:prefLabel "Ananas"@it, "Pineapple"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=48321>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:mela_cotogna;
+  skos:altLabel "Ananas sativus"@it, "Ananasso"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300375583>, <http://id.loc.gov/authorities/subjects/sh88022547>,
+    <https://www.wikidata.org/wiki/Q147316>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:mela_cotogna a skos:Concept;
+  skos:prefLabel "Mele Cotogne"@it, "Quinces"@en;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q2751465>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:frutta a skos:Concept;
+  skos:prefLabel "Frutta"@it, "Fruit"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=7517>;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300011868>, <http://id.loc.gov/authorities/subjects/sh85052105>,
+    <https://www.wikidata.org/wiki/Q3314483>;
+  skos:narrower ams:mela, ams:pera, ams:melone, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna,
+    ams:agrumi;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:agrumi a skos:Concept;
+  skos:prefLabel "Agrumi"@it, "Citrus fruit"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=11712>;
+  skos:broader ams:frutta;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266420>, <http://id.loc.gov/authorities/subjects/sh85026231>,
+    <https://www.wikidata.org/wiki/Q81513>;
+  skos:narrower ams:arancia, ams:limone;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:solanacee a skos:Concept;
+  skos:prefLabel "Solanacee"@it, "Solanaceae"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20759>;
+  skos:broader ams:dicotiledoni;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85124477>, <https://www.wikidata.org/wiki/Q134172>;
+  dct:description "Famiglia di piante angiosperme dicotiledoni che comprende specie erbacee, arbustive o arboree, molte delle quali di interesse alimentare o ornamentale, come patata, pomodoro e peperone."@it,
+    "A family of dicotyledonous angiosperms including herbaceous, shrubby, or arboreal species, many of which are important as food or ornamental plants, such as potato, tomato, and pepper."@en;
+  skos:narrower ams:patata, ams:melanzana, ams:pomodoro, ams:peperone;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:dicotiledoni a skos:Concept;
+  skos:prefLabel "Dicotiledoni"@it, "Dicotyledons"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=1034>;
+  skos:altLabel "Dicotyledoneae"@it, "Dicotyledones"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85037685>, <https://www.wikidata.org/wiki/Q1307404>;
+  dct:description "Gruppo di angiosperme caratterizzate dalla presenza di due cotiledoni nel seme e da una struttura fogliare e vascolare tipicamente reticolata."@it,
+    "A group of angiosperms distinguished by seeds with two cotyledons and by typically net‑veined leaves and differentiated vascular structures."@en;
+  skos:narrower ams:actinidia, ams:lattuga, ams:fagiolino, ams:carciofo, ams:carota,
+    ams:solanacee, ams:cucurbita_pepo;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:allium a skos:Concept;
+  skos:prefLabel "Allium"@it, "Allium"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=58673>;
+  skos:broader ams:monocotiledoni;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85003696>, <https://www.wikidata.org/wiki/Q49391>;
+  dct:description "Genere di piante monocotiledoni che comprende specie aromatiche bulbose, tra cui aglio, cipolla, porro ed erba cipollina, diffuse in molte regioni temperate."@it,
+    "A genus of monocotyledonous bulbous plants that includes aromatic species such as garlic, onion, leek, and chives, widespread in many temperate regions."@en;
+  skos:narrower ams:cipolla, ams:aglio;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cucurbita_pepo a skos:Concept;
+  skos:prefLabel "Cucurbita pepo"@it, "Cucurbita pepo"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=73104>;
+  skos:broader ams:dicotiledoni;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85034678>, <https://www.wikidata.org/wiki/Q7229863>;
+  dct:description "Specie erbacea annuale della famiglia delle Cucurbitacee, coltivata per frutti e semi commestibili; comprende numerose varietà di zucchine e zucche."@it,
+    "An annual herbaceous species of the Cucurbitaceae family, cultivated for its edible fruits and seeds; it includes many varieties of squashes and zucchinis."@en;
+  skos:narrower ams:zucca, ams:zucchino;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:monocotiledoni a skos:Concept;
+  skos:prefLabel "Monocotiledoni"@it, "Monocotyledons"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=3156>;
+  skos:altLabel "Liliopsida"@it, "Monocotili"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85086900>, <https://www.wikidata.org/wiki/Q78961>;
+  dct:description "Gruppo di angiosperme caratterizzate da un singolo cotiledone nel seme, foglie a nervature parallele e fasci vascolari distribuiti irregolarmente nel fusto."@it,
+    "A group of angiosperms characterized by a single cotyledon in the seed, parallel‑veined leaves, and vascular bundles scattered throughout the stem."@en;
+  skos:narrower ams:gladiolo, ams:allium;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:SSD_10D a skos:Collection;
+  skos:prefLabel "10/D - Scienze dell'antichità"@it, "10/D - Sciences of antiquity"@en;
+  skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-D>;
+  dct:description "Il macrosettore concorsuale 10/D raggruppa le attività di ricerca e di didattica relative allo studio delle civiltà antiche, comprendendo la filologia, la linguistica, la letteratura, la storia, l’archeologia e le culture del mondo greco, latino e del Vicino Oriente antico. Il settore include l’analisi, l’interpretazione e la trasmissione dei testi antichi, lo studio delle testimonianze materiali e dei contesti storici, nonché l’indagine sulle forme culturali, religiose, artistiche e sociali delle società antiche"@it,
+    "The competition macro-sector 10/D encompasses research and teaching activities related to the study of ancient civilizations, including the philology, linguistics, literature, history, archaeology, and cultures of the Greek, Latin, and ancient Near Eastern worlds. The sector covers the analysis, interpretation, and transmission of ancient texts, the study of material evidence and historical contexts, and the investigation of the cultural, religious, artistic, and social forms of ancient societies"@en;
+  skos:member ams:IGCyr;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:IGCyr a skos:Collection;
+  skos:prefLabel "Iscrizioni della Cirenaica greca"@it, "Inscriptions of Greek Cyrenaica"@en;
+  dct:description "Collezione di immagini che documenta la grande maggioranza delle iscrizioni della Cirenaica greca (VII–I sec. a.C.) e le iscrizioni in versi greci della Cirenaica greca e romana (VII sec. a.C.–VII sec. d.C.)"@it,
+    "A collection of images documenting the vast majority of inscriptions from Greek Cyrenaica (7th–1st century BC) and the Greek verse inscriptions from Greek and Roman Cyrenaica (7th century BC–7th century AD)"@en;
+  skos:member ams:epitaph, ams:dedication, ams:unclear, ams:accounts, ams:iscrizioni_onorarie,
+    ams:tithe, ams:list_of_names, ams:sacred_laws, ams:caption, ams:owner, ams:private_honors,
+    ams:trademark, ams:decree, ams:alphabet, ams:public_honors, ams:royal_letter, ams:acclamation,
+    ams:list_of_ephebes, ams:list_of_soldiers, ams:list_of_priests, ams:regulation, ams:road_signpost,
+    ams:defixio, ams:will, ams:tomb_protection, ams:iscrizioni_religiose, ams:iscrizioni_normative,
+    ams:cataloghi, ams:iscrizioni_identificative;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:epitaph a skos:Concept;
+  skos:prefLabel "Epitaffi"@it, "Epitaphs"@en;
+  skos:altLabel "Iscrizioni funebri"@it, "Funerary inscription"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=29468>, <http://vocab.getty.edu/page/aat/300028729>,
+    <https://www.eagle-network.eu/voc/typeins/lod/92.html>;
+  dct:description "Iscrizioni sepolcrali, spesso in forma di breve componimento in versi, che per lo più contengono le lodi del defunto"@it,
+    "Funerary inscriptions, often in the form of short verse compositions, which typically contain praises of the deceased."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:dedication a skos:Concept;
+  skos:prefLabel "Dediche votive"@it, "Dedication"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Dedication>;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:tithe, ams:sacred_laws, ams:defixio;
+  skos:altLabel "Votive dedication"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300404460>, <https://www.wikidata.org/wiki/Q126733445>;
+  dct:description "Iscrizioni che dedicano un oggetto, una struttura o un’offerta a una divinità o entità religiosa"@it,
+    "Inscriptions dedicating an object, structure, or offering to a deity or religious entity."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:unclear a skos:Concept;
+  skos:prefLabel "Incerto"@it, "Unclear"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine>;
+  skos:altLabel "Uncertain"@en, "Unable to determine"@en;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/144.html>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:accounts a skos:Concept;
+  skos:prefLabel "Rendiconti"@it, "Accounts"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Accounts>;
+  skos:broader ams:cataloghi;
+  skos:related ams:list_of_names, ams:list_of_ephebes, ams:list_of_soldiers, ams:list_of_priests;
+  skos:altLabel "Rendiconti amministrativi"@it, "Rendiconto"@it, "Accounts of the damiergoi"@en,
+    "Account"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=45368>, <http://vocab.getty.edu/page/aat/300145802>;
+  dct:description """Iscrizioni che registrano transazioni finanziarie, spese o bilanci, utilizzate per scopi amministrativi, finanziari o commerciali, fornendo una documentazione sistematica delle attività economiche in un determinato periodo.
+Elenchi che dettagliano spese e costi, riportando singole voci o categorie di spesa senza offrire un contesto finanziario più ampio. Questi registri possono includere conti edilizi, liste di tributi e inventari di tesoreria.
+Redatti e mantenuti dai magistrati per i controlli ufficiali, garantivano trasparenza durante i passaggi di consegne.
+Ad esempio, gli inventari delle tesorerie templari comprendevano dichiarazioni formali di trasferimento di responsabilità. I conti edilizi, spesso con una funzione onorifica, conservavano i nomi dei contributori più che l’accuratezza finanziaria"""@it,
+    "Inscriptions recording financial transactions, expenditures, or balances, used for administrative, financial, or commercial purposes, providing a systematic record of financial activities over a specific period. Lists detailing expenditures, costs, detailing individual expenses or categories of expenses without providing a broader financial context. Accounts may include building accounts, tribute lists, and treasury inventories. Maintained by magistrates for official audits, they ensured transparency during office transitions. For example, temple treasury inventories included formal declarations of responsibility transfer. Building accounts, often serving honorific purposes, preserved the names of contributors rather than ensuring precise financial accuracy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:iscrizioni_onorarie a skos:Concept;
+  skos:prefLabel "Iscrizioni onorarie"@it, "Honorary inscription"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Honorific>;
+  skos:altLabel "Dediche onorarie"@it, "Honorific inscription"@en, "Honorific"@en;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/69.html>, <https://www.wikidata.org/wiki/Q125323109>;
+  dct:description """Testi che lodano o onorano individui, gruppi o entità per le loro imprese, contributi, servizi o status eccezionale.
+Questi testi esprimono spesso le ragioni dell’onorificenza, i meriti dell’individuo e la natura dell’onore conferito"""@it,
+    """Texts praising or honouring individuals, groups, or entities for their achievements, contributions, services or extraordinary status. Texts often express
+ the reasons for receiving the honours, the individual's achievements and the nature of the honour"""@en;
+  skos:narrower ams:private_honors, ams:public_honors, ams:acclamation;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:tithe a skos:Concept;
+  skos:prefLabel "Decima"@it, "Tithe"@en;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:dedication, ams:sacred_laws, ams:defixio;
+  skos:altLabel "Tithing"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=37270>, <http://id.loc.gov/authorities/subjects/sh85135644>,
+    <https://www.wikidata.org/wiki/Q184664>;
+  dct:description "Imposta pari a un decimo del reddito o del prodotto, originariamente offerta come dono votivo o ringraziamento a una divinità; in molti contesti coincide funzionalmente con l’offerta votiva."@it,
+    "A levy corresponding to one‑tenth of revenue or produce, originally offered as a thank‑offering to a god; in many contexts functionally equivalent to a votive offering"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:list_of_names a skos:Concept;
+  skos:prefLabel "Lista di nomi"@it, "List of names"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Names>;
+  skos:broader ams:cataloghi;
+  skos:altLabel "Name list"@en, "Catalogue of names"@en;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Names>, <https://www.wikidata.org/wiki/Q11884534>;
+  dct:description "Nomi multipli di individui, gruppi o entità, spesso in forma di elenco o enumerazione. Quando incisi su pietra, questi elenchi erano utilizzati per la registrazione pubblica e per il riconoscimento onorifico"@it,
+    "Multiple names of individuals, groups, or entities, often in the form of a list or enumeration. When engraved into stones, these lists were used for public record-keeping and honorific recognition"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:sacred_laws a skos:Concept;
+  skos:prefLabel "Legge sacra"@it, "Sacred laws"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Lex_sacra>;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:dedication, ams:tithe, ams:defixio;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300417712>, <https://www.wikidata.org/wiki/Q126733473>;
+  dct:description """Leggi o regolamenti religiosi dotati di autorità giuridica o vincolante all’interno di un contesto religioso, che definiscono le norme e i requisiti relativi ai culti civici e alle associazioni religiose volontarie.
+Queste leggi disciplinano vari aspetti delle pratiche cultuali, tra cui lo svolgimento dei rituali, i criteri di partecipazione, i doveri dei funzionari religiosi e l’imposizione di multe in caso di inadempienza"""@it,
+    """Religious laws or regulations with legal or binding authority within a religious context, detailing the religious regulations and requirements governing
+ civic cults and voluntary religious associations. These laws address various aspects of cultic practices, including the conduct of rituals, participation criteria, duties of religious officials, and the imposition of fines for non-compliance."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:caption a skos:Concept;
+  skos:prefLabel "Didascalie"@it, "Caption"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Label>;
+  skos:broader ams:iscrizioni_identificative;
+  skos:related ams:owner, ams:trademark;
+  skos:altLabel "Label"@en;
+  dct:description "Iscrizioni che forniscono descrizioni o informazioni identificative relative a oggetti, manufatti o immagini."@it,
+    "Inscriptions providing descriptions or identifying information for objects, artifacts, or images."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:owner a skos:Concept;
+  skos:prefLabel "Marchi di proprietà"@it, "Owner's mark"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Ownership>;
+  skos:broader ams:iscrizioni_identificative;
+  skos:related ams:caption, ams:trademark;
+  skos:altLabel "Owner inscription"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300028772>;
+  dct:description "Iscrizioni che indicano la proprietà o che riportano il nome dell’individuo, dell’ente o dell’istituzione responsabile"@it,
+    "Inscriptions marking ownership or bearing the name of an individual, entity, or institution in charge"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:private_honors a skos:Concept;
+  skos:prefLabel "Dediche onorarie private"@it, "Private honors"@en;
+  skos:exactMatch <https://www.eagle-network.eu/voc/typeins/lod/422.html>;
+  skos:broader ams:iscrizioni_onorarie;
+  skos:related ams:public_honors, ams:acclamation;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Elogium>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:trademark a skos:Concept;
+  skos:prefLabel "Marchi"@it, "Trademark"@en;
+  skos:broader ams:iscrizioni_identificative;
+  skos:related ams:caption, ams:owner;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Maker>, <http://vocab.getty.edu/page/aat/300028776>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:decree a skos:Concept;
+  skos:prefLabel "Decreti"@it, "Decree"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Decree>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:regulation, ams:will, ams:tomb_protection;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=13396>, <http://vocab.getty.edu/page/aat/300026925>,
+    <https://www.wikidata.org/wiki/Q2571972>;
+  dct:description """Ordine, decisione o giudizio specifico emanato da un’autorità esecutiva, amministrativa o giudiziaria in risposta a una determinata questione o situazione.
+Pur potendo avere effetti giuridici e forza esecutiva, i decreti sono solitamente più mirati e circoscritti rispetto alle leggi, poiché affrontano casi o problemi individuali invece di stabilire principi generali o regolamenti applicabili a un ambito più ampio di circostanze."""@it,
+    """Specific order, decision, or judgment issued by an executive, administrative, or judicial authority in response to a particular matter or situation. While decrees may have legal
+ effects and enforceability, they are usually more focused and specific than laws, addressing individual cases or issues rather than establishing general principles or regulations applicable to a wider scope of circumstances."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:alphabet a skos:Concept;
+  skos:prefLabel "Alfabeto"@it, "Alphabet"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Abecedarium>;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=8566>;
+  dct:description """Iscrizione composta dalle lettere di un alfabeto, utilizzata come strumento per l’insegnamento o l’esercizio della scrittura. 
+L’abecedario epigrafico può trovarsi su diversi supporti, come tavolette di pietra, pareti, frammenti ceramici o altri materiali durevoli."""@it,
+    """Inscription that consists of the letters of an alphabet serving as a tool for teaching or practicing writing skills. The inscription abecedarium may be found on 
+various objects, such as stone tablets, walls, pot sherds, or other durable materials."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:public_honors a skos:Concept;
+  skos:prefLabel "Dediche onorarie pubbliche"@it, "Public honors"@en;
+  skos:broader ams:iscrizioni_onorarie;
+  skos:related ams:private_honors, ams:acclamation;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/70.html>, <https://ontology.inscriptiones.org/type_of_inscription/Elogium>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:royal_letter a skos:Concept;
+  skos:prefLabel "Lettere di sovrani"@it, "Royal letter"@en;
+  skos:altLabel "Letter from a sovereign"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q126733464>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:acclamation a skos:Concept;
+  skos:prefLabel "Acclamazioni"@it, "Acclamation"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Acclamation>;
+  skos:broader ams:iscrizioni_onorarie;
+  skos:related ams:private_honors, ams:public_honors;
+  dct:description """Iscrizioni che esprimono lode o ammirazione entusiastica, spesso in un contesto pubblico o cerimoniale.
+Le acclamazioni sono generalmente testi brevi che elogiano un individuo o una divinità, formulano auguri di bene e successo e possono includere elementi onorifici"""@it,
+    """Inscriptions expressing enthusiastic praise or admiration, often in a public or ceremonial context. Acclamations are often short texts praising either an individual or deity, wishing
+ well and success, and can include honorific aspects."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:list_of_ephebes a skos:Concept;
+  skos:prefLabel "Lista degli efebi"@it, "List of ephebes"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Ephebes>;
+  skos:broader ams:cataloghi;
+  skos:related ams:accounts, ams:list_of_names, ams:list_of_soldiers, ams:list_of_priests;
+  skos:altLabel "Ephebic list"@en;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/419.html>;
+  dct:description "Elenchi di individui di sesso maschile che stanno svolgendo l’addestramento o la formazione militare (efebia) nell’antica Grecia"@it,
+    "Lists of male individuals undergoing military training or education (ephebia) in ancient Greece"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:list_of_soldiers a skos:Concept;
+  skos:prefLabel "Lista dei soldati"@it, "List of soldiers"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Military_personnel>;
+  skos:broader ams:cataloghi;
+  skos:related ams:accounts, ams:list_of_names, ams:list_of_ephebes, ams:list_of_priests;
+  skos:altLabel "Military personnel"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300027178>;
+  dct:description "Elenchi di individui che prestano servizio militare, con indicazione della loro posizione o grado, inclusi i veterani"@it,
+    "Lists of individuals serving in military, including their positions or ranks, including veterans."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:list_of_priests a skos:Concept;
+  skos:prefLabel "Lista dei sacerdoti"@it, "List of priests"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Priests>;
+  skos:broader ams:cataloghi;
+  skos:related ams:accounts, ams:list_of_names, ams:list_of_ephebes, ams:list_of_soldiers;
+  skos:altLabel "Catalogo di sacerdoti"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q126733466>;
+  dct:description "Elenchi di individui che ricoprono cariche o titoli religiosi o sacerdotali"@it,
+    "Lists of individuals holding religious or priestly offices or titles."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:regulation a skos:Concept;
+  skos:prefLabel "Regolamenti"@it, "Regulation"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Regulatory>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:decree, ams:will, ams:tomb_protection;
+  skos:altLabel "Regulatory"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300027842>;
+  dct:description "Testi relativi a regolamenti, norme o istruzioni che disciplinano il comportamento o la condotta"@it,
+    "Texts related to regulations, rules, or instructions governing behavior or conduct"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:road_signpost a skos:Concept;
+  skos:prefLabel "Segnali stradali"@it, "Road signpost"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Road_signpost>;
+  skos:altLabel "Segnaletica stradale"@it, "Street sign"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300003909>, <https://www.wikidata.org/wiki/Q22812402>;
+  dct:description "Iscrizioni che forniscono indicazioni direzionali o orientamento ai viaggiatori, spesso collocate presso incroci o bivi"@it,
+    "Inscriptions providing directional information or guidance to travelers, often found at intersections or crossroads"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:defixio a skos:Concept;
+  skos:prefLabel "Defissione"@it, "Defixio"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Defixio>;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:dedication, ams:tithe, ams:sacred_laws;
+  skos:altLabel "Maledizione"@it, "Curse tablet"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300410443>, <https://www.wikidata.org/wiki/Q1430557>;
+  dct:description "Tavolette di maledizione o incantesimi vincolanti, destinati a causare danno ad altri o a ottenere vendetta. Queste tavolette, spesso trafitte da un chiodo e solitamente arrotolate, contengono maledizioni rivolte a persone o animali, scritte in grafia corsiva e accompagnate da segni magici. I testi, anonimi, non sono destinati al pubblico, ma alle divinità"@it,
+    "Curse tablets or binding spells, aimed at causing harm to others or seeking revenge. These tablets, often pierced with a nail and usually rolled up, contain curses of people or animals, written in cursive script and labelled with magical signs. The anonymous texts are not addressed to the public, but to deities"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:will a skos:Concept;
+  skos:prefLabel "Testamento"@it, "Will"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Testament>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:decree, ams:regulation, ams:tomb_protection;
+  skos:altLabel "Testament"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=4636>, <http://vocab.getty.edu/page/aat/300027764>;
+  dct:description "Documenti legali che espongono le ultime volontà e disposizioni testamentarie di un individuo, delineando i desideri relativi alla distribuzione dei suoi beni e patrimoni dopo la morte."@it,
+    "Legal documents detailing the last will and testament of an individual, outlining a person's wishes regarding the distribution of their property and assets after their death"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:tomb_protection a skos:Concept;
+  skos:prefLabel "Protezione delle tombe"@it, "Tomb protection"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Tomb_regulation>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:decree, ams:regulation, ams:will;
+  skos:altLabel "Tomb regulation"@en;
+  dct:description "“Regolamenti per la protezione delle tombe che prevedono misure o direttive volte a salvaguardare i luoghi di sepoltura da vandalismi, furti o altre forme di danneggiamento, spesso incisi come avvertimenti o proibizioni per preservare la sacralità dell’ultimo luogo di riposo del defunto"@it,
+    "Tomb protection regulations entail measures or directives aimed at safeguarding burial sites from vandalism, theft, or other forms of damage, often inscribed as warnings or prohibitions to preserve the sanctity of the deceased's final resting place"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:iscrizioni_religiose a skos:Concept;
+  skos:prefLabel "Iscrizioni religiose"@it, "Religious inscriptions"@en;
+  skos:altLabel "Religious text"@en;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Religious>,
+    <http://vocab.getty.edu/page/aat/300220519>;
+  dct:description "Testi associati a pratiche, credenze, rituali o alla condotta delle istituzioni religiose"@it,
+    "Texts associated with religious practices, beliefs, rituals, or conduct of religious institutions"@en;
+  skos:narrower ams:dedication, ams:tithe, ams:sacred_laws, ams:defixio;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:iscrizioni_normative a skos:Concept;
+  skos:prefLabel "Iscrizioni normative"@it, "Regulatory inscriptions"@en;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Regulatory>;
+  dct:description "Le iscrizioni normative sono testi relativi a regolamenti, norme o istruzioni che disciplinano il comportamento o la condotta"@it,
+    "Texts related to regulations, rules, or instructions governing behavior or conduct"@en;
+  skos:narrower ams:decree, ams:regulation, ams:will, ams:tomb_protection;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cataloghi a skos:Concept;
+  skos:prefLabel "Cataloghi"@it, "Record keeping"@en;
+  skos:altLabel "Liste"@it, "Collection"@en, "List"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=9107>, <https://ontology.inscriptiones.org/type_of_inscription/Record_keeping>,
+    <http://vocab.getty.edu/page/aat/300026059>;
+  dct:description "Testi relativi all’organizzazione e alla conservazione delle informazioni per scopi amministrativi e finanziari, spesso presentati sotto forma di catalogo, enumerazione o elenco di voci"@it,
+    "Texts related to organizing and storing information for administrative and financial purposes, often presenting information in the form of a catalog, enumeration, list of items"@en;
+  skos:narrower ams:accounts, ams:list_of_names, ams:list_of_ephebes, ams:list_of_soldiers,
+    ams:list_of_priests;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:iscrizioni_identificative a skos:Concept;
+  skos:prefLabel "Iscrizioni identificative"@it, "Identification inscriptions"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=11428>, <https://ontology.inscriptiones.org/type_of_inscription/Identification>;
+  dct:description "Testi che identificano le caratteristiche fisiche dell’oggetto iscritto e altre sue qualità, la sua origine, la sua classificazione e la sua appartenenza, oppure che forniscono informazioni sul committente, l’autore, il produttore o il proprietario"@it,
+    "Texts identifying the physical characteristics of the inscribed object and other qualities, its origin, its classification, and its belonging, or providing information about the commissioner, author, producer or owner"@en;
+  skos:narrower ams:caption, ams:owner, ams:trademark;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .

@@ -14,3 +14,5 @@ tests/jena-fuseki*
 .DS_Store
 .phpunit.result.cache
 /.idea
+docker-compose.yml
+dockerfiles/config/config-docker-compose.ttl
