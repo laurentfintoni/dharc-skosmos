@@ -260,6 +260,23 @@
     void:dataDump <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> ;
     skosmos:sparqlGraph <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> .
 
+:ams a skosmos:Vocabulary, void:Dataset;
+    dc:title "AMS SKOS Collections"@en, "AMS SKOS Collections"@it ;
+    skosmos:shortName "AMS";
+    dc:subject :cat_knot ;
+    void:uriSpace "http://w3id.org/AMSHistorica/thesaurus/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:defaultSidebarView 'groups' ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-collections.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-collections.ttl> .
+
+
 # Skosmos categories (add new categories here)
 
 :categories a skos:ConceptScheme;

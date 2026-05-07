@@ -40,3 +40,7 @@ curl -X POST -H Content-Type:text/turtle --data-binary "@hico-skos.ttl" "http://
 
 curl -L -o ETV.ttl https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@ETV.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl"
+
+#load Test
+curl -L -o AMS_SKOS-collections.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-collections.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@AMS_SKOS-collections.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-collections.ttl"

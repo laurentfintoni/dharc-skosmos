@@ -25,7 +25,16 @@
   dct:description "Descrizione del thesaurus in italiano"@it, "Descrizione del thesaurus in inglese"@en;
   skos:hasTopConcept ams:frutta, ams:dicotiledoni, ams:monocotiledoni, ams:epitaph,
     ams:unclear, ams:iscrizioni_onorarie, ams:alphabet, ams:royal_letter, ams:road_signpost,
-    ams:iscrizioni_religiose, ams:iscrizioni_normative, ams:cataloghi, ams:iscrizioni_identificative .
+    ams:iscrizioni_religiose, ams:iscrizioni_normative, ams:cataloghi, ams:iscrizioni_identificative,
+    ams:anemoi, ams:aphrodite, ams:apollo, ams:ares, ams:artemis, ams:asklepios, ams:athena,
+    ams:charites, ams:curete, ams:demeter, ams:dionysos, ams:dioscuri, ams:eumenis, ams:eunomia,
+    ams:enyalios, ams:hades, ams:hekate, ams:helios, ams:heracles, ams:hermes, ams:heroes,
+    ams:hestia, ams:hymenaios, ams:horai, ams:hygieia, ams:persephone, ams:mousae, ams:nika,
+    ams:nymphae, ams:ouranides, ams:panakeia, ams:serapis, ams:thanatos, ams:tritopatores,
+    ams:tyche, ams:zeus, ams:arsinoe_II, ams:arsinoe_III, ams:berenice_I, ams:berenice_II,
+    ams:ptolemy_I, ams:ptolemy_III, ams:ptolemy_IV, ams:ptolemy_V, ams:ptolemy_VIII, ams:ptolemy_IX,
+    ams:cleopatra_I, ams:cleopatra_III, ams:cleopatra_VIII, ams:cleopatra_di_macedonia,
+    ams:magas, ams:olympias .
 
 ams:SSD_07D a skos:Collection;
   skos:prefLabel "07/D - Patologia vegetale e entomologia"@it, "07/D - Plant pathology and entomology"@en;
@@ -407,7 +416,7 @@ ams:SSD_10D a skos:Collection;
   skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-D>;
   dct:description "Il macrosettore concorsuale 10/D raggruppa le attività di ricerca e di didattica relative allo studio delle civiltà antiche, comprendendo la filologia, la linguistica, la letteratura, la storia, l’archeologia e le culture del mondo greco, latino e del Vicino Oriente antico. Il settore include l’analisi, l’interpretazione e la trasmissione dei testi antichi, lo studio delle testimonianze materiali e dei contesti storici, nonché l’indagine sulle forme culturali, religiose, artistiche e sociali delle società antiche"@it,
     "The competition macro-sector 10/D encompasses research and teaching activities related to the study of ancient civilizations, including the philology, linguistics, literature, history, archaeology, and cultures of the Greek, Latin, and ancient Near Eastern worlds. The sector covers the analysis, interpretation, and transmission of ancient texts, the study of material evidence and historical contexts, and the investigation of the cultural, religious, artistic, and social forms of ancient societies"@en;
-  skos:member ams:IGCyr;
+  skos:member ams:IGCyr, ams:mitologia_storia_antica;
   skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
 
 ams:IGCyr a skos:Collection;
@@ -721,5 +730,653 @@ ams:iscrizioni_identificative a skos:Concept;
   dct:description "Testi che identificano le caratteristiche fisiche dell’oggetto iscritto e altre sue qualità, la sua origine, la sua classificazione e la sua appartenenza, oppure che forniscono informazioni sul committente, l’autore, il produttore o il proprietario"@it,
     "Texts identifying the physical characteristics of the inscribed object and other qualities, its origin, its classification, and its belonging, or providing information about the commissioner, author, producer or owner"@en;
   skos:narrower ams:caption, ams:owner, ams:trademark;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:mitologia_storia_antica a skos:Collection;
+  skos:prefLabel "Mitologia classica e storia antica"@it, "Classical Mythology and Ancient History"@en;
+  dct:description "Collezione dedicata alla mitologia classica e alla storia antica, comprendente divinità greche e romane, figure leggendarie ed eroi, insieme a personaggi storici del mondo antico"@it,
+    "Collection focused on classical mythology and ancient history, including Greek and Roman deities, legendary figures and heroes, as well as historical personalities of the ancient world"@en;
+  skos:member ams:anemoi, ams:aphrodite, ams:apollo, ams:apollo_apotropaios, ams:apollo_archegetes,
+    ams:apollo_korax, ams:apollo_mytriois, ams:apollo_nomios, ams:apollo_pythios, ams:apollo_soter,
+    ams:ares, ams:artemis, ams:artemis_agrotera, ams:artemis_katagogis, ams:asklepios,
+    ams:athena, ams:athena_apotropaios, ams:charites, ams:curete, ams:demeter, ams:dionysos,
+    ams:dioscuri, ams:eumenis, ams:eunomia, ams:enyalios, ams:hades, ams:hekate, ams:helios,
+    ams:heracles, ams:hermes, ams:hermes_dolios, ams:heroes, ams:hestia, ams:hymenaios,
+    ams:horai, ams:hygieia, ams:iatros, ams:karneios, ams:persephone, ams:mousae, ams:nika,
+    ams:nymphae, ams:ouranides, ams:panakeia, ams:serapis, ams:thanatos, ams:tritopatores,
+    ams:tyche, ams:zeus, ams:zeus_apotropaios, ams:zeus_lykaios, ams:zeus_soter, ams:zeus_melichios,
+    ams:arsinoe_II, ams:arsinoe_III, ams:berenice_I, ams:berenice_II, ams:ptolemy_I, ams:ptolemy_III,
+    ams:ptolemy_IV, ams:ptolemy_V, ams:ptolemy_VIII, ams:ptolemy_IX, ams:cleopatra_I,
+    ams:cleopatra_III, ams:cleopatra_VIII, ams:cleopatra_di_macedonia, ams:magas, ams:olympias;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:anemoi a skos:Concept;
+  skos:prefLabel "Anemoi"@it, "Anemoi"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q476682>;
+  dct:description "Antichi dei greci dei venti, che rappresentano ciascuno delle quattro direzioni cardinali, insieme a un certo numero di divinità minori dei venti. Associati alle stagioni e alle condizioni meteorologiche"@it,
+    "Ancient Greek wind gods, representing each of the four cardinal directions, along with a number of lesser wind gods. Associated with the seasons and weather conditions."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:aphrodite a skos:Concept;
+  skos:prefLabel "Afrodite"@it, "Aphrodite"@en;
+  skos:altLabel "Venere"@it, "Venus"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q35500>, <https://iconclass.org/92C4>;
+  dct:description "Dea greca dell’amore, della bellezza, del piacere e della procreazione. La sua equivalente romana è la dea Venere. Afrodite è conosciuta anche come Citerèa (Signora di Citera) e Cipride (Signora di Cipro), dai due luoghi di culto — Citera e Cipro — che rivendicavano di essere il suo luogo di nascita"@it,
+    "Greek goddess of love, beauty, pleasure, and procreation. Her Roman equivalent is the goddess Venus. Aphrodite is also known as Cytherea (Lady of Cythera) and Cypris (Lady of Cyprus) after the two cult sites, Cythera and Cyprus, which claimed to be her place of birth."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo a skos:Concept;
+  skos:prefLabel "Apollo"@it, "Apollo"@en;
+  skos:related ams:zeus, ams:asklepios, ams:artemis;
+  skos:altLabel "Dio Apollo"@it, "Phoebus"@en, "Phoibos"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q37340>, <https://iconclass.org/92B3>;
+  dct:description "Nella mitologia greco‑romana, una divinità dalle molteplici funzioni e significati, una delle più venerate e influenti tra tutte le divinità antiche greche e romane. Sebbene la sua natura originaria sia oscura, a partire da Omero fu il dio della distanza divina, colui che colpiva o minacciava da lontano; il dio che rendeva gli uomini consapevoli della propria colpa e li purificava; che presiedeva alla legge religiosa e alle costituzioni delle città; e che comunicava ai mortali, tramite profeti e oracoli, la conoscenza del futuro e la volontà di suo padre, Zeus (il Giove romano)"@it,
+    "In Greco-Roman mythology, a deity of manifold function and meaning, one of the most widely revered and influential of all the ancient Greek and Roman gods. Though his original nature is obscure, from the time of Homer onward he was the god of divine distance, who sent or threatened from afar; the god who made men aware of their own guilt and purified them of it; who presided over religious law and the constitutions of cities; and who communicated with mortals through prophets and oracles his knowledge of the future and the will of his father, Zeus (Roman Jupiter)."@en;
+  skos:narrower ams:apollo_apotropaios, ams:apollo_archegetes, ams:apollo_korax, ams:apollo_mytriois,
+    ams:apollo_nomios, ams:apollo_pythios, ams:apollo_soter, ams:karneios;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_apotropaios a skos:Concept;
+  skos:prefLabel "Apollo Apotropaios"@it, "Apollo Apotropaios"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Divinità apotropaiche"@it, "Apotropaios"@it, "Apotropaei"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q25338401>;
+  dct:description "Epiteto di Apollo nella sua funzione protettivacontro il male"@it,
+    "Epiteth of Apollo in his protective function against evil"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_archegetes a skos:Concept;
+  skos:prefLabel "Apollo Archegetes"@it, "Apollo Archegetes"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Archagetes"@it, "Archagetes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q55414242>;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_korax a skos:Concept;
+  skos:prefLabel "Apollo Korax"@it, "Apollo Korax"@en;
+  skos:broader ams:apollo;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_mytriois a skos:Concept;
+  skos:prefLabel "Apollo Myrtoios"@it, "Apollo Myrtoios"@en;
+  skos:broader ams:apollo;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_nomios a skos:Concept;
+  skos:prefLabel "Apollo Nomios"@it, "Apollo Nomios"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Nomius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q107247969>;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_pythios a skos:Concept;
+  skos:prefLabel "Apollo Pythios"@it, "Apollo Pythios"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Pythios"@en, "Pythian Apollo"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q107189402>;
+  dct:description "Epiteto di Apollo legato a Delphi"@it, "Epithet of Apollo connected with Delphi"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:apollo_soter a skos:Concept;
+  skos:prefLabel "Apollo Soter"@it, "Apollo Soter"@en;
+  skos:broader ams:apollo;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q2303797>;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ares a skos:Concept;
+  skos:prefLabel "Ares"@it, "Ares"@en;
+  skos:related ams:zeus;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40901>, <http://id.loc.gov/authorities/names/no2017035875>;
+  dct:description "Dio greco della guerra"@it, "Greek god of war and combat"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:artemis a skos:Concept;
+  skos:prefLabel "Artemide"@it, "Artemis"@en;
+  skos:related ams:zeus, ams:apollo;
+  skos:altLabel "Diana"@it, "Diana"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39503>, <https://iconclass.org/92C3>;
+  dct:description "Nella religione greca, dea degli animali selvatici, della caccia, della vegetazione, nonché della castità e del parto. Artemide era figlia di Zeus e di Latona e sorella gemella di Apollo"@it,
+    "In Greek religion, the goddess of wild animals, the hunt, and vegetation, and of chastity and childbirth. Artemis was the daughter of Zeus and Leto and the twin sister of Apollo"@en;
+  skos:narrower ams:artemis_agrotera, ams:artemis_katagogis;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:artemis_agrotera a skos:Concept;
+  skos:prefLabel "Artemis Agrotera"@it, "Artemis Agrotera"@en;
+  skos:broader ams:artemis;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1458788>;
+  dct:description "Epiteto di Artemide"@it, "Epiteth of Artemis"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:artemis_katagogis a skos:Concept;
+  skos:prefLabel "Artemis Katagogis"@it, "Artemis Katagogis"@en;
+  skos:broader ams:artemis;
+  dct:description "Epiteto di Artemide"@it, "Epiteth of Artemis"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:asklepios a skos:Concept;
+  skos:prefLabel "Asclepio"@it, "Asklepios"@en;
+  skos:related ams:apollo, ams:hygieia, ams:panakeia;
+  skos:altLabel "Esculapio"@it, "Asklepio"@it, "Asclepius"@en, "Aesculapius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q83223>, <http://id.loc.gov/authorities/names/no2015101384>,
+    <https://www.getty.edu/cona/CONAIconographyRecord.aspx?iconid=901000305>;
+  dct:description "Dio greco‑romano della medicina, figlio di Apollo (dio della guarigione, della verità e della profezia) e della principessa mortale Coronide. Il centauro Chirone gli insegnò l’arte della guarigione"@it,
+    "Greco-Roman god of medicine, son of Apollo (god of healing, truth, and prophecy) and the mortal princess Coronis. The Centaur Chiron taught him the art of healing"@en;
+  skos:narrower ams:iatros;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:athena a skos:Concept;
+  skos:prefLabel "Atena"@it, "Athena"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Athanaia"@it, "Athena"@it, "Athene"@en, "Pallas Athena"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q37122>, <http://id.loc.gov/authorities/names/no2015006898>;
+  dct:description "Protettrice delle città greche, patrona di Atene e di altre poleis, dea della guerra, dell’artigianato e della ragione pratica; identificata con la Minerva romana. Figlia di Zeus, generata senza madre, emerse già adulta dalla sua fronte"@it,
+    "Greek city protectress, patroness of Athens and other cities, goddess of war, handicraft, and practical reason; identified with the Roman Minerva. daughter of Zeus, produced without a mother, so that she emerged full-grown from his forehead"@en;
+  skos:narrower ams:athena_apotropaios;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:athena_apotropaios a skos:Concept;
+  skos:prefLabel "Atena Apotropaia"@it, "Athena Apotropaia"@en;
+  skos:broader ams:athena;
+  skos:altLabel "Divinità apotropaiche"@it, "Apotropaios"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q25338401>;
+  dct:description "Epiteto di Atena"@it, "Epiteth of Athena"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:charites a skos:Concept;
+  skos:prefLabel "Tre Grazie"@it, "Charites"@en;
+  skos:altLabel "Cariti"@it, "Grazie"@it, "Graces"@en, "Three Graces"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q184353>, <https://iconclass.org/92D3>;
+  dct:description "Dee greche della grazia e della bellezza"@it, "Greek goddesses of grace and beauty"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:curete a skos:Concept;
+  skos:prefLabel "Cureti"@it, "Curete"@en;
+  skos:altLabel "Kouretes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q247617>, <https://iconclass.org/92L295>;
+  dct:description "Divinità della mitologia minoica e greca, servitori di Rea"@it, "Minor Minoan and Greek deities, servants of Rhea"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:demeter a skos:Concept;
+  skos:prefLabel "Demetra"@it, "Demeter"@en;
+  skos:related ams:persephone;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40730>, <https://iconclass.org/92M168>;
+  dct:description "Nella religione greca, figlia delle divinità Crono e Rea, sorella e consorte di Zeus (il re degli dèi) e dea dell’agricoltura"@it,
+    "In Greek religion, daughter of the deities Cronus and Rhea, sister and consort of Zeus (the king of the gods), and goddess of agriculture"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:dionysos a skos:Concept;
+  skos:prefLabel "Dioniso"@it, "Dionysos"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Dionisio"@it, "Bacco"@it, "Dionysus"@en, "Bacchus"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41680>, <http://id.loc.gov/authorities/names/no2014014847>;
+  dct:description "Dio greco del vino, della vendemmia, dei teatri, della fertilità e dell'ubriachezza"@it,
+    "Greek god of wine, the grape harvest, the theatre, fertility, and ecstasy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:dioscuri a skos:Concept;
+  skos:prefLabel "Dioscuri"@it, "Dioscuri"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Castore e Polluce"@it, "Castor and Pollux"@en, "Diskouri brothers"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q190103>, <https://iconclass.org/94R>;
+  dct:description "Fratelli della mitologia greca"@it, "Greek mythical siblings"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:eumenis a skos:Concept;
+  skos:prefLabel "Eumenidi"@it, "Eumenides"@en;
+  skos:altLabel "Erinni"@it, "Furie"@it, "Erinyes"@en, "Erinnyes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q180262>, <http://id.loc.gov/authorities/subjects/sh87000688>;
+  dct:description "Personificazioni femminili della vendetta soprattutto nei confronti di chi colpisce la propria famiglia e i parenti. Nella mitologia romana si chiamavano Furie"@it,
+    "Female personifications of vengeance, especially directed against those who harm their own family or kin. In Roman mythology they were known as the Furies"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:eunomia a skos:Concept;
+  skos:prefLabel "Eunomia"@it, "Eunomia"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q920416>, <https://iconclass.org/92D221>;
+  dct:description "Dea greca dell’ordine, della buona condotta e dell’armonia sociale, personificazione del corretto funzionamento della comunità e delle norme civiche. Identificata con Eunomia, una delle Horai"@it,
+    "Greek goddess of order, good conduct, and social harmony, personifying the proper functioning of the community and its civic norms. Identified with Eunomia, one of the Horae"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:enyalios a skos:Concept;
+  skos:prefLabel "Enialio"@it, "Enyalius"@en;
+  skos:altLabel "Enyalios"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1345963>;
+  dct:description "Divinità della mitologia greca"@it, "Greek deity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hades a skos:Concept;
+  skos:prefLabel "Ade"@it, "Hades"@en;
+  skos:related ams:persephone, ams:thanatos;
+  skos:altLabel "Hades"@it, "Plutone"@it, "Pluton"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41410>, <http://id.loc.gov/authorities/names/no2014024174>;
+  dct:description "Dio greco dell'oltretomba"@it, "God of the underworld in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hekate a skos:Concept;
+  skos:prefLabel "Ecate"@it, "Hecate"@en;
+  skos:altLabel "Hekate"@it, "Hekate"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q131575>, <http://id.loc.gov/authorities/names/no2015131059>;
+  dct:description "Dea greca"@it, "Greek goddess"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:helios a skos:Concept;
+  skos:prefLabel "Helios"@it, "Helios"@en;
+  skos:altLabel "Elio"@it, "Elios"@it, "Helius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q134270>, <http://id.loc.gov/authorities/names/no2018059404>;
+  dct:description "Titano della mitologia greca, personificazione del Sole e custode del suo corso quotidiano attraverso il cielo"@it,
+    "Titan of Greek mythology, personification of the Sun and guardian of its daily course across the sky"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:heracles a skos:Concept;
+  skos:prefLabel "Eracle"@it, "Heracles"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Ercole"@it, "Herakles"@it, "Hercules"@en, "Alcides"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q122248>, <http://id.loc.gov/authorities/names/no2014084680>;
+  dct:description "Eroe e semidio della mitologia greca, figlio di Zeus e Alcmena, noto per la sua forza straordinaria e per le imprese"@it,
+    "Hero and demigod of Greek mythology, son of Zeus and Alcmene, renowned for his extraordinary strength and for the feats that made him one of the most famous figures in myth"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hermes a skos:Concept;
+  skos:prefLabel "Ermes"@it, "Hermes"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Hermes"@it, "Erme"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41484>, <http://id.loc.gov/authorities/names/no2015131271>;
+  dct:description "Dio greco del commercio, dei viaggi, dei confini, dei ladri e dell’eloquenza; messaggero degli dèi e psicopompo, protettore della comunicazione e del movimento tra i mondi"@it,
+    "Greek god of commerce, travel, boundaries, thieves, and eloquence; messenger of the gods and psychopomp, protector of communication and movement between realms"@en;
+  skos:narrower ams:hermes_dolios;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hermes_dolios a skos:Concept;
+  skos:prefLabel "Dolius"@it, "Dolius"@en;
+  skos:broader ams:hermes;
+  skos:altLabel "Dolius"@it, "Dolius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q117837153>;
+  dct:description "Epiteto di Ermes"@it, "Epiteth of Hermes"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:heroes a skos:Concept;
+  skos:prefLabel "Eroi"@it, "Heroes"@en;
+  skos:closeMatch <https://vocab.getty.edu/page/aat/300236801>;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hestia a skos:Concept;
+  skos:prefLabel "Estia"@it, "Hestia"@en;
+  skos:altLabel "Hestia"@it, "Vesta"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41419>, <http://id.loc.gov/authorities/names/no2016065482>;
+  dct:description "Dea greca del focolare, della casa e della famiglia, figlia di Crono e Rea; personificazione della stabilità domestica e custode del fuoco sacro della comunità"@it,
+    "Greek goddess of the hearth, home, and family, daughter of Cronus and Rhea; personification of domestic stability and guardian of the community’s sacred fire"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hymenaios a skos:Concept;
+  skos:prefLabel "Imene"@it, "Hymen"@en;
+  skos:altLabel "Hymen"@it, "Hymenoes"@it, "Hymenoes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q506770>, <https://iconclass.org/92D1913>;
+  dct:description "Divinità greca del matrimonio"@it, "Greek god of marriage ceremonies"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:horai a skos:Concept;
+  skos:prefLabel "Ore"@it, "Horae"@en;
+  skos:altLabel "Hora"@it, "Hours"@en, "Horai"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q201411>, <https://iconclass.org/92D2>;
+  dct:description "Divinità delle stagioni e del tempo nella mitologia greca"@it, "Goddesses of the seasons and the natural portions of time in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:hygieia a skos:Concept;
+  skos:prefLabel "Igea"@it, "Hygieia"@en;
+  skos:related ams:asklepios;
+  skos:altLabel "Hygieia"@it, "Hygiea"@en, "Hygeia"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q202257>, <http://id.loc.gov/authorities/names/no2013131873>;
+  dct:description "Dea della mitologia greca, personificazione della salute, dell’igiene e del benessere"@it,
+    "Goddess in Greek mythology, personification of health, hygiene, and well‑being"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:iatros a skos:Concept;
+  skos:prefLabel "Iatros"@it, "Iatros"@en;
+  skos:broader ams:asklepios;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q107349776>;
+  dct:description "Epiteto di Asclepio, dottore"@it, "Epithet of Asclepius, doctor"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:karneios a skos:Concept;
+  skos:prefLabel "Carneio"@it, "Karneios"@en;
+  skos:broader ams:apollo;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q671534>;
+  dct:description "Epiteto di Apollo"@it, "Epithet of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:persephone a skos:Concept;
+  skos:prefLabel "Persefone"@it, "Persephone"@en;
+  skos:related ams:demeter, ams:zeus, ams:hades;
+  skos:altLabel "Kore"@it, "Persephone"@it, "Kore"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q45967>, <http://id.loc.gov/authorities/names/no2014090208>;
+  dct:description "Dea greca della primavera e del rinnovamento vegetale, nonché regina dell’oltretomba accanto ad Ade"@it,
+    "Greek goddess of spring and vegetal renewal, and queen of the underworld alongside Hades"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:mousae a skos:Concept;
+  skos:prefLabel "Muse"@it, "Muse"@en;
+  skos:altLabel "Muses"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q66016>, <https://thes.bncf.firenze.sbn.it/termine.php?id=24831>;
+  dct:description "Divinità femminili della mitologia greca, personificazioni dell’ispirazione nelle arti, nella letteratura e nelle scienze"@it,
+    "Female deities of Greek mythology, personifications of inspiration in literature, science, and the arts"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:nika a skos:Concept;
+  skos:prefLabel "Nike"@it, "Nike"@en;
+  skos:altLabel "Nice"@it, "Vittoria Alata"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q165023>, <http://id.loc.gov/authorities/names/no2019004704>;
+  dct:description "Dea greca della vittoria"@it, "Goddess of victory in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:nymphae a skos:Concept;
+  skos:prefLabel "Ninfa"@it, "Nymph"@en;
+  skos:altLabel "Ninfe"@it, "Nymphs"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q373916>, <http://id.loc.gov/authorities/subjects/sh99000113>,
+    <https://thes.bncf.firenze.sbn.it/termine.php?id=59233>;
+  dct:description "Divinità femminili della natura nella mitologia greca e romana, associate a luoghi specifici come boschi, sorgenti, montagne e corsi d’acqua"@it,
+    "Female nature deities in Greek and Roman mythology, linked to specific places such as woods, springs, mountains, and waterways"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ouranides a skos:Concept;
+  skos:prefLabel "Uranids"@it, "Uranids"@en;
+  skos:altLabel "Ouranides"@it, "Ouranides"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q12882383>;
+  dct:description "Personaggi della mitologia greca, figli di Urano e Gea"@it, "Greek mythology characters, children of Uranus and Gaia"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:panakeia a skos:Concept;
+  skos:prefLabel "Panacea"@it, "Panacea"@en;
+  skos:related ams:asklepios;
+  skos:altLabel "Panakeia"@it, "Panakeia"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q850227>;
+  dct:description "Dea greca della salute"@it, "Greek goddess of universal health"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:serapis a skos:Concept;
+  skos:prefLabel "Serapide"@it, "Serapis"@en;
+  skos:altLabel "Serapis"@it, "Sarapis"@it, "Sarapis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q214554>, <https://iconclass.org/96A32>;
+  dct:description "Divinità greco-egizia"@it, "Graeco-Egyptian god"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:thanatos a skos:Concept;
+  skos:prefLabel "Tanato"@it, "Thanatos"@en;
+  skos:related ams:hades;
+  skos:altLabel "Tanatos"@it, "Thanatos"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q199647>, <https://iconclass.org/92N53>,
+    <http://id.loc.gov/authorities/names/no2020015785>;
+  dct:description "Dio greco della morte"@it, "Personification of death in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:tritopatores a skos:Concept;
+  skos:prefLabel "Tritopatri"@it, "Tritopatores"@en;
+  skos:altLabel "Tritopatores"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q4463223>, <http://id.loc.gov/authorities/subjects/sh85137939>;
+  dct:description "Antiche divinità ancestrali della religione greca considerate spiriti protettori delle generazioni passate e legate al culto degli antenati e alla continuità della stirpe"@it,
+    "Ancient ancestral deities in Greek religion, regarded as protective spirits of past generations and associated with ancestor worship and lineage continuity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:tyche a skos:Concept;
+  skos:prefLabel "Tiche"@it, "Tyche"@en;
+  skos:altLabel "Tyche"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q213440>, <http://id.loc.gov/authorities/names/n2014070345>;
+  dct:description "Dea e personificazione greca della fortuna"@it, "Greek goddess of fortune"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zeus a skos:Concept;
+  skos:prefLabel "Zeus"@it, "Zeus"@en;
+  skos:related ams:athena, ams:apollo, ams:artemis, ams:ares, ams:hermes, ams:dionysos,
+    ams:persephone, ams:heracles, ams:dioscuri;
+  skos:altLabel "Giove"@it, "Jupiter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q34201>, <https://iconclass.org/92B1>;
+  dct:description "Dio greco del cielo e re di tutti gli dei"@it, "Greek god of the sky and king of the gods"@en;
+  skos:narrower ams:zeus_apotropaios, ams:zeus_lykaios, ams:zeus_soter, ams:zeus_melichios;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zeus_apotropaios a skos:Concept;
+  skos:prefLabel "Zeus Apotropaio"@it, "Zeus Apotropaios"@en;
+  skos:broader ams:zeus;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q25338401>;
+  dct:description "Epiteto di Zeus"@it, "Epithet of Zeus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zeus_lykaios a skos:Concept;
+  skos:prefLabel "Zeus Lykaios"@it, "Zeus Lykaios"@en;
+  skos:broader ams:zeus;
+  dct:description "Epiteto di Zeus"@it, "Epithet of Zeus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zeus_soter a skos:Concept;
+  skos:prefLabel "Zeus Soter"@it, "Zeus Soter"@en;
+  skos:broader ams:zeus;
+  skos:altLabel "Soter"@it, "Soter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q99743298>;
+  dct:description "Epiteto di Zeus, salvatore"@it, "Epithet of Zeus, as savior"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:zeus_melichios a skos:Concept;
+  skos:prefLabel "Zeus Meilichios"@it, "Zeus Meilichios"@en;
+  skos:broader ams:zeus;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1637673>;
+  dct:description "Epiteto di Zeus"@it, "Epithet of Zeus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:arsinoe_II a skos:Concept;
+  skos:prefLabel "Arsinoe II"@it, "Arsinoe II"@en;
+  skos:exactMatch <http://viaf.org/viaf/1710161634372010850006>;
+  skos:related ams:ptolemy_I, ams:berenice_I;
+  skos:altLabel "Arsinoe Filadelfo"@it, "Arsinoe II Philadelph"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40234>, <http://id.loc.gov/authorities/names/no2010038087>,
+    <https://iconclass.org/98C(ARSINOE%20II)>;
+  dct:description "Figlia di Tolomeo I e Bernice I, sorella e moglie di Tolomeo II, è stata una regina egizia, sovrana in Macedonia, Tracia e Egitto"@it,
+    "Daughter of Ptolemy I and Bernice I, sister and wife of Ptolemy II, was the queen of Macedonia, Thrace and Egypt"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:arsinoe_III a skos:Concept;
+  skos:prefLabel "Arsinoe III"@it, "Arsinoe III"@en;
+  skos:exactMatch <http://viaf.org/viaf/86055773>;
+  skos:related ams:ptolemy_III, ams:berenice_II;
+  skos:altLabel "Arsinoe Filopatore"@it, "Arsinoe III Philopator"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40258>;
+  dct:description "Regina tolemaica, figlia di Tolomeo III e Berenice II, e moglie del fratello Tolomeo IV Filopatore; sovrana d’Egitto dal 220 al 204 a.C., fu una figura politicamente rilevante e la prima regina della dinastia a generare un figlio dal proprio fratello, consolidando così la legittimità dinastica"@it,
+    "Ptolemaic queen, daughter of Ptolemy III and Berenice II, and wife of her brother Ptolemy IV Philopator; she ruled Egypt from 220 to 204 BC and was a politically significant figure, becoming the first Ptolemaic queen to bear a child by her brother, thereby reinforcing dynastic legitimacy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:berenice_I a skos:Concept;
+  skos:prefLabel "Berenice I"@it, "Berenice I"@en;
+  skos:exactMatch <http://viaf.org/viaf/25413773>;
+  skos:related ams:ptolemy_I, ams:arsinoe_II;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39962>;
+  dct:description "Regina macedone e in seguito consorte di Tolomeo I Sotere, primo sovrano dell’Egitto tolemaico; Berenice I (ca. 340–279 a.C.) fu una figura di rilievo nella formazione della dinastia lagide e contribuì alla legittimazione del nuovo regno attraverso la sua posizione e le sue alleanze familiari"@it,
+    "Macedonian noblewoman and later consort of Ptolemy I Soter, the first ruler of Ptolemaic Egypt; Berenice I (c. 340–279 BCE) played a significant role in the early formation of the Lagid dynasty and helped consolidate the new kingdom’s legitimacy through her status and familial alliances"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:berenice_II a skos:Concept;
+  skos:prefLabel "Berenice II"@it, "Berenice II"@en;
+  skos:exactMatch <http://viaf.org/viaf/96149106265668492202>;
+  skos:related ams:arsinoe_III, ams:ptolemy_III;
+  skos:altLabel "Berenice II Euergetis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40010>, <http://id.loc.gov/authorities/names/n86123801>,
+    <https://iconclass.org/98C(BERENICE%20II)>;
+  dct:description "Regina regnante di Cirenaica dal 258 al 246 a.C. e, in seguito, regina d’Egitto come moglie di Tolomeo III, Berenice II Euergete fu una figura di primo piano della dinastia lagide. Figlia di Magas di Cirene e nota per il suo ruolo politico attivo, è talvolta considerata coreggente del marito e contribuì alla definizione dell’identità dinastica tolemaica"@it,
+    "Queen regnant of Cyrenaica from 258 to 246 BCE and later queen of Ptolemaic Egypt as the wife of Ptolemy III, Berenice II Euergetis was a prominent member of the Lagid dynasty. Daughter of Magas of Cyrene and known for her active political role, she is sometimes regarded as co‑regent of her husband and contributed significantly to the shaping of Ptolemaic dynastic identity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ptolemy_I a skos:Concept;
+  skos:prefLabel "Tolomeo I"@it, "Ptolemy I"@en;
+  skos:exactMatch <http://viaf.org/viaf/21347488>;
+  skos:related ams:berenice_I, ams:arsinoe_II;
+  skos:altLabel "Tolomeo I Sotere"@it, "Tolomeo I d'Egitto"@it, "Ptolemy son of Lagus"@en,
+    "Ptolemy I Soter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q168261>, <http://id.loc.gov/authorities/names/n93023826>;
+  dct:description "Generale macedone e stretto collaboratore di Alessandro Magno, Tolomeo I Sotere fu il fondatore del Regno tolemaico d’Egitto. Divenuto re e faraone dal 305/304 al 282 a.C., consolidò il nuovo stato ellenistico con una politica stabile e con la creazione di Alessandria come centro culturale di primo piano. La sua dinastia governò l’Egitto fino al 30 a.C., facendo del paese uno dei principali fulcri della civiltà ellenistica"@it,
+    "A Macedonian general and close companion of Alexander the Great, Ptolemy I Soter founded the Ptolemaic Kingdom in Egypt. As king and pharaoh from 305/304 to 282 BCE, he established a stable Hellenistic state and developed Alexandria into a major center of Greek culture. His dynasty ruled Egypt until 30 BCE, making the kingdom one of the principal strongholds of Hellenistic civilization."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ptolemy_III a skos:Concept;
+  skos:prefLabel "Tolomeo III"@it, "Ptolemy III"@en;
+  skos:exactMatch <http://viaf.org/viaf/294668087>;
+  skos:related ams:berenice_II, ams:ptolemy_IV, ams:arsinoe_III;
+  skos:altLabel "Tolomeo Evergete"@it, "Tolomeo III Evergete"@it, "Ptolemy III Euergetes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39602>;
+  dct:description "Faraone tolemaico, figlio di Tolomeo II e terzo sovrano della dinastia lagide, Tolomeo III Evergete regnò sull’Egitto dal 246 al 222 a.C"@it,
+    "Ptolemaic pharaoh, son of Ptolemy II and third ruler of the Lagid dynasty, Ptolemy III Euergetes reigned over Egypt from 246 to 222 BCE"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ptolemy_IV a skos:Concept;
+  skos:prefLabel "Tolomeo IV"@it, "Ptolemy IV"@en;
+  skos:exactMatch <http://viaf.org/viaf/2154849>;
+  skos:related ams:ptolemy_III, ams:berenice_II, ams:arsinoe_II;
+  skos:altLabel "Tolomeo IV d'Egitto"@it, "Tolomeo IV Filopatore"@it, "Ptolemy IV Philopator"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39595>, <http://id.loc.gov/authorities/names/no2003046116>;
+  dct:description "Faraone tolemaico e quarto sovrano della dinastia lagide, Tolomeo IV Filopatore (244–204 a.C.) regnò sull’Egitto dal 222 a.C. fino alla morte"@it,
+    "Ptolemaic pharaoh and fourth ruler of the Lagid dynasty, Ptolemy IV Philopator (244–204 BCE) reigned over Egypt from 222 BCE until his death"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ptolemy_V a skos:Concept;
+  skos:prefLabel "Tolomeo V"@it, "Ptolemy V"@en;
+  skos:exactMatch <http://viaf.org/viaf/66521839>;
+  skos:related ams:ptolemy_IV, ams:arsinoe_III, ams:cleopatra_I;
+  skos:altLabel "Tolomeo V Epifane"@it, "Tolomeo Epifane"@it, "Ptolemy Epiphanes"@en,
+    "Ptolemy V Epiphanes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39957>;
+  dct:description "Faraone tolemaico e quinto sovrano della dinastia lagide, Tolomeo V Epifane Eucaristo (210–180 a.C.) regnò sull’Egitto dal 204 a.C. fino alla morte. Salito al trono in età infantile, il suo regno fu segnato da crisi interne e pressioni esterne, ma anche da importanti atti di legittimazione regale, tra cui il celebre Decreto di Rosetta, che celebrava la sua incoronazione e il sostegno dei sacerdoti egiziani"@it,
+    "Ptolemaic pharaoh and fifth ruler of the Lagid dynasty, Ptolemy V Epiphanes Eucharistos (210–180 BCE) reigned over Egypt from 204 BCE until his death. Ascending the throne as a child, his reign was marked by internal turmoil and external pressures, yet also by key acts of royal legitimation, most notably the Rosetta Decree, which commemorated his coronation and the support of the Egyptian priesthood"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ptolemy_VIII a skos:Concept;
+  skos:prefLabel "Tolomeo VIII"@it, "Ptolemy VIII"@en;
+  skos:exactMatch <http://viaf.org/viaf/155419788>;
+  skos:related ams:ptolemy_V, ams:cleopatra_I, ams:cleopatra_III, ams:ptolemy_IX;
+  skos:altLabel "Tolomeo Evergete Fiscone"@it, "Tolomeo VIII Evergete"@it, "Ptolemy VIII Physcon"@en,
+    "Ptolemy VIII Euergetes II"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3350>, <http://id.loc.gov/authorities/names/nb2007018630>;
+  dct:description "Tolomeo VIII Evergete II Trifone (ca. 184–116 a.C.), soprannominato Fiscone, fu re del Regno tolemaico e figlio minore di Tolomeo V ed Elena I. Il suo lungo e turbolento regno fu segnato da conflitti politici e militari con i fratelli Tolomeo VI e Cleopatra II, dando origine a una delle fasi più instabili della dinastia lagide"@it,
+    "Ptolemy VIII Euergetes II Tryphon (c. 184–116 BCE), nicknamed Physcon, was a king of the Ptolemaic Kingdom and the younger son of Ptolemy V and Cleopatra I. His long and turbulent reign was marked by intense political and military conflict with his siblings Ptolemy VI and Cleopatra II, resulting in one of the most unstable periods of the Lagid dynasty"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:ptolemy_IX a skos:Concept;
+  skos:prefLabel "Tolomeo IX"@it, "Ptolemy IX"@en;
+  skos:exactMatch <http://viaf.org/viaf/46669300>;
+  skos:related ams:ptolemy_VIII, ams:cleopatra_III;
+  skos:altLabel "Tolomeo Sotere Latiro"@it, "Tolomeo IX Sotere II"@it, "Ptolemy IX Lathyros"@en,
+    "Ptolemy VIII Soter II"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3340>, <http://id.loc.gov/authorities/names/nr97026533>;
+  dct:description "Tolomeo IX Sotere II, detto Latiro (ca. 142–81 a.C.), fu re d’Egitto in due distinti periodi. Figlio di Tolomeo VIII e Cleopatra III, regnò dapprima in coreggenza con la nonna Cleopatra II e la madre Cleopatra III (116–107 a.C.), e successivamente come sovrano indipendente dal 88 all’81 a.C."@it,
+    "Ptolemy IX Soter II, commonly known as Lathyros (c. 142–81 BCE), was twice king of Ptolemaic Egypt. Son of Ptolemy VIII and Cleopatra III, he first ruled jointly with his grandmother Cleopatra II and his mother Cleopatra III (116–107 BCE), and later reigned independently from 88 to 81 BCE"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cleopatra_I a skos:Concept;
+  skos:prefLabel "Cleopatra I"@it, "Cleopatra I"@en;
+  skos:exactMatch <http://viaf.org/viaf/54146822248807381494>;
+  skos:related ams:ptolemy_V, ams:ptolemy_VIII;
+  skos:altLabel "Cleopatra I Syra"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40252>;
+  dct:description "Principessa dell’Impero seleucide e, dal 193 a.C., regina d’Egitto come moglie di Tolomeo V, Cleopatra I Sira (ca. 204–176 a.C.) esercitò un ruolo politico di primo piano. Alla morte del marito divenne reggente durante la minorità del figlio Tolomeo VI, governando il regno con autorevolezza e garantendo stabilità in una fase delicata della dinastia tolemaica"@it,
+    "A princess of the Seleucid Empire and, from 193 BCE, queen of Ptolemaic Egypt as the wife of Ptolemy V, Cleopatra I Syra (c. 204–176 BCE) played a significant political role. After her husband’s death, she served as regent during the minority of their son Ptolemy VI, governing with authority and ensuring stability during a critical phase of the Ptolemaic dynasty"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cleopatra_III a skos:Concept;
+  skos:prefLabel "Cleopatra III"@it, "Cleopatra III"@en;
+  skos:exactMatch <http://viaf.org/viaf/816680>;
+  skos:related ams:ptolemy_VIII, ams:cleopatra_VIII;
+  skos:altLabel "Cleopatra III of Egypt"@en, "Cleopatra Euergetis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40003>;
+  dct:description "Cleopatra III (ca. 160–101 a.C.) fu regina d’Egitto e una delle figure politiche più influenti della tarda età tolemaica. Governò inizialmente in coreggenza con la madre Cleopatra II e il marito Tolomeo VIII (142–131 e 127–116 a.C.), e successivamente con i figli Tolomeo IX e Tolomeo X dal 116 al 101 a.C."@it,
+    "Cleopatra III (c. 160–101 BCE) was a queen of Egypt and one of the most influential political figures of the late Ptolemaic period. She first ruled jointly with her mother Cleopatra II and her husband Ptolemy VIII (142–131 and 127–116 BCE), and later with her sons Ptolemy IX and Ptolemy X from 116 to 101 BCE"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cleopatra_VIII a skos:Concept;
+  skos:prefLabel "Cleopatra VIII"@it, "Cleopatra VIII"@en;
+  skos:exactMatch <http://viaf.org/viaf/221149196547474792518>;
+  skos:altLabel "Cleopatra Selene II"@it, "Cleopatra Selene II"@en, "Cleopatra VIII of Egypt"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40058>, <http://id.loc.gov/authorities/names/n85216104>;
+  dct:description "Cleopatra Selene II (ca. 40–5 a.C.), figlia della regina Cleopatra VII e del triumviro Marco Antonio, fu una principessa tolemaica e una delle ultime eredi della dinastia. Sorella gemella di Alessandro Elio, sposò Giuba II di Mauretania, divenendo regina di Mauretania e contribuendo alla diffusione dell’eredità culturale egizio‑ellenistica nel Mediterraneo occidentale"@it,
+    "Cleopatra Selene II (c. 40–5 BCE), daughter of Queen Cleopatra VII and the Roman triumvir Mark Antony, was a Ptolemaic princess and one of the last heirs of the dynasty. Twin sister of Alexander Helios, she married Juba II of Mauretania, becoming queen of Mauretania and playing a key role in transmitting the Egyptian‑Hellenistic cultural legacy to the western Mediterranean"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:cleopatra_di_macedonia a skos:Concept;
+  skos:prefLabel "Cleopatra di Macedonia"@it, "Cleopatra of Macedon"@en;
+  skos:exactMatch <http://viaf.org/viaf/47568026>;
+  skos:related ams:olympias;
+  skos:altLabel "Cleopatra of Macedonia"@en, "Cleopatra of Epirus"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q230258>;
+  dct:description "Cleopatra di Macedonia (ca. 355/354–308 a.C.), figlia di Filippo II di Macedonia e di Olimpiade d’Epiro, fu principessa macedone e unica sorella germana di Alessandro Magno. In seguito divenne regina e reggente d’Epiro, esercitando un ruolo politico significativo nelle dinamiche dinastiche del mondo ellenistico"@it,
+    "Cleopatra of Macedonia (c. 355/354–308 BCE), daughter of Philip II of Macedon and Olympias of Epirus, was a Macedonian princess and the only full sibling of Alexander the Great. She later became queen and regent of Epirus, playing an important political role within the dynastic landscape of the Hellenistic world"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:magas a skos:Concept;
+  skos:prefLabel "Magas"@it, "Magas of Cyrene"@en;
+  skos:related ams:berenice_I, ams:arsinoe_II, ams:berenice_II;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q878392>;
+  dct:description "Magas di Cirene (m. 250 a.C.) fu un sovrano macedone e re di Cirene dal 276 a.C. alla morte. Figlio di Berenice I e divenuto membro della dinastia tolemaica dopo il matrimonio della madre con Tolomeo I, esercitò dapprima il ruolo di governatore e poi quello di re, consolidando l’autonomia politica della Cirenaica nel quadro del mondo ellenistico"@it,
+    "Magas of Cyrene (d. 250 BCE) was a Macedonian ruler and king of Cyrene from 276 BCE until his death. The son of Berenice I and incorporated into the Ptolemaic dynasty after his mother’s marriage to Ptolemy I, he first served as governor and later as king, strengthening the political autonomy of Cyrenaica within the Hellenistic world"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
+
+ams:olympias a skos:Concept;
+  skos:prefLabel "Olimpiade d'Epiro"@it, "Olympias"@en;
+  skos:exactMatch <http://viaf.org/viaf/24149366313985602225>;
+  skos:related ams:cleopatra_di_macedonia;
+  skos:altLabel "Olimpia d'Epiro"@it, "Olimpias"@it, "Olympiada Anayka"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q223134>, <http://id.loc.gov/authorities/names/n83049452>,
+    <https://iconclass.org/98C(OLYMPIAS)>;
+  dct:description "Olimpiade (ca. 375–316 a.C.) fu una principessa molossa, figlia del re Neottolemo I d’Epiro e sorella di Alessandro I d’Epiro. Moglie di Filippo II di Macedonia e madre di Alessandro Magno, esercitò un’influenza decisiva sulla formazione del futuro conquistatore e assunse un ruolo politico di primo piano, divenendo di fatto la figura dominante in Macedonia durante le campagne del figlio"@it,
+    "Olympias (c. 375–316 BCE) was a Molossian princess, daughter of King Neoptolemus I of Epirus and sister of Alexander I of Epirus. As the wife of Philip II of Macedon and mother of Alexander the Great, she played a crucial role in her son’s upbringing and emerged as the de facto leader of Macedon during his campaigns, exerting significant political influence"@en;
   skos:inScheme <http://w3id.org/AMSHistorica/thesaurus>;
   skos:topConceptOf <http://w3id.org/AMSHistorica/thesaurus> .
