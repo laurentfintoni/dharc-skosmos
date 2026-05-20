@@ -273,8 +273,8 @@
     skosmos:groupClass skos:Collection ;
     skosmos:defaultSidebarView 'groups' ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-collections.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-collections.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-2026-05-20.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/vocab_files/AMS_SKOS-2026-05-20.ttl> .
 
 
 # Skosmos categories (add new categories here)
